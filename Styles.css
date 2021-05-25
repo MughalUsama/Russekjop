@@ -1,0 +1,66 @@
+body{
+	overflow: scroll;
+	overflow-x: hidden;
+}
+#div1st
+{
+	background-image: url("Picture2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  box-sizing: border-box;
+}
+::placeholder{
+	color: white;
+	font-weight: bold;
+}
+section{
+	font-size: 2vw;
+	width:100%;
+	height:30%;
+	font-size:30px;
+	text-align: center;
+}
+.divs{
+	color: black;
+	width:100%;
+}
+.divider{
+  position:absolute;
+  top:10%;
+  border-left:2px solid black;
+  z-index: 999;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+@media (min-width: 992px){
+  .A {
+    width: 33.33%;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .B {
+    width: 33.33%;
+  }
+  .col-md-12 > .divs{
+	width:95%;
+  }
+}
+
+
+@media (max-width: 767px){
+
+  .C {
+    width: 100%;
+  }
+}
+
+.imagesStyle{
+  object-fit:cover !important;
+  height: 100% !important; 
+}

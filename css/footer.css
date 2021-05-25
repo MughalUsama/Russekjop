@@ -1,0 +1,32 @@
+#flogo{
+    max-height: 360px;
+    max-width: 360px;
+}
+
+.social{
+    max-height: 60px;
+    max-width: 60px;
+}
+.social:hover{
+    transform: scale(0.85);
+}
+
+
+a{
+    color: white !important;
+}
+footer{
+    background-color: black !important;
+    color: white !important;
+}
+
+@media (min-width: 600px) {
+    footer{
+        
+        padding-right: 0% !important;
+        padding-left: 0% !important;
+   	    margin-top: 0.25rem !important;
+        width: 103% !important;
+        max-width: 104% !important;
+    }
+}
