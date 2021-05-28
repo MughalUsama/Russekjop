@@ -10,55 +10,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--JQUERY AND popper   -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!--JQUERY AND bootstrap.js   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!--JQUERY AND bootstrap.js   -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>
 <body>
 	<header>
-		<nav id="header-nav" class="navbar navbar-default navbar-expand-sm bg-light" style="margin-bottom: 0px; height: 25%;">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
-	           <ul id="nav-list" class="nav navbar-nav navbar-right">
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Comapny (Login)</a>
-	            </li>
-	          </ul>
-	        </div >
-					<div class="navbar-header col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-left: 0%;">
-						<a href="index.php" class="pull-left " style="float: left; clear: right;">
-							<img src="Picture1.png" height="40%" width="40%">
-							<br>
-							<br>
-						</a>
-					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	           <ul id="nav-list" class="nav navbar-nav navbar-right">
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Register Group<br></a>
-	            </li>
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Login
-	              	<br></a>
-	            </li>
-	          </ul>
-	        </div>
-	      </div>  
-			</div>
-		</nav>
+		<?php
+		 require_once("./header.php")
+		 ?>
 	</header>
 	<div class="row" id="div1st">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-4" >
-				<div class="py-2" style="margin-left: 15%;">
-					<img src="Picture3.png" width="60"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
+				<div class="py-2" style="margin-left: 10%;">
+					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
 				</div>
-				<div class="py-2" style="margin-left: 15%;">
-					<img src="Picture3.png" width="60"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
+				<div class="py-2" style="margin-left: 5%;">
+					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
 				</div>
-				<div class="py-2" style="margin-left: 15%;">
-					<img src="Picture3.png" width="60"><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
+				<div class="py-2" style="margin-left: 10%;">
+					<img src="Picture3.png" class="tick-img" ><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
 				</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding" >

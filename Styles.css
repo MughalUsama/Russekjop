@@ -2,6 +2,12 @@ body{
 	overflow: scroll;
 	overflow-x: hidden;
 }
+.myfont{
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+.myfontTimes{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #div1st
 {
 	background-image: url("Picture2.png");
@@ -53,14 +59,33 @@ section{
 }
 
 
-@media (max-width: 767px){
+.tick-img{
+  width: 60px;
+  }
 
-  .C {
-    width: 100%;
+@media (max-width: 1024px){
+
+  h4{
+    font-size: 100% !important;
   }
 }
 
+@media (max-width: 767px){
+  .C {
+    width: 100%;
+  }
+  h4{
+    font-size: 83% !important;
+  }
+  
+.tick-img{
+  width: 30px;
+  }
+}
 .imagesStyle{
   object-fit:cover !important;
   height: 100% !important; 
 }
+
+
+ 
