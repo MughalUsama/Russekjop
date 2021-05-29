@@ -50,7 +50,7 @@
             <a href="./aboutus.php">About Us</a>
           </li>
           <li>
-            <a href="./blog.php">Blog</a>
+            <a href="./blog.php">News</a>
           </li>
           <li>
             <a href="./companyregister.php">Company Register</a>
@@ -75,7 +75,7 @@
             <a href="./FAQ.php">FAQs</a>
           </li>
           <li>
-            <a href="./partner.php">Becoming a Partner</a>
+            <a href="./supplier.php">Become a Supplier</a>
           </li>
           <li>
             <a href="./terms.php">Conditions and terms</a>

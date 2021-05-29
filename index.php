@@ -155,15 +155,15 @@
 
 <!--		Bottom images -->
 	  <div class="row bottom-images">
-		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0">
-			<div class="divs cimage">
+		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0 cimage" onclick="window.location='./supplier.php';">
+			<div class="divs ">
 				<img class="imagesStyle img-fluid col-12 p-0 m-0"  src="./img/Picture19.png">
 			</div>
 		</div>
 		<div class="divider d-md-none d-none d-md-flex"></div>
 
-		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0">
-			<div class="divs bimage">
+		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0 bimage" onclick="window.location='http://google.com';">
+			<div class="divs">
 				<img class="imagesStyle img-fluid col-12 p-0 m-0" src="./img/Picture20.png">
 			</div>
 		</div>
