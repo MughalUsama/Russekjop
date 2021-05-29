@@ -1,4 +1,4 @@
-<footer class="page-footer container-fluid col-12 justify-content-center font-small" style="box-shadow: 0 0 3pt 2pt #44D9E6;">
+<footer class="page-footer container-fluid col-12 justify-content-center font-small" style="box-shadow: 0 0 3pt 2pt red;">
 
   <!-- Footer Links -->
   <div class="container-fluid text-center col-12 text-md-left">

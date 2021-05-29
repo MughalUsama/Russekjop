@@ -21,12 +21,12 @@
 		 require_once("./header.php")
 		 ?>
 	</header>
-	<section class="sign-in-sec py-4" style="background-color:red;padding-top: 1.5%;padding-bottom: 1.5%;">
+	<section class="sign-in-sec py-5 bg-white" style="background-color:red;padding-top: 1.5%;padding-bottom: 1.5%;">
 				<div class="container">
 					<div class="row mb-4">
 						<div class="col-12 text-center">
 							<h2 class="heading mb-4">
-								<strong class="font-weight-medium">Login</strong>
+								<strong class="font-weight-medium">Login - Business</strong>
 							</h2>
 						</div>
 					</div>
@@ -40,12 +40,8 @@
 									<input type="password" class="form-control" placeholder="Password">
 								</div>
 								<div class="pt-4 mb-3">
-									<a href="connection.html" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">sign in</a>
+									<a href="connection.html" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</a>
 								</div>
-								<p><a href="#" style="font-size: 80%;">Forgot Password?</a></p>
-								<hr style="width: 70%;">
-								<p style="font-size: 65%;">Don't you have an account? </p>
-								<a href="register_Group.php" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Register</a>
 							</form>
 						</div>
 					</div>

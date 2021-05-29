@@ -24,13 +24,13 @@
 	</header>
 	<div class="row" id="div1st">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-4" >
-				<div class="py-2" style="margin-left: 10%;">
+				<div class="py-2" >
 					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
 				</div>
-				<div class="py-2" style="margin-left: 5%;">
+				<div class="py-2">
 					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
 				</div>
-				<div class="py-2" style="margin-left: 10%;">
+				<div class="py-2">
 					<img src="Picture3.png" class="tick-img" ><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
 				</div>
 		</div>

@@ -36,38 +36,38 @@
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control" placeholder="Group Name*">
+									<input type="text" class="form-control border border-danger" placeholder="Group Name">
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control" placeholder="Contact Person*">
+									<input type="text" class="form-control border border-danger" placeholder="Contact Person">
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-4 mb-lg-6">
-										<input type="text" class="form-control" placeholder="Telephone*">
+										<input type="text" class="form-control border border-danger" placeholder="Telephone">
 									</div>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" class="form-control" placeholder="Email(Username)">
+									<input type="email" class="form-control border border-danger" placeholder="Email(Username)">
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control" placeholder="Address*">
+									<input type="text" class="form-control border border-danger" placeholder="Address">
 								</div>
 								<div class="d-flex flex-row form-group mb-4 mb-lg-6">
-									<input type="text" class=" form-control" placeholder="Post Code*" style="width: 65%;">
-									<input type="text" class=" form-control" placeholder="City*" style="margin-left:2.95%">
+									<input type="text" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;">
+									<input type="text" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%">
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" class="form-control" placeholder="Password*">
+									<input type="password" class="form-control border border-danger" placeholder="Password">
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" class="form-control" placeholder="Confirm Password*">
+									<input type="password" class="form-control border border-danger" placeholder="Confirm Password">
 								</div>
 								<div class="form-check d-flex flex-row">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							    <input type="checkbox" class="form-check-input border border-danger" id="exampleCheck1">
 							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%">Check me out</label>
 							  </div>
 								<div class="pt-4 mb-5">
-									<a href="more-info.html" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">sign up</a>
+									<a href="more-info.html" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</a>
 								</div>
 							</form>
 						</div>
@@ -79,7 +79,6 @@
 <?php
 require_once("./footer.php");
 ?>
-<script src="./js/index.js"></script>
 
 </body>
 </html>

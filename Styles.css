@@ -61,6 +61,7 @@ section{
 
 .tick-img{
   width: 60px;
+  margin-left: 10%;
   }
 
 @media (max-width: 1024px){
@@ -70,6 +71,11 @@ section{
   }
 }
 
+@media (max-width: 376px){  
+  .tick-img{
+    margin-left: 10%;
+  }
+  }
 @media (max-width: 767px){
   .C {
     width: 100%;
@@ -80,12 +86,11 @@ section{
   
 .tick-img{
   width: 30px;
-  }
+  margin-left: 5%;
+ }
 }
 .imagesStyle{
   object-fit:cover !important;
   height: 100% !important; 
 }
 
-
- 
