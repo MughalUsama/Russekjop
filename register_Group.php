@@ -17,37 +17,9 @@
   </head>
 <body>
 	<header>
-		<nav id="header-nav" class="navbar navbar-default navbar-expand-sm bg-light" style="margin-bottom: 0px; height: 25%;">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
-	           <ul id="nav-list" class="nav navbar-nav navbar-right">
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Comapny (Login)</a>
-	            </li>
-	          </ul>
-	        </div >
-					<div class="navbar-header col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-left: 0%;">
-						<a href="index.php" class="pull-left " style="float: left; clear: right;">
-							<img src="Picture1.png" height="40%" width="40%">
-							<br>
-							<br>
-						</a>
-					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	           <ul id="nav-list" class="nav navbar-nav navbar-right">
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Register Group<br></a>
-	            </li>
-	            <li>
-	              <a href="#" style="float: right;clear: left; position: relative;font-weight: bold;font-size: 1.7vw;color: black;">Login
-	              	<br></a>
-	            </li>
-	          </ul>
-	        </div>
-	      </div>  
-			</div>
-		</nav>
+		<?php
+		 require_once("./header.php")
+		 ?>
 	</header>
 	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
 				<div class="container">
