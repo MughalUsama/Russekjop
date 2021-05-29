@@ -57,7 +57,7 @@
 				  </select>
 				</div>
 				<div style="margin-top: 3%;margin-left: 15%;margin-bottom: 12%;">
-					<button style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
+					<button class="py-1" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
 				</div>
 		</div>
 	</div>
