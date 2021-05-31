@@ -34,18 +34,18 @@
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control" placeholder="Email (Username)" required>
+									<input type="text" class="form-control" name="userEmail" id="userEmail" placeholder="Email (Username)" required>
 								</div>
 								<div class="form-group mb-2 mb-lg-6">
-									<input type="password" class="form-control" placeholder="Password" required>
+									<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Password" required>
 								</div>
 								<div class="pt-4 mb-3">
-									<button type="submit" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
+									<button type="submit" name="userLoginBtn" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
 								</div>
 								<p><a href="#" style="font-size: 65%;">Forgot Password?</a></p>
 								<hr style="width: 70%;">
 								<p style="font-size: 65%;">Don't you have an account? </p>
-								<a href="register_Group.php" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Register</a>
+								<a href="register_Group.php" name="userRegister" id="userRegister" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Register</a>
 							</form>
 						</div>
 					</div>

@@ -36,38 +36,38 @@
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center" method="POST" action="#">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control border border-danger" placeholder="Group Name" required>
+									<input type="text" name="userName" id="userName" class="form-control border border-danger" placeholder="Group Name" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control border border-danger" placeholder="Contact Person" required>
+									<input type="text" name="userContactPerson" id="userContactPerson" class="form-control border border-danger" placeholder="Contact Person" required>
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-4 mb-lg-6">
-										<input type="text" class="form-control border border-danger" placeholder="Telephone" required>
+										<input type="text" name="userTelephone" id="userTelephone" class="form-control border border-danger" placeholder="Telephone" required>
 									</div>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" class="form-control border border-danger" placeholder="Email(Username)" required>
+									<input type="email" name="userEmail" id="userEmail" class="form-control border border-danger" placeholder="Email(Username)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control border border-danger" placeholder="Address" required>
+									<input type="text" name="userAddress" id="userAddress" class="form-control border border-danger" placeholder="Address" required>
 								</div>
 								<div class="d-flex flex-row form-group mb-4 mb-lg-6">
-									<input type="text" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;"  required>
-									<input type="text" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
+									<input type="text" name="userPostCode" id="userPostCode" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;"  required>
+									<input type="text" name="userCity" id="userCity" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" class="form-control border border-danger" placeholder="Password" required>
+									<input type="password" name="userPassword" id="userPassword" class="form-control border border-danger" placeholder="Password" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" class="form-control border border-danger" placeholder="Confirm Password" required>
+									<input type="password" name="userConfirmPassword" id="userConfirmPassword" class="form-control border border-danger" placeholder="Confirm Password" required>
 								</div>
 								<div class="form-check d-flex flex-row">
-							    <input type="checkbox" class="form-check-input border border-danger" id="ageCheck">
-							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%">I confirm that I am over 18 years old</label>
+							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" id="ageCheck">
+							    <label class="form-check-label" for="exampleCheck1" style="font-size:55%;margin-top:1%">I confirm that I am over 18 years old</label>
 							  </div>
 								<div class="pt-4 mb-5">
-									<button type="submit" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>
+									<button type="submit" name="userSignUpBtn" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>
 								</div>
 							</form>
 						</div>

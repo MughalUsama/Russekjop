@@ -34,13 +34,13 @@
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" class="form-control" placeholder="Email (Username)" required>
+									<input type="text" name="companyEmail" id="companyEmail" class="form-control" placeholder="Email (Username)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" class="form-control" placeholder="Password" required>
+									<input type="password" name="companyPassword" id="companyPassword" class="form-control" placeholder="Password" required>
 								</div>
 								<div class="pt-4 mb-3">
-									<button type="submit" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
+									<button type="submit" name="companyLoginBtn" id="companyLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
 								</div>
 							</form>
 						</div>
