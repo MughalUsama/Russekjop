@@ -25,13 +25,13 @@
 	<div class="row" id="div1st">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-4" >
 				<div class="py-2" >
-					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
+					<img src="./img/Picturec.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
 				</div>
 				<div class="py-2">
-					<img src="Picture3.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
+					<img src="./img/Picturec.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
 				</div>
 				<div class="py-2">
-					<img src="Picture3.png" class="tick-img" ><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
+					<img src="./img/Picturec.png" class="tick-img" ><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
 				</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding" >
@@ -67,7 +67,7 @@
 	<div class="row">
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
-  				<img class="imagesStyle" src="Picture4.png" width="30%" height="75%" style="margin:auto;display: block;">
+  				<img class="imagesStyle" src="Picture./img/Pictured.png4.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Fill out the form</p></section>
   				<p class="text-center" style="padding-left: 10%;">Save time by simply filling out the form. We obtain offers from several providers based on your needs.</p>
   			</div>
@@ -75,7 +75,7 @@
 
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
-  				<img class="imagesStyle" src="Picture5.png" width="30%" height="75%" style="margin:auto;display: block;">
+  				<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Receive offers</p></section>
   				<p class="text-center" style="padding-left: 10%;">Receive offers from several different suppliers and see which offer suits you best.</p>
   			</div>
@@ -86,7 +86,7 @@
 	<!-- Contains Icon-->
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
-  				<img class="imagesStyle" src="Picture6.png" width="30%" height="75%" style="margin:auto;display: block;">
+  				<img class="imagesStyle" src="./img/Picturef.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Choose offer</p></section>
   				<p class="text-center" style="padding-left: 10%;">Choose the best offer based on your needs.</p>
   			</div>
