@@ -1,0 +1,107 @@
+
+#part-container{
+    font-family: Georgia, serif;
+    margin-bottom: 0%;
+    box-shadow: 0 0 3pt 2pt #44D9E6;
+
+}
+a{
+  clear: none !important;
+}
+.card-header{
+    font-family: Georgia, serif;
+    background-color:white;
+}
+.bg-colorx{
+          background: linear-gradient(90deg,#0062e6,#33aeff);
+}
+
+#partner-img{
+    background-image: url('../img/about_us.jpeg');
+    background-blend-mode: darken;
+    background-size: contain;
+    background-repeat: no-repeat,no-repeat;
+    width: 100%;
+}
+@media only screen and (max-width: 766px){
+
+    #part-container{
+        margin-left: 5% !important;
+        background: linear-gradient(90deg,#0062e6,#33aeff);
+        margin-bottom: 1.5%;
+    }
+    #outline-term{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+
+    }
+    #center-page{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    p{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        color: white;
+        text-align: justify;
+        font-size: 110%; 
+    }
+    h3{
+        font-size: 150% !important;
+        color: white;
+    }
+}
+
+#part-container{
+    font-family: Georgia, serif;
+    margin-bottom: 0%;
+    box-shadow: 0 0 3pt 2pt #44D9E6;
+
+}
+a{
+  clear: none !important;
+}
+.card-header{
+    font-family: Georgia, serif;
+    background-color:white;
+}
+.bg-colorx{
+          background: linear-gradient(90deg,#0062e6,#33aeff);
+}
+
+#partner-img{
+    background-image: url('../img/about_us.jpeg');
+    background-blend-mode: darken;
+    background-size: contain;
+    background-repeat: no-repeat,no-repeat;
+    width: 100%;
+    margin-top: 11% !important;
+}
+@media only screen and (max-width: 766px){
+
+    #part-container{
+        margin-left: 5% !important;
+        background: linear-gradient(90deg,#0062e6,#33aeff);
+        margin-bottom: 1.5%;
+    }
+    #outline-term{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+
+    }
+    #center-page{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    p{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        color: white;
+        text-align: justify;
+        font-size: 110%; 
+    }
+    h3{
+        font-size: 150% !important;
+        color: white;
+    }
+}
