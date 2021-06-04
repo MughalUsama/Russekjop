@@ -29,7 +29,7 @@
 								<strong class="font-weight-medium">Welcome to </strong>
 								<strong class="text-danger">Russekjøp</strong>
 							</h2>
-							<span class="title">Business registration (done from admin page)</span>
+							<span class="title">Business registration</span>
 						</div>
 					</div>
 					<div class="row justify-content-center">
