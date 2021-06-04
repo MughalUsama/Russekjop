@@ -67,7 +67,7 @@
 	<div class="row">
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
-  				<img class="imagesStyle" src="Picture./img/Pictured.png4.png" width="30%" height="75%" style="margin:auto;display: block;">
+  				<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Fill out the form</p></section>
   				<p class="text-center" style="padding-left: 10%;">Save time by simply filling out the form. We obtain offers from several providers based on your needs.</p>
   			</div>

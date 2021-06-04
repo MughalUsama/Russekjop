@@ -37,7 +37,7 @@
 									<input type="text" class="form-control" name="userEmail" id="userEmail" placeholder="Email (Username)" required>
 								</div>
 								<div class="form-group mb-2 mb-lg-6">
-									<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Password" required>
+									<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Password" minlength="8" required>
 								</div>
 								<div class="pt-4 mb-3">
 									<button type="submit" name="userLoginBtn" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>

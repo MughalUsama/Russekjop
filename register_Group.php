@@ -57,14 +57,14 @@
 									<input type="text" name="userCity" id="userCity" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="userPassword" id="userPassword" class="form-control border border-danger" placeholder="Password" required>
+									<input type="password" name="userPassword" id="userPassword" class="form-control border border-danger" placeholder="Password" minlength="8" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="userConfirmPassword" id="userConfirmPassword" class="form-control border border-danger" placeholder="Confirm Password" required>
+									<input type="password" name="userConfirmPassword" id="userConfirmPassword" class="form-control border border-danger" placeholder="Confirm Password" minlength="8" required>
 								</div>
 								<div class="form-check d-flex flex-row">
-							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" id="ageCheck">
-							    <label class="form-check-label" for="exampleCheck1" style="font-size:55%;margin-top:1%">I confirm that I am over 18 years old</label>
+							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" id="ageCheck" required>
+							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%;">I confirm that I am over 18 years old *</label>
 							  </div>
 								<div class="pt-4 mb-5">
 									<button type="submit" name="userSignUpBtn" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>

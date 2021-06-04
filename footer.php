@@ -47,7 +47,7 @@
             <a href="./contactus.php">Contact</a>
           </li>
           <li>
-            <a href="./aboutus.php">About Us</a>
+            <a href="./about_us.php">About Us</a>
           </li>
           <li>
             <a href="./blog.php">News</a>
