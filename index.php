@@ -39,8 +39,8 @@
 					<h3 style="font-weight: bolder;color: white;font-size: 2.7vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
 				</div>
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-				  <label style="color: white;" for="Category">Choose You Category:</label>
 				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
+				  	<option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
 				    <option>1</option>
 				    <option>2</option>
 				    <option>3</option>
@@ -48,8 +48,8 @@
 				  </select>
 				</div>
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-					<label style="color: white;" for="Product">Choose product/service:</label>
 				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product">
+				  	<option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
 				    <option>1</option>
 				    <option>2</option>
 				    <option>3</option>
