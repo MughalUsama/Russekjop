@@ -26,7 +26,7 @@
             Email:     <p class="d-inline ml-2 mycolor">post@russekjop.no</p>
           </li>
           <li class="pb-1">
-            Web:       <a href="www.sportsreg.no" class="d-inline ml-2 mycolor">www.russekjøp.no</a>
+            Web:       <a href="https://www.sportsreg.no" class="d-inline ml-2 mycolor">www.russekjøp.no</a>
           </li>
           
         </ul>
@@ -44,7 +44,7 @@
 
         <ul class="mb-4 list-unstyled">
         <li>
-            <a href="./contactus.php">Contact</a>
+            <a href="./contact_us.php">Contact</a>
           </li>
           <li>
             <a href="./about_us.php">About Us</a>
@@ -69,7 +69,7 @@
 
         <ul class="mb-4 list-unstyled">
         <li>
-            <a href="./howitworks.php">How it works</a>
+            <a href="./how_it_works.php">How it works</a>
           </li>
           <li>
             <a href="./FAQ.php">FAQs</a>

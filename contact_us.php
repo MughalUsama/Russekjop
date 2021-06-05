@@ -46,7 +46,7 @@
 										<input type="text" name="Telephone" id="Telephone" class="form-control border border-danger" placeholder="Telephone (optional)">
 									</div>
 								</div>
-								<div class="form-group mb-4 mb-lg-6">
+								<div class="form-group mb-1 mb-lg-6">
 									<textarea name="paragraph_text" id="paragraph_text" cols="50" rows="10" class="form-control border border-danger" placeholder="Your Message" required></textarea>
 								</div>
 								<div class="pt-4 mb-5">
