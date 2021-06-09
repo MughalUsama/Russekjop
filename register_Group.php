@@ -63,7 +63,7 @@
 									<input type="password" name="userConfirmPassword" id="userConfirmPassword" class="form-control border border-danger" placeholder="Confirm Password" minlength="8" required>
 								</div>
 								<div class="form-check d-flex flex-row">
-							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" id="ageCheck" required>
+							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" required>
 							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%;">I confirm that I am over 18 years old *</label>
 							  </div>
 								<div class="pt-4 mb-5">
