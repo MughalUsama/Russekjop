@@ -22,7 +22,7 @@
 		 require_once("./header.php")
 		 ?>
 	</header>
-	<div class="row" id="div1st">
+	<div class="row py-5" id="div1st">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-4" >
 				<div class="py-2" >
 					<img src="./img/Picturec.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
@@ -56,7 +56,7 @@
 				    <option>4</option>
 				  </select>
 				</div>
-				<div style="margin-top: 3%;margin-left: 15%;margin-bottom: 12%;">
+				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
 					<button class="py-1" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
 				</div>
 		</div>

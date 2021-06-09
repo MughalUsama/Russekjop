@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>SportsReg</title>
+    <title>Russekjob</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="./img/color-Russekjob-logo-ai.png"/>
     <!--bootstrap   -->
