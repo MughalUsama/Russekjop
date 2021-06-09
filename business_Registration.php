@@ -8,12 +8,16 @@
 	<link rel="icon" href="./img/color-Russekjob-logo-ai.png"/>
     <!--bootstrap   -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--JQUERY AND popper   -->
+	<!--JQUERY AND popper   -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!--JQUERY AND bootstrap.js   -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/Styles.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
+	<link rel="stylesheet" href="./vanillaSelectBox/vanillaSelectBox.css">
+	<script src="./vanillaSelectBox/vanillaSelectBox.js"></script>
+	<link rel="stylesheet" href="./css/Styles.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/regbusiness.css'>
+
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>
 <body>
 	<header>
@@ -25,10 +29,6 @@
 				<div class="container">
 					<div class="row mb-6 mb-lg-10 mb-xl-14">
 						<div class="col-12 text-center mb-4">
-							<h2 class="heading mb-3" >
-								<strong class="font-weight-medium">Welcome to </strong>
-								<strong class="text-danger">Russekjøp</strong>
-							</h2>
 							<span class="title">Business registration</span>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 									</div>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" name="businessEmail" id="businessEmail" class="form-control border border-danger" placeholder="Email 1(business contact email)" required>
+									<input type="email" name="businessEmail" id="businessEmail" class="form-control border border-danger" placeholder="Business contact email" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
 									<input type="email" name="businessWebsite" id="businessWebsite" class="form-control border border-danger" placeholder="Website" required>
@@ -58,38 +58,37 @@
 								<div class="form-group mb-4 mb-lg-6">
 									<input type="text" name="contactPerson" id="contactPerson" class="form-control border border-danger" placeholder="Contact Person" required>
 								</div>
-								<div class="form-group mb-4 mb-lg-6">
+								<div class="form-group mb-2 mb-lg-6">
 									<input type="email" name="contactPersonEmail" id="contactPersonEmail" class="form-control border border-danger" placeholder="Email Contact Person" required>
 								</div>
-								<div class="form-group mb-4 mb-lg-6">
-								  <select type="text" name="Category" placeholder="Choose You Category" class="form-control border border-danger" id="Category">
-								  	<option value="" selected disabled>Category</option>
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
-								  </select>
+								<div class="form-group mb-2 mb-lg-6">
+									<select id="category" name="categories[]" multiple>
+									
+									</select>
 								</div>
-								<div class="form-group mb-4 mb-lg-6">
-								  <select type="text" name="Category" placeholder=" Choose You Category " class="form-control border border-danger" id="Product">
-								  	<option value="" selected disabled>Product / Service</option>
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
-								  </select>
+								<div class="form-group mb-2 mb-lg-6">
+									<select id="products" name="products[]" multiple>
+									
+									</select>
 								</div>
-								<div class="form-group mb-4 mb-lg-6">
-								  <select type="text" name="Category" placeholder=" Choose You Category " class="form-control border border-danger" id="Product">
-								  	<option value="" selected disabled>Places to Sell</option>
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
-								  </select>
+								<div class="form-group mb-2 mb-lg-6">
+								<select id="counties" name="counties[]" multiple>
+									<option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>
+									<option value="Oslo">Oslo</option>
+									<option value="Rogaland">Rogaland</option>
+									<option value="Møre og Romsdal">Møre og Romsdal</option>
+									<option value="Nordland">Nordland</option>
+									<option value="Viken">Viken</option>
+									<option value="Innlandet">Innlandet</option>
+									<option value="Vestfold og Telemark">Vestfold og Telemark</option>
+									<option value="Agder">Agder</option>
+									<option value="Vestland">Vestland</option>
+									<option value="Trøndelag">Trøndelag</option>
+									<option value="Troms og Finnmark">Troms og Finnmark</option>
+								</select>
 								</div>
 								<div class="pt-4 mb-5">
-									<button type="submit" name="userSignUpBtn" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;margin-top: 6%;">Register</button>
+									<button type="submit" name="userSignUpBtn" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">Register</button>
 								</div>
 							</form>
 						</div>
@@ -101,6 +100,6 @@
 <?php
 require_once("./footer.php");
 ?>
-
+<script src="./js/regbusiness.js"></script>
 </body>
 </html>
