@@ -27,8 +27,8 @@
 <!-- Bootstrap row -->
 <header>
 			<?php
-			 require_once("./header.php")
-			 ?>
+			 require_once("./header_user.php")
+			?>
 </header>
 <div class="row" id="body-row">
     <!-- Sidebar -->
