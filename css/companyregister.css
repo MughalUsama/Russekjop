@@ -1,0 +1,18 @@
+#search-div{
+    background-color: gainsboro;
+border-radius: 5px;
+}
+.top-img{
+    background-image: url("../img/Pictureb.png");
+}
+section{
+    font-family: Georgia, serif;
+
+}
+
+@media only screen and (max-width: 600px){
+   #search-div{
+        padding: 0%;
+    }
+
+}
