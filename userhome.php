@@ -57,10 +57,10 @@
                     <span class="menu-collapsed">Profile</span>
                 </div>
             </a>
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers <span class="badge badge-pill badge-primary ml-2">*</span></span>                </div>
+                    <span class="menu-collapsed">My Offers <span class="badge badge-pill badge-primary ml-2"><i class="fa fa-envelope"></i></span></span>                </div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -94,22 +94,22 @@
     <!-- MAIN -->
     <div class="col">
     <div class="row py-5" id="div1st">
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-5" >
+		<div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center py-5" >
 				<div class="py-4 mt-3" >
-					<img src="./img/Picturec.png" class="tick-img"><h5 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h5>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h6>
 				</div>
 				<div class="py-3">
-					<img src="./img/Picturec.png" class="tick-img"><h5 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h5>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h6>
 				</div>
 				<div class="py-4 mb-1">
-					<img src="./img/Picturec.png" class="tick-img" ><h5 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h5>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h6>
 				</div>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding" >
+		<div class="col-md-6 col-sm-12 nopadding" >
 				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-					<h3 style="font-weight: bolder;color: white;font-size: 2.7vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
+					<h3 class="mt-2" style="font-weight: bolder;color: white;font-size: 2.3vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
 				</div>
-                <form method="POST" action=".">
+                <form method="POST" action="./request.php">
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
                     <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
                         <option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
@@ -128,10 +128,10 @@
                         <option>4</option>
                     </select>
                     </div>
-                </form>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
 					<button class="py-1" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
 				</div>
+                </form>
 		</div>
 	</div>
 

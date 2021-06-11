@@ -21,20 +21,49 @@
 		 require_once("./header.php")
 		 ?>
 	</header>
-	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
-				<div class="container">
-					<div class="row mb-6 mb-lg-10 mb-xl-14">
+	<section class="container-fluid mx-0 px-0" style="margin-top:1.5%">
+				<div class="container-fluid mx-0 px-0">
+					<div class="row mb-6 col-12">
 						<div class="col-12 text-center mb-4">
-							<h2 class="heading mb-3" >
+							<h2 class="heading mb-2 mt-3" >
 								<strong class="font-weight-medium">Welcome to </strong>
 								<strong class="text-danger">Russekjøp</strong>
 							</h2>
-							<span class="title">How It Works</span>
 						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
-							
+					<div class="row justify-content-center col-12 px-0 mx-0 pt-4 pb-4" style="background-image: url('./img/pictureb.png');">
+					<h1 class="title mb-3">How It Works</h1>
+
+						<div class="col-12 pt-3">
+							<!-- How Russekjøp works div -->
+
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="divs">
+										<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
+										<section><p style="font-size: 2rem;font-weight: bold">Fill out the form</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Save time by simply filling out the form. We obtain offers from several providers based on your needs.</p>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="divs">
+										<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
+										<section><p style="font-size:  2rem;font-weight: bold">Receive offers</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Receive offers from several different suppliers and see which offer suits you best.</p>
+									</div>
+								</div>
+							<!-- Choose products div -->
+							<!-- Contains Icon-->
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="divs">
+										<img class="imagesStyle" src="./img/Picturef.png" width="30%" height="75%" style="margin:auto;display: block;">
+										<section><p style="font-size:  2rem;font-weight: bold">Choose offer</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Choose the best offer based on your needs.</p>
+									</div>
+								</div>
+						</div>
+	
 						</div>
 					</div>
 				</div>
