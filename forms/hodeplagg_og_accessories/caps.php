@@ -5,16 +5,16 @@
                 <h2 class="heading mb-3" >
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
-                <span class="title">Clothes and shoes – Sweater</span>
+                <span class="title">Hodeplagg og accessories – Caps</span>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-                <form class="Sweater-form text-center" method="POST" action="#">
+                <form class="Caps-form text-center" method="POST" action="#">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="text" name="numberOfSweater" id="numberOfSweater" class=" form-control border border-danger" placeholder="Number of sweaters" style="width: 33%;"  required>
-                        <input type="text" name="colorOfSweater" id="colorOfSweater" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
-                        <select type="text" name="sizeOfSweater" class="form-control border border-danger" id="sizeOfSweater" style="margin-left:2.95%;width:33%">
+                        <input type="text" name="numberOfCaps" id="numberOfCaps" class=" form-control border border-danger" placeholder="Number of caps" style="width: 33%;"  required>
+                        <input type="text" name="colorOfCaps" id="colorOfCaps" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
+                        <select type="text" name="sizeOfCaps" class="form-control border border-danger" id="sizeOfCaps" style="margin-left:2.95%;width:33%">
                             <option value="" selected disabled>Size</option>
                             <option>Small=3</option>
                             <option>Medium=4</option>
@@ -24,13 +24,13 @@
                     </div>
                     <div class="form-check d-flex flex-row" style="margin-bottom: 3%;margin-top: -2%;">
                         <label class="form-check-label" for="exampleCheck1" style="font-size:95%;">Print </label>
-                        <input type="checkbox" name="printSweater" id="printSweater" class="form-check-input border border-danger" required>
+                        <input type="checkbox" name="printCaps" id="printCaps" class="form-check-input border border-danger" required>
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="paragraph_text_Sweater" id="paragraph_text_Sweater" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
+                        <textarea name="paragraph_text_Caps" id="paragraph_text_Caps" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
                     </div>
                     <div class="pt-4 mb-5">
-                        <button type="submit" name="sendSweater" id="sendSweater" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
+                        <button type="submit" name="sendCaps" id="sendCaps" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
                     </div>
                 </form>
             </div>
