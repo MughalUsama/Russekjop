@@ -32,6 +32,7 @@ session_start();
 <header>
 			<?php
              ob_start();
+             require_once("./db.php");
 			 require_once("./header_user.php")
 			?>
 </header>
@@ -97,7 +98,14 @@ session_start();
     <!-- MAIN -->
     <div class="col p-4">
         <?php
-        require_once("./forms/Russebuss_bil/bussjafor.php");
+        $query="Select * from products where product_id = \"{$_REQUEST["Product"]}\";";
+        $pdata = db::getInstance()->get_result($query);
+        while($row = mysqli_fetch_assoc($pdata))
+        {
+            $_SESSION["formname"] = $row["form_name"];
+        }
+        require_once("".$_SESSION["formname"]);
+        
         ?>
     </div><!-- Main Col END -->
 </div><!-- body-row END -->

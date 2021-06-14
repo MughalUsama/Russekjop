@@ -32,11 +32,15 @@ session_start();
 <!-- Bootstrap NavBar -->
 <!-- Bootstrap row -->
 <header>
-			<?php
-             ob_start();
-             require_once("./db.php");
-			 require_once("./header_user.php")
-			?>
+        <?php
+		 ob_start();
+		 require_once("./db.php");
+		 require_once("./header_user.php");
+
+		 $query="Select * from category;";
+		 $category_data = db::getInstance()->get_result($query);
+		 
+		 ?>
 </header>
 <div class="row" id="body-row">
     <!-- Sidebar -->
@@ -75,13 +79,13 @@ session_start();
             <!-- /END Separator -->
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
+                    <span class="fa fa-info-circle fa-fw mr-3"></span>
                     <span class="menu-collapsed">About Us</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="fa fa-sign-out fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>
                 </div>
             </a>
@@ -119,14 +123,16 @@ session_start();
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
                     <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
                         <option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                        <?php
+                            while($row = mysqli_fetch_assoc($category_data))
+                            {
+                                echo("<option value = \"{$row['category_id']}\">{$row['category_name']}</option>");
+                            }
+						?>
                     </select>
                     </div>
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product" required>
+                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Product" placeholder=" Choose You Category " class="form-control" id="Product" required>
                         <option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
                         <option>1</option>
                         <option>2</option>
@@ -152,12 +158,7 @@ session_start();
 		require_once("./footer.php");
 		?>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="./js/userhome.js"></script>
     <script src="./js/sidebar.js"></script>
 </body>
 </html>

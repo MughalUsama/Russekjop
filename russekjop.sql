@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 04:00 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Generation Time: Jun 14, 2021 at 05:50 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -223,40 +223,40 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `category_id`, `product_name`, `form_name`) VALUES
-(120, 23, 'Russedress', 'filepath.php'),
-(121, 23, 'Sko', 'genericform2.php'),
-(122, 23, 'Gensere/hettejakker', 'genericform2.php'),
-(123, 23, 'Jakker', 'genericform2.php'),
-(124, 23, 'T-skjorte', 'genericform2.php'),
-(125, 23, 'Singlet', 'genericform2.php'),
-(126, 25, 'Ørepropper', 'genericform2.php'),
-(127, 25, 'Caps/Bøttehatt', 'genericform2.php'),
-(128, 25, 'Russelue', 'genericform2.php'),
-(129, 25, 'Hårbånd', 'genericform2.php'),
-(130, 26, 'Strykemerker', 'genericform2.php'),
-(131, 26, 'Trykk av klær og utstyr', 'genericform2.php'),
-(132, 27, 'Russekort', 'genericform2.php'),
-(133, 28, 'DJ', 'genericform2.php'),
-(134, 28, 'Video', 'genericform2.php'),
-(135, 28, 'Russesang', 'genericform2.php'),
-(136, 29, 'Salgsdugnad', 'genericform2.php'),
-(137, 30, 'Profileringsartikler', 'genericform2.php'),
-(138, 31, 'Garasje/Oppbevaring', 'genericform2.php'),
-(139, 31, 'Bussbygging', 'genericform2.php'),
-(140, 31, 'Bussjåfør', 'genericform2.php'),
-(141, 31, 'Graffiti', 'genericform2.php'),
-(142, 31, 'Foliering', 'genericform2.php'),
-(143, 32, 'Russelogo', 'genericform2.php'),
-(144, 32, 'Design', 'genericform2.php'),
-(145, 32, 'Banner', 'genericform2.php'),
-(146, 32, 'Buss-/bilfoliering', 'genericform2.php'),
-(147, 32, 'Graffiti', 'genericform2.php'),
-(148, 33, 'Banners', 'genericform2.php'),
-(149, 33, 'Klistremerker og stickers', 'genericform2.php'),
-(150, 34, 'Aggregat', 'genericform2.php'),
-(151, 34, 'Lys', 'genericform2.php'),
-(152, 34, 'Musikkanlegg', 'genericform2.php'),
-(153, 34, 'Høyttalere og forsterkere', 'genericform2.php');
+(120, 23, 'Russedress', './forms/clothes_and_shoes/russedress.php'),
+(121, 23, 'Sko', './forms/clothes_and_shoes/shoes.php'),
+(122, 23, 'Gensere/hettejakker', './forms/clothes_and_shoes/sweater.php'),
+(123, 23, 'Jakker', './forms/clothes_and_shoes/jacket.php'),
+(124, 23, 'T-skjorte', './forms/clothes_and_shoes/t_shirt.php'),
+(125, 23, 'Singlet', './forms/clothes_and_shoes/singlet.php'),
+(126, 25, 'Ørepropper', './forms/hodeplagg_og/Orepropper.php'),
+(127, 25, 'Caps/Bøttehatt', './forms/hodeplagg_og/caps.php'),
+(128, 25, 'Russelue', './forms/hodeplagg_og/Russelue.php'),
+(129, 25, 'Hårbånd', './forms/hodeplagg_og/Harband.php'),
+(130, 26, 'Strykemerker', './forms/Trykkeri/strykemerker.php'),
+(131, 26, 'Trykk av klær og utstyr', './forms/Trykkeri/trykk_pa_klaer.php'),
+(132, 27, 'Russekort', './forms/russekort/Russekort.php'),
+(133, 28, 'DJ', './forms/musikk_og _video/DJ.php'),
+(134, 28, 'Video', './forms/musikk_og _video/video.php'),
+(135, 28, 'Russesang', './forms/musikk_og _video/russesang.php'),
+(136, 29, 'Salgsdugnad', './forms/Dugnad/Salgsdugnad.php'),
+(137, 30, 'Profileringsartikler', './forms/profilering/profileringsart.php'),
+(138, 31, 'Garasje/Oppbevaring', './forms/Russebuss_bil/garasje_oppbev.php'),
+(139, 31, 'Bussbygging', './forms/Russebuss_bil/bussbygging.php'),
+(140, 31, 'Bussjåfør', './forms/Russebuss_bil/bussjafor.php'),
+(141, 31, 'Graffiti', './forms/Russebuss_bil/graffiti.php'),
+(142, 31, 'Foliering', './forms/Russebuss_bil/foliering.php'),
+(143, 32, 'Russelogo', './forms/Grafisk/logo.php'),
+(144, 32, 'Design', './forms/Grafisk/design.php'),
+(145, 32, 'Banner', './forms/Grafisk/Banner.php'),
+(146, 32, 'Buss-/bilfoliering', './forms/Grafisk/Buss_bilfoliering.php'),
+(147, 32, 'Graffiti', './forms/Grafisk/graffiti.php'),
+(148, 33, 'Banners', './forms/markedsforing/Banners.php'),
+(149, 33, 'Klistremerker og stickers', './forms/markedsforing/Klistremerker.php'),
+(150, 34, 'Aggregat', './forms/lyd_og_lys/Aggregat.php'),
+(151, 34, 'Lys', './forms/lyd_og_lys/Lys.php'),
+(152, 34, 'Musikkanlegg', './forms/lyd_og_lys/musikkanlegg.php'),
+(153, 34, 'Høyttalere og forsterkere', './forms/lyd_og_lys/hoyttalere_og.php');
 
 --
 -- Indexes for dumped tables

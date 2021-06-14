@@ -24,7 +24,12 @@ session_start();
 	<header>
 		<?php
 		 ob_start();
-		 require_once("./header.php")
+		 require_once("./db.php");
+		 require_once("./header.php");
+
+		 $query="Select * from category;";
+		 $category_data = db::getInstance()->get_result($query);
+		 
 		 ?>
 	</header>
 	<div class="row py-5" id="div1st">
@@ -47,10 +52,12 @@ session_start();
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
 				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
 				  	<option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
-				    <option>1</option>
-				    <option>2</option>
-				    <option>3</option>
-				    <option>4</option>
+					  <?php
+                            while($row = mysqli_fetch_assoc($category_data))
+                            {
+                                echo("<option value = \"{$row['category_id']}\">{$row['category_name']}</option>");
+                            }
+						?>
 				  </select>
 				</div>
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">

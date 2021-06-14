@@ -1,4 +1,10 @@
-
+select{
+  color: wheat !important;
+}
+select option { color: black; }
+select option:first-child{
+  color: wheat;
+}
 body{
 	overflow: scroll;
 	overflow-x: hidden;
