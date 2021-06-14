@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -24,6 +27,7 @@
 
 <header>
 		<?php
+         ob_start();
 		 require_once("./header.php")
 		 ?>
 </header>

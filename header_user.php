@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ml-auto text-center">
                 <a href="./" class="nav-item nav-link myfontTimes active font-weight-bold text-dark">Homepage</a>
-                <a href="./login.php" id="logout_btn" class="logout_btn nav-item nav-link myfontTimes font-weight-bold text-dark">Logout</a>
+                <a href="./logout.php" id="logout_btn" class="logout_btn nav-item nav-link myfontTimes font-weight-bold text-dark">Logout</a>
             </div>
         </div>
     </nav>
