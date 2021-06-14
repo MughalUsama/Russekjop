@@ -3,6 +3,9 @@ body{
 	overflow: scroll;
 	overflow-x: hidden;
 }
+section{
+  font-family: Georgia, serif;
+}
 .cimage:hover{
  transform: scale(0.99);
  cursor: pointer;
@@ -24,6 +27,8 @@ body{
 	background-position: center;
 	background-size: cover;
   box-sizing: border-box;
+  font-family: Georgia, serif;
+
 }
 ::placeholder{
 	color: white;

@@ -7,16 +7,19 @@
     <title>Russekjøp</title>
 	<link rel="icon" href="./img/color-Russekjob-logo-ai.png"/>
     <!--bootstrap   -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-   
     <!--JQUERY AND popper   -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!--JQUERY AND bootstrap.js   -->
+    <!--JQUERY AND bootstrap.js   -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>	
+    <!--JQUERY AND bootstrap.js   -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/Styles.css">
+
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>
 <body>
@@ -90,10 +93,24 @@
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
     <!-- MAIN -->
-    <div class="col p-4">
-        <?php
-        require_once("./forms/Russebuss_bil/bussjafor.php");
-        ?>
+    <div class="col">
+        <nav class="mt-2" aria-label="...">
+            <ul class="pagination pagination-md  justify-content-end">
+                <li class="page-item active" aria-current="page">
+                <span class="page-link bg-danger border-danger text-white">Offers</span>
+                </li>
+                <li class="page-item"><a class="page-link text-danger border-danger" href="#">All Requests</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" href="#">Accepted Offers</a></li>
+            </ul>
+        </nav>
+        
+        <div class="row d-flex col-12 mb-5 pb-2 justify-content-start" id="offers">
+            
+            <!-- Card start-->
+
+
+        </div>
+
     </div><!-- Main Col END -->
 </div><!-- body-row END -->
     <!-- Page Content -->

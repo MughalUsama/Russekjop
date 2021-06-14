@@ -94,7 +94,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a href="#"> Russekjøp</a>
+    <a href="./"> Russekjøp</a>
   </div>
   <!-- Copyright -->
 

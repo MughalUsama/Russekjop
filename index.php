@@ -38,6 +38,7 @@
 				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
 					<h3 style="font-weight: bolder;color: white;font-size: 2.7vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
 				</div>
+				<form action="./login.php">
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
 				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
 				  	<option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
@@ -57,8 +58,9 @@
 				  </select>
 				</div>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
-					<button class="py-1" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
+					<button class="py-1" type="submit" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
 				</div>
+				</form>
 		</div>
 	</div>
 	<h1 id="menu-heading" style="text-align: center;margin-top: 5%;margin-bottom: 3%;">How Russekjøp works</h1>

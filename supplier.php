@@ -52,7 +52,7 @@
             </div>
             <!-- second paragraph-->
             <!-- Button trigger modal -->
-<a class="ml-auto mr-4" href="./contactus.php"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+<a class="ml-auto mr-4" href="./contact_us.php"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Kontakt oss
 </button></a>
         </div>

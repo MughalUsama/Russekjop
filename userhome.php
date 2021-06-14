@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/Styles.css">
+
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>
 <body>
@@ -90,10 +92,50 @@
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
     <!-- MAIN -->
-    <div class="col p-4">
-        <?php
-        require_once("./forms/Russebuss_bil/bussjafor.php");
-        ?>
+    <div class="col">
+    <div class="row py-5" id="div1st">
+		<div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center py-5" >
+				<div class="py-4 mt-3" >
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h6>
+				</div>
+				<div class="py-3">
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h6>
+				</div>
+				<div class="py-4 mb-1">
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h6>
+				</div>
+		</div>
+		<div class="col-md-6 col-sm-12 nopadding" >
+				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
+					<h3 class="mt-2" style="font-weight: bolder;color: white;font-size: 2.3vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
+				</div>
+                <form method="POST" action="./request.php">
+                    <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
+                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
+                        <option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    </div>
+                    <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
+                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product" required>
+                        <option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    </div>
+				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
+					<button class="py-1" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
+				</div>
+                </form>
+		</div>
+	</div>
+
+
     </div><!-- Main Col END -->
 </div><!-- body-row END -->
     <!-- Page Content -->
