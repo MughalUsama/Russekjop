@@ -3,7 +3,6 @@
         <div class="row mb-6 mb-lg-10 mb-xl-14">
             <div class="col-12 text-center mb-4">
                 <h2 class="heading mb-3" >
-                <strong class="font-weight-medium">Welcome to </strong>
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
                 <span class="title">Clothes and shoes – Russedress</span>
