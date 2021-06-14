@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +22,55 @@
 <body>
 	<header>
 		<?php
-		 require_once("./header.php")
+     ob_start();
+     require_once("./db.php");
+		 require_once("./header.php");
+
+     //redirect if logged in
+    if (array_key_exists('businessloggedin' ,$_SESSION)) {
+      header("location: ./businesshome.php");
+      exit;  
+    }    
+    if(array_key_exists('clubloggedin',$_SESSION)){
+      
+      // header("Location: ./userhome.php"); /* Redirect browser */
+      // /* Make sure that code below does not get executed when we redirect. */
+      // exit;
+    }
+    if (array_key_exists('adminloggedin',$_SESSION)) {
+      header("Location: ./adminhome.php"); /* Redirect browser */
+      /* Make sure that code below does not get executed when we redirect. */
+      exit;
+    }
+
+    //log in
+    $errormsg = "";
+    if (isset($_POST["login"])){
+      $email = mysqli_escape_string(db::getInstance(), $_POST["email"]);
+      $passwd = mysqli_escape_string(db::getInstance(), $_POST["passwd"]);
+      $query="Select * from clubs where email = '$email' and password = '$passwd' ;";
+      $data = db::getInstance()->get_result($query);
+      
+      if($data){
+        $_SESSION["login_time_stamp"] = time(); // login time used for expiring session
+        $_SESSION['userdata'] = mysqli_fetch_assoc($data) ;
+        $_SESSION["username"] = $_SESSION['userdata']['club_name'];
+        if($_SESSION['userdata']['isadmin']=='1'){ 
+          header("location: ./admin.php");
+          $_SESSION['adminloggedin'] = "yes";
+        }
+        else{
+          header("Location: ./userhome.php"); /* Redirect browser */
+          $_SESSION['clubloggedin'] = "yes";
+        }
+        /* Make sure that code below does not get executed when we redirect. */
+        exit;
+        }
+      else
+      { 
+        $errormsg = "d-flex";    
+      }
+    }
 		 ?>
 	</header>
 	<section class="sign-in-sec py-4" style="background-image:url('./img/Pictureb.png');padding-top: 1.5%;padding-bottom: 1.5%;">
@@ -32,15 +84,15 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-10 col-lg-8 col-xl-6">
-					<form class="login-form text-center" action="./userhome.php">
+					<form class="login-form text-center" action="<?php  echo $_SERVER['PHP_SELF'];?>" id="login-form" method="POST">
 						<div class="form-group mb-4 mb-lg-6">
-							<input type="text" class="form-control" name="userEmail" id="userEmail" placeholder="Email (Username)" required>
+							<input type="text" class="form-control" name="email" id="userEmail" placeholder="Email (Username)" required>
 						</div>
 						<div class="form-group mb-2 mb-lg-6">
-							<input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Password" minlength="8" required>
+							<input type="password" class="form-control" name="passwd" id="userPassword" placeholder="Password" minlength="8" required>
 						</div>
 						<div class="pt-4 mb-3">
-							<button type="submit" name="userLoginBtn" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
+							<button type="submit" name="login" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
 						</div>
 						<p><a href="#forgetpassmodal" data-toggle="modal" data-target="#forgetpassmodal" style="font-size: 65%;">Forgot Password?</a></p>
 						<hr style="width: 70%;">

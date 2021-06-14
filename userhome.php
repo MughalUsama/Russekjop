@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,6 +33,8 @@
 <!-- Bootstrap row -->
 <header>
 			<?php
+             ob_start();
+             require_once("./db.php");
 			 require_once("./header_user.php")
 			?>
 </header>
@@ -73,7 +79,7 @@
                     <span class="menu-collapsed">About Us</span>
                 </div>
             </a>
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>

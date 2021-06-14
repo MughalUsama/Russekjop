@@ -25,7 +25,9 @@ session_start();
 </head>
 <body>
 <?php
-require_once("./header.php");
+ ob_start();
+ require_once("./db.php");
+ require_once("./header.php");
 ?>
 
 
