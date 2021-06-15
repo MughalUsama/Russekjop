@@ -5,7 +5,7 @@
                 <h2 class="heading mb-3" >
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
-                <span class="title">Hodeplagg og accessories – Russelue</span>
+                <span class="title">Hodeplagg og accessories – Russelue</span> <!--Detail 2-->
             </div>
         </div>
         <div class="row justify-content-center">

@@ -5,7 +5,7 @@
                 <h2 class="heading mb-3" >
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
-                <span class="title">Clothes and shoes – Jacket</span>
+                <span class="title">Clothes and shoes – Jacket</span> <!--Detail 1-->
             </div>
         </div>
         <div class="row justify-content-center">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-check d-flex flex-row" style="margin-bottom: 3%;margin-top: -2%;">
                         <label class="form-check-label" for="exampleCheck1" style="font-size:95%;">Print </label>
-                        <input type="checkbox" name="printJacket" id="printJacket" class="form-check-input border border-danger" required>
+                        <input type="checkbox" name="printJacket" id="printJacket" class="form-check-input border border-danger">
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
                         <textarea name="paragraph_text_Jacket" id="paragraph_text_Jacket" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>

@@ -5,7 +5,7 @@
                 <h2 class="heading mb-3" >
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
-                <span class="title">Grafisk design – Banner</span>
+                <span class="title">Grafisk design – Banner</span> <!--Detail 5-->
             </div>
         </div>
         <div class="row justify-content-center">

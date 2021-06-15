@@ -5,7 +5,7 @@
                 <h2 class="heading mb-3" >
                 <strong class="text-danger">Russekjøp</strong>
                 </h2>
-                <span class="title">Dugnad – Salgsdugnad</span>
+                <span class="title">Dugnad – Salgsdugnad</span> <!--Detail 3-->
             </div>
         </div>
         <div class="row justify-content-center">
@@ -19,51 +19,51 @@
                     <label class="form-check-label" for="exampleCheck" style="font-size:105%%;margin-bottom: 5%;">Current products you want offers on  </label>
                     <div class="form-check d-flex row col-12" style="margin-bottom: 3%;margin-top: -2%;margin-left: 1.5%;padding-left: 0%;padding-right: 0%;">
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkToiletpaper" id="checkToiletpaper" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkToiletpaper" id="checkToiletpaper" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck1" style="font-size:100%;">Toiletpaper </label>
                         </div>
                         <div class="col-6 d-flex justify-content-start" >
-                            <input type="checkbox" name="checkPaperTowels" id="checkPaperTowels" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkPaperTowels" id="checkPaperTowels" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck2" style="font-size:100%;">Paper towels </label>
                         </div>
                     </div>
 
                     <div class="form-check d-flex row col-12" style="margin-bottom: 3%;margin-top: -2%;margin-left: 1.5% ;padding-left: 0%;padding-right: 0%;">
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkSocks" id="checkSocks" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkSocks" id="checkSocks" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck3" style="font-size:100%;">Socks </label>
                         </div>
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkLighterBriquettes" id="checkLighterBriquettes" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkLighterBriquettes" id="checkLighterBriquettes" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck4" style="font-size:100%;">Lighter briquettes </label>
                         </div>                    
                     </div>
 
                     <div class="form-check d-flex row col-12" style="margin-bottom: 3%;margin-top: -2%;margin-left: 1.5% ;padding-left: 0%;padding-right: 0%;">
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkCleaningProducts" id="checkCleaningProducts" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkCleaningProducts" id="checkCleaningProducts" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck5" style="font-size:100%;">Cleaning products </label>
                         </div>
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkCookiesAndGoodies" id="checkCookiesAndGoodies" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkCookiesAndGoodies" id="checkCookiesAndGoodies" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck6" style="font-size:100%;">Cookies and Goodies </label>
                         </div>                   
                     </div>
 
                     <div class="form-check d-flex row col-12" style="margin-bottom: 3%;margin-top: -2%;margin-left: 1.5% ;padding-left: 0%;padding-right: 0%;">
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkGreetingCardOrChristmasCard" id="checkGreetingCardOrChristmasCard" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkGreetingCardOrChristmasCard" id="checkGreetingCardOrChristmasCard" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck7" style="font-size:100%;">Greeting card/Christmas card </label>
                         </div>
                         <div class="col-6 d-flex justify-content-start">
-                            <input type="checkbox" name="checkCuredMeatSndMeatProducts" id="checkCuredMeatSndMeatProducts" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkCuredMeatSndMeatProducts" id="checkCuredMeatSndMeatProducts" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck8" style="font-size:100%;">Cured meat and meat products </label>
                         </div>                  
                     </div>
 
                     <div class="form-check d-flex row col-12" style="margin-bottom: 3%;margin-top: -2%;margin-left: 1.7%; padding-left: 0%;padding-right: 0%;">
                         <div class="col-12">
-                            <input type="checkbox" name="checkOther" id="checkOther" class="form-check-input border border-danger" required>
+                            <input type="checkbox" name="checkOther" id="checkOther" class="form-check-input border border-danger">
                             <label class="form-check-label" for="exampleCheck9" style="font-size:100%;">Other </label>
                         </div> 
                     </div>
