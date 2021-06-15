@@ -20,6 +20,7 @@ session_start();
 	<script src="./vanillaSelectBox/vanillaSelectBox.js"></script>
 	<link rel="stylesheet" href="./css/Styles.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/regbusiness.css'>
+    <script src="./js/notify.min.js"></script>
 
 	<link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>

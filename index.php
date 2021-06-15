@@ -29,6 +29,23 @@ session_start();
 
 		 $query="Select * from category;";
 		 $category_data = db::getInstance()->get_result($query);
+		 //redirect if logged in
+		 if (array_key_exists('businessloggedin' ,$_SESSION)) {
+			header("location: ./businesshome.php");
+			exit;  
+		  }    
+		  if(array_key_exists('clubloggedin',$_SESSION)){
+			
+			header("Location: ./userhome.php"); /* Redirect browser */
+			 /* Make sure that code below does not get executed when we redirect. */
+			 exit;
+		  }
+		  if (array_key_exists('adminloggedin',$_SESSION)) {
+			header("Location: ./admin.php"); /* Redirect browser */
+			/* Make sure that code below does not get executed when we redirect. */
+			exit;
+		  }
+	  
 		 
 		 ?>
 	</header>

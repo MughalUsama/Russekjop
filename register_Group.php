@@ -18,15 +18,47 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/Styles.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
+	<script src="./js/notify.min.js"></script>
+
   </head>
 <body>
 	<header>
 		<?php
 		 ob_start();
 		 require_once("./db.php");
+		 require_once("./header.php");
+		$errormsg = "";
+		if (isset($_POST["register"])){
+			$email = $_POST["email"];
+			$query="Select * from clubs where email = '$email';";
+			$data = db::getInstance()->get_result($query);
+			
+			if(!$data)
+			{
 
-		 require_once("./header.php")
-		 ?>
+				$name = mysqli_escape_string(db::getInstance(),$_POST["clubname"]);
+				$person = mysqli_escape_string(db::getInstance(),$_POST["contactperson"]);
+				$telph = mysqli_escape_string(db::getInstance(),$_POST["telephone"]);
+				$email = mysqli_escape_string(db::getInstance(),$_POST["email"]);
+				$address = mysqli_escape_string(db::getInstance(),$_POST["address"]);
+				$code = mysqli_escape_string(db::getInstance(),$_POST["postcode"]);
+				$city = mysqli_escape_string(db::getInstance(),$_POST["city"]);
+				$passwd = mysqli_escape_string(db::getInstance(),$_POST["password"]);
+				
+				$query="Insert into clubs(club_name, contact_person, telephone, email, address, post_code, city, password) VALUES ('$name','$person','$telph','$email','$address','$code','$city','$passwd');";
+				if(db::getInstance()->dbquery($query))
+				{
+					$errormsg = "signedup";    
+				}
+			}
+			else
+			{
+				$errormsg = "error";    
+			}
+		}
+	?>
+	<span id="errormsg" class="d-none <?php echo($errormsg)?>"></span>
+
 	</header>
 	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
 				<div class="container">
@@ -41,40 +73,40 @@ session_start();
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
-							<form class="login-form text-center" method="POST" action="#">
+							<form id="reg-form" class="login-form text-center" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="userName" id="userName" class="form-control border border-danger" placeholder="Group Name" required>
+									<input type="text" name="clubname" id="userName" class="form-control border border-danger" placeholder="Group Name" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="userContactPerson" id="userContactPerson" class="form-control border border-danger" placeholder="Contact Person" required>
+									<input type="text" name="contactperson" id="userContactPerson" class="form-control border border-danger" placeholder="Contact Person" required>
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-4 mb-lg-6">
-										<input type="text" name="userTelephone" id="userTelephone" class="form-control border border-danger" placeholder="Telephone" required>
+										<input type="text" name="telephone" id="userTelephone" class="form-control border border-danger" placeholder="Telephone" required>
 									</div>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" name="userEmail" id="userEmail" class="form-control border border-danger" placeholder="Email(Username)" required>
+									<input type="email" name="email" id="userEmail" class="form-control border border-danger" placeholder="Email(Username)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="userAddress" id="userAddress" class="form-control border border-danger" placeholder="Address" required>
+									<input type="text" name="address" id="userAddress" class="form-control border border-danger" placeholder="Address" required>
 								</div>
 								<div class="d-flex flex-row form-group mb-4 mb-lg-6">
-									<input type="text" name="userPostCode" id="userPostCode" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;"  required>
-									<input type="text" name="userCity" id="userCity" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
+									<input type="text" name="postcode" id="userPostCode" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;"  required>
+									<input type="text" name="city" id="userCity" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="userPassword" id="userPassword" class="form-control border border-danger" placeholder="Password" minlength="8" required>
+									<input type="password" name="password" id="password" class="form-control border border-danger" placeholder="Password" minlength="8" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="userConfirmPassword" id="userConfirmPassword" class="form-control border border-danger" placeholder="Confirm Password" minlength="8" required>
+									<input type="password"  id="confirmpassword" class="form-control border border-danger" placeholder="Confirm Password" minlength="8" required>
 								</div>
 								<div class="form-check d-flex flex-row">
 							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" required>
 							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%;">I confirm that I am over 18 years old *</label>
 							  </div>
 								<div class="pt-4 mb-5">
-									<button type="submit" name="userSignUpBtn" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>
+									<button type="submit" name="register" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>
 								</div>
 							</form>
 						</div>
@@ -86,6 +118,6 @@ session_start();
 <?php
 require_once("./footer.php");
 ?>
-
+<script src="./js/register_group.js"></script>
 </body>
 </html>

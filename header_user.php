@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) { //if there's no session_start yet...
+    session_start(); //do this
+}
+?>
 <nav class="pr-0 navbar d-none d-sm-flex navbar-light bg-danger py-0 my-0">
 <a href="./company_login.php" class="ml-auto mr-0 pr-4 nav-item nav-link myfontTimes py-1 active font-weight-bold">Company Name</a>
 </nav>

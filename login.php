@@ -16,9 +16,10 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!--JQUERY AND bootstrap.js   -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/Styles.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
     <script src="./js/notify.min.js"></script>
+    <link rel="stylesheet" href="./css/Styles.css">
+
   </head>
 <body>
 	<header>
@@ -34,12 +35,12 @@ session_start();
     }    
     if(array_key_exists('clubloggedin',$_SESSION)){
       
-      // header("Location: ./userhome.php"); /* Redirect browser */
-      // /* Make sure that code below does not get executed when we redirect. */
-      // exit;
+      header("Location: ./userhome.php"); /* Redirect browser */
+       /* Make sure that code below does not get executed when we redirect. */
+       exit;
     }
     if (array_key_exists('adminloggedin',$_SESSION)) {
-      header("Location: ./adminhome.php"); /* Redirect browser */
+      header("Location: ./admin.php"); /* Redirect browser */
       /* Make sure that code below does not get executed when we redirect. */
       exit;
     }
@@ -57,22 +58,23 @@ session_start();
         $_SESSION['userdata'] = mysqli_fetch_assoc($data) ;
         $_SESSION["username"] = $_SESSION['userdata']['club_name'];
         if($_SESSION['userdata']['isadmin']=='1'){ 
-          header("location: ./admin.php");
           $_SESSION['adminloggedin'] = "yes";
+          header("location: ./admin.php");
         }
         else{
-          header("Location: ./userhome.php"); /* Redirect browser */
           $_SESSION['clubloggedin'] = "yes";
+          header("Location: ./userhome.php"); /* Redirect browser */
         }
         /* Make sure that code below does not get executed when we redirect. */
         exit;
         }
       else
       { 
-        $errormsg = "d-flex";    
+        $errormsg = "error";    
       }
     }
 		 ?>
+     <span id="errormsg" class="d-none <?php echo($errormsg)?>"></span>
 	</header>
 	<section class="sign-in-sec py-4" style="background-image:url('./img/Pictureb.png');padding-top: 1.5%;padding-bottom: 1.5%;">
 		<div class="container">
