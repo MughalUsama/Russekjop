@@ -39,7 +39,14 @@ session_start();
 
 		 $query="Select * from category;";
 		 $category_data = db::getInstance()->get_result($query);
-		 
+         $newmsg = "d-none";
+		 $msgquery="Select * from offer_messages where club_id =\"{$_SESSION["userdata"]["club_id"]}\" and is_seen = 0 and sentby = 1 and status = 0;";
+         $msgdata = db::getInstance()->get_result($msgquery);
+         if($msgdata)
+         {
+            $newmsg = "d-inline;";
+         }
+
 		 ?>
 </header>
 <div class="row" id="body-row">
@@ -70,7 +77,7 @@ session_start();
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers <span class="badge badge-pill badge-primary ml-2"><i class="fa fa-envelope"></i></span></span>                </div>
+                    <span class="menu-collapsed">My Offers <span class="<?php echo($newmsg) ?> badge badge-pill badge-primary ml-2"><i class="fa fa-envelope"></i></span></span>                </div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">

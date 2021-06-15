@@ -24,7 +24,7 @@ session_start();
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/Styles.css">
     <script src="./js/notify.min.js"></script>
-
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/cluboffers.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
   </head>
 <body>
@@ -37,7 +37,13 @@ session_start();
 			<?php
              ob_start();
              require_once("./db.php");
-			 require_once("./header_user.php")
+			 require_once("./header_user.php");
+
+            $allquery = "Select * from club_requests where club_id = \"{$_SESSION["userdata"]["club_id"]}\"";
+            $allresult = db::getInstance()->get_result($allquery);
+            $accquery = "Select * from club_requests where club_id = \"{$_SESSION["userdata"]["club_id"]}\" and accepted_by is NOT NULL";
+            $accresult = db::getInstance()->get_result($accquery);
+
 			?>
 </header>
 <div class="row" id="body-row">
@@ -104,18 +110,110 @@ session_start();
         <nav class="mt-2" aria-label="...">
             <ul class="pagination pagination-md  justify-content-end">
                 <li class="page-item active" aria-current="page">
-                <span class="page-link bg-danger border-danger text-white">Offers</span>
+                <span class="page-link bg-danger border-danger text-white" id="off-tab">Offers</span>
                 </li>
-                <li class="page-item"><a class="page-link text-danger border-danger" href="#">All Requests</a></li>
-                <li class="page-item"><a class="page-link text-danger border-danger" href="#">Accepted Offers</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" href="#">All Requests</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" href="#">Accepted Offers</a></li>
             </ul>
         </nav>
         
-        <div class="row d-flex col-12 mb-5 pb-2 justify-content-start" id="offers">
-            
-            <!-- Card start-->
+        <div class="accordion col-12 mb-5 pb-2 justify-content-start" id="accordionExample">
+        <!-- cards here -->
+        </div>
+        <div class="table-responsive" id="ar-table">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Product</th>
+            <th scope="col">Accepted-By</th>
+            <th scope="col">Size</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Color</th>
+            <th scope="col">Description</th>
+            <th scope="col">Created On</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        $count =0;
+        if ($allresult) {
+            while($row = $allresult->fetch_assoc())
+            {
+                $cquery = "Select * from category where category_id = \"{$row["category_id"]}\"";
+                $cresult = db::getInstance()->get_result($cquery);
+                $row1 = $cresult->fetch_assoc();
+                $pquery = "Select * from products where product_id = \"{$row["product_id"]}\"";
+                $presult = db::getInstance()->get_result($pquery);
+                $row2 = $presult->fetch_assoc();
+                $count = $count + 1;
+                $htmlline = "<tr>
+                <th scope=\"row\">$count</th>
+                <td>{$row1["category_name"]}</td>
+                <td>{$row2["product_name"]}</td>
+                <td>{$row["size"]}</td>
+                <td>{$row["quantity"]}</td>
+                <td>{$row["color"]}</td>
+                <td><div class=\"scrollable\">{$row["description"]}</div></td>
+                <td>{$row["created_on"]}</td>
+                </tr>";
+                echo($htmlline);
+            }
+        }
+        ?>
+        </tbody>
+        </table>
+        </div>
 
-
+        <div class="table-responsive" id="acc-table">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Product</th>
+            <th scope="col">Accepted-By</th>
+            <th scope="col">Size</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Color</th>
+            <th scope="col">Description</th>
+            <th scope="col">Created On</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        $count =0;
+        if ($accresult) {
+            while($row = $accresult->fetch_assoc())
+            {
+                $cquery = "Select * from category where category_id = \"{$row["category_id"]}\"";
+                $cresult = db::getInstance()->get_result($cquery);
+                $row1 = $cresult->fetch_assoc();
+                $pquery = "Select * from products where product_id = \"{$row["product_id"]}\"";
+                $presult = db::getInstance()->get_result($pquery);
+                $row2 = $presult->fetch_assoc();
+                $bquery = "Select * from business_info where business_id = \"{$row["accepted_by"]}\"";
+                $bresult = db::getInstance()->get_result($bquery);
+                $row3 = $bresult->fetch_assoc();
+                $count = $count + 1;
+                $htmlline = "<tr>
+                <th scope=\"row\">$count</th>
+                <td>{$row1["category_name"]}</td>
+                <td>{$row2["product_name"]}</td>
+                <td>{$row3["business_name"]}</td>
+                <td>{$row["size"]}</td>
+                <td>{$row["quantity"]}</td>
+                <td>{$row["color"]}</td>
+                <td><div class=\"scrollable\">{$row["description"]}</div></td>
+                <td>{$row["created_on"]}</td>
+                </tr>";
+                echo($htmlline);
+            }
+        }
+        ?>
+        </tbody>
+        </table>
         </div>
 
     </div><!-- Main Col END -->
@@ -129,11 +227,7 @@ session_start();
 		?>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="./js/cluboffers.js"></script>
     <script src="./js/sidebar.js"></script>
 </body>
 </html>

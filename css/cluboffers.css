@@ -1,0 +1,12 @@
+
+.rej-btn, .acc-btn, .send-btn{
+    border-radius: 3%;
+    border: none;
+    background-color: #dc3545!important;
+    color: wheat;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+}
+.accordion-button:not(.collapsed) {
+    color: wheat !important;
+}
