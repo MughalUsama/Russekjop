@@ -1,0 +1,42 @@
+
+@media only screen and (max-width: 600px){
+    .vsb-main button{
+    min-width: 450px !important;
+    }    
+}
+@media only screen and (max-width: 400px){
+    .vsb-main button{
+    min-width: 350px !important;
+    }    
+}
+
+.create-account-sec{
+    background-image: url("../img/Pictureb.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.chosen-container-multi .chosen-choices {
+    border-radius: 2%;
+    border-color: #44D9E6;
+    background-color: #E7E6E6 !important;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.chosen-drop{
+    width: 81%;
+}
+.chosen-container {
+    width: 100% !important;
+}
+.chosen-container .chosen-results{
+    border-radius: 2%;
+    border-color: #44D9E6;
+    background-color: #E7E6E6 !important;
+    width: 100%;
+
+}
+.chosen-container ul.chosen-results {
+    background-color: black;
+}
