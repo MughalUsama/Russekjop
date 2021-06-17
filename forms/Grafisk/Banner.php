@@ -10,11 +10,11 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-                <form class="Banner-form text-center" method="POST" action="#">
+                <form class="Banner-form text-center" method="POST" action="./forms/submit/detail5.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row justify-content-between form-group mb-5 mb-lg-6">
-                        <input type="text" name="NumberOfBanner" id="NumberOfBanner" class=" form-control border border-danger col-4 d-flex justify-content-start" placeholder="Number of banners" required>
+                        <input type="text" name="quantity" id="NumberOfBanner" class=" form-control border border-danger col-4 d-flex justify-content-start" placeholder="Number of banners" required>
                         
-                        <select type="text" name="sizeOfBanner" class="form-control border border-danger col-4 d-flex" id="sizeOfBanner">
+                        <select type="text" name="size" class="form-control border border-danger col-4 d-flex" id="sizeOfBanner">
                             <option value="" selected disabled>Size</option>
                             <option>Small=3</option>
                             <option>Medium=4</option>
@@ -23,13 +23,13 @@
                         </select>
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="paragraph_text_Banner" id="paragraph_text_Banner" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
+                        <textarea name="description" id="paragraph_text_Banner" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
                     </div>
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">
                         <input class="form-control border border-danger col-6 d-flex justify-content-start" type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.xlsx,.png,.jpg,.jpeg,.pdf,.pptx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                     </div>
                     <div class="pt-4 mb-5">
-                        <button type="submit" name="sendBanner" id="sendBanner" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
+                        <button type="submit" name="send" id="sendBanner" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
                     </div>
                 </form>
             </div>

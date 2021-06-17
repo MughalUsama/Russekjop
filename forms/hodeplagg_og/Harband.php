@@ -10,11 +10,11 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-                <form class="Harband-form text-center" method="POST" action="#">
+                <form class="Harband-form text-center" method="POST" action="./forms/submit/detail1.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="text" name="numberOfHarband" id="numberOfHarband" class=" form-control border border-danger" placeholder="Number of harband" style="width: 33%;"  required>
-                        <input type="text" name="colorOfHarband" id="colorOfHarband" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
-                        <select type="text" name="sizeOfHarband" class="form-control border border-danger" id="sizeOfHarband" style="margin-left:2.95%;width:33%">
+                        <input type="text" name="quantity" id="numberOfHarband" class=" form-control border border-danger" placeholder="Number of harband" style="width: 33%;"  required>
+                        <input type="text" name="color" id="colorOfHarband" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
+                        <select type="text" name="size" class="form-control border border-danger" id="sizeOfHarband" style="margin-left:2.95%;width:33%">
                             <option value="" selected disabled>Size</option>
                             <option>Small=3</option>
                             <option>Medium=4</option>
@@ -24,16 +24,20 @@
                     </div>
                     <div class="form-check d-flex flex-row" style="margin-bottom: 3%;margin-top: -2%;">
                         <label class="form-check-label" for="exampleCheck1" style="font-size:95%;">Print </label>
-                        <input type="checkbox" name="printHarband" id="printHarband" class="form-check-input border border-danger">
+                        <input type="checkbox" name="Print" id="printHarband" class="form-check-input border border-danger">
                     </div>
+                    <div class="d-none">
+                        <input type="text" name="tablename" id="tablename" class="d-none" value="detail1">
+                    </div>
+
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="paragraph_text_Harband" id="paragraph_text_Harband" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
+                        <textarea name="description" id="paragraph_text_Harband" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
                     </div>
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">
                         <input class="form-control border border-danger col-6 d-flex justify-content-start" type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.xlsx,.png,.jpg,.jpeg,.pdf,.pptx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                     </div>
                     <div class="pt-4 mb-5">
-                        <button type="submit" name="sendHarband" id="sendHarband" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
+                        <button type="submit" name="send" id="sendHarband" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-top: -5%;">Send</button>
                     </div>
                 </form>
             </div>

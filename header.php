@@ -9,7 +9,7 @@ if (array_key_exists('businessloggedin' ,$_SESSION) or array_key_exists('clublog
 }
 ?>
 <nav class="pr-0 navbar d-none d-sm-flex navbar-light bg-danger py-0 my-0">
-<a href="./company_login.php" class="ml-auto mr-0 pr-4 nav-item nav-link myfontTimes py-1 active font-weight-bold">Company Login</a>
+<a href="./company_login.php" class="ml-auto mr-0 pr-4 nav-item nav-link myfontTimes py-1 active font-weight-bold  <?php echo($addclass);?>">Company Login</a>
 </nav>
 <nav class="navbar navbar-expand-md navbar-light bg-white pb-2 pt-0" style="box-shadow: 0 4pt 2pt -2pt red;">
         <a href="./index.php" class="navbar-brand">

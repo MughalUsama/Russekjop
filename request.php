@@ -28,14 +28,22 @@ session_start();
 <body>
 	<div class="wrapper">
 
-    <!-- Sidebar -->
-<!-- Bootstrap NavBar -->
-<!-- Bootstrap row -->
 <header>
 			<?php
-             ob_start();
-             require_once("./db.php");
-			 require_once("./header_user.php")
+            ob_start();
+            require_once("./db.php");
+			require_once("./header_user.php");
+            if (!array_key_exists( "clubloggedin",$_SESSION)) {
+                header("./index.php");
+            exit;
+            }
+            if (isset($_POST["submit-next"])){
+               $pro_id = mysqli_escape_string(db::getInstance(), $_POST["Product"]);
+               $cat_id = mysqli_escape_string(db::getInstance(), $_POST["Category"]);
+               $_SESSION["pro_id"]=$pro_id;
+               $_SESSION["cat_id"]=$cat_id;
+            }
+
 			?>
 </header>
 <div class="row" id="body-row">
@@ -57,7 +65,7 @@ session_start();
                 </div>
             </a>
             <!-- Submenu content -->
-            <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="./profile.php" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
                     <span class="menu-collapsed">Profile</span>

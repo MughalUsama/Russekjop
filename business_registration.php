@@ -130,10 +130,6 @@ session_start();
 	}
 // ===== php ends	
 ?>
-			
-			
-
-
 
 
 			<!-- html-->

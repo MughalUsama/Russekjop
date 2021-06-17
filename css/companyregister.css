@@ -1,6 +1,6 @@
 #search-div{
     background-color: gainsboro;
-border-radius: 5px;
+    border-radius: 5px;
 }
 .top-img{
     background-image: url("../img/Pictureb.png");
@@ -9,10 +9,23 @@ section{
     font-family: Georgia, serif;
 
 }
-
+h6{
+    color: #dc3545;
+    border-top: 1px solid#dc3545;
+    border-bottom: 1px solid #dc3545;
+}
 @media only screen and (max-width: 600px){
    #search-div{
         padding: 0%;
     }
 
 }
+.bname>u{
+    cursor: pointer;
+    font-size: 1rem;
+}
+.card-header{
+    font-family: Georgia, serif;
+    background-color:white;
+}
+

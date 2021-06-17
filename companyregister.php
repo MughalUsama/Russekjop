@@ -30,51 +30,52 @@ session_start();
 		 ?>
 	</header>
 	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
-				<div class="container">
-          <img class="img-fluid mx-auto col-12 top-img" style="max-height: 200px;" src="." alt="RUSSEKJOP">
+				<div class="container-fluid justify-content-center">
+          <img class="img-fluid mx-auto col-12 top-img" style="max-height: 200px;" src="./img/Pictureb.png" alt="RUSSEKJOP">
           <div class="row d-flex col-12 pb-1 my-3 justify-content-center">
-              <h3 class="text-center">Company Register</h3>
+              <h3 class="text-center">C<span class="text-danger">o</span><span class="text-dark">m</span><span class="text-danger">p</span><span class="text-dark">a</span><span class="text-danger">n</span><span class="text-dark">y R</span><span class="text-danger">e</span><span class="text-dark">g</span><span class="text-danger">i</span><span class="text-dark">s</span><span class="text-danger">t</span><span class="text-dark">e</span><span class="text-danger">r</span>
+              </h3>
           </div>
           <div class="row d-flex col-12 pb-1 justify-content-center ml-0">
             <div class="row d-flex col-12 justify-content-center align-items-center py-0" id="search-div">
                 <p class="hide-xs mx-auto col-md-3 mt-3" style="font-size: 1.1rem;"> Search <i class="fa fa-search" aria-hidden="true"></i></p>
-                <input type="text" class="d-inline col-xs-12 col-md-9 form-control " id="search-txt" name="search-txt" placeholder="Type here to search">
+                <input type="text" class="d-inline col-xs-12 col-md-9 form-control " id="search-txt" name="search-txt" placeholder="Type here & Press enter to search">
             </div>
           </div>
         
         <!--dynamic content below -->
-        <div class="row d-flex my-3 col-12 pt-5 justify-content-between align-items-start" id="scontent">
+        <div class="row d-flex my-3 col-10 pt-2 pb-4 mb-5 mx-auto justify-content-between align-items-start" id="scontent">
         
         <?php 
-        //     $query = "Select Distinct(category_id) from business_categories Order by category_id;";
-        //     $result = db::getInstance()->get_result($query);
-        //     $categories = array();
-        //     if($result)
-        //     {
-        //         while($row = mysqli_fetch_assoc($result)){
-        //             array_push($categories,$row);
-        //         }
-        //     }
-        //     foreach($categories as $category)
-        //     {
-        //         $query1 = "Select * from category where category_id = {$category["category_id"]};";
-        //         $result = db::getInstance()->get_result($query1);
-        //         $row = mysqli_fetch_assoc($result);
-        //         $query2 = "Select * from business_categories where category_id = {$category["category_id"]};";
-        //         $result2 = db::getInstance()->get_result($query2);
-        //         $disp = "<div class=\"row col-xs-12 px-0 col-md-4 d-flex justify-content-center\">";
-        //         $disp = $disp."<h6 class = \"row ml-auto px-0 mt-4 mb-2 justify-content-center col-12 cname\"><b>{$row["category_name"]}</b></h6>";
-        //         while($row2 = mysqli_fetch_assoc($result2))
-        //         {
-        //             $query2 = "Select * from business_info where business_id = {$row2["business_id"]} and business_id in (Select business_id from business_sports where sports_name = \"Football\" or sports_name = \"Handball\" or sports_name = \"Ishockey\" );";
-        //             $result3 = db::getInstance()->get_result($query2);
-        //             $row3 = mysqli_fetch_assoc($result3);
-        //             $disp = $disp."<p class = \"row ml-auto my-0 px-0 justify-content-center col-12 bname\" currentbid = \"{$row2["business_id"]}\"><u>".$row3["business_name"]."</u></p>";
-        //         }
-        //         $disp = $disp."</div>";
-        //         echo($disp);
-        //     }
-        // ?>
+            $query = "Select Distinct(category_id) from business_categories Order by category_id;";
+            $result = db::getInstance()->get_result($query);
+            $categories = array();
+            if($result)
+            {
+                while($row = mysqli_fetch_assoc($result)){
+                    array_push($categories,$row);
+                }
+            }
+            foreach($categories as $category)
+            {
+                $query1 = "Select * from category where category_id = {$category["category_id"]};";
+                $result = db::getInstance()->get_result($query1);
+                $row = mysqli_fetch_assoc($result);
+                $query2 = "Select * from business_categories where category_id = {$category["category_id"]};";
+                $result2 = db::getInstance()->get_result($query2);
+                $disp = "<div class=\"row col-xs-12 px-0 col-md-4 d-flex justify-content-center\">";
+                $disp = $disp."<h6 class = \"row ml-auto px-0 mt-4 mb-2 justify-content-center col-12 cname\"><b>{$row["category_name"]}</b></h6>";
+                while($row2 = mysqli_fetch_assoc($result2))
+                {
+                    $query2 = "Select * from business_info where business_id = {$row2["business_id"]};";
+                    $result3 = db::getInstance()->get_result($query2);
+                    $row3 = mysqli_fetch_assoc($result3);
+                    $disp = $disp."<p class = \"row ml-auto my-0 px-0 justify-content-center col-12 bname\" currentbid = \"{$row2["business_id"]}\"><u>".$row3["business_name"]."</u></p>";
+                }
+                $disp = $disp."</div>";
+                echo($disp);
+            }
+         ?>
 
         </div>
 
@@ -85,7 +86,7 @@ session_start();
 <?php
 require_once("./footer.php");
 ?>
-
+<script src="./js/companyregister.js"> </script>
 </body>
 <!-- Development -->
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
