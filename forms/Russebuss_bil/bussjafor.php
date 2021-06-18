@@ -16,14 +16,9 @@
                         <input type="date" data-date="" data-date-format="DD MMMM YYYY" name="endDate" id="endDate" class=" form-control border border-danger col-4 d-flex justify-content-start" placeholder="To date" style="margin-left:2.7%" required>
                     </div>
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <select type="text" name="size" class="form-control border border-danger col-4 d-flex" id="sizeOfBanners">
-                            <option value="" selected disabled>Size</option>
-                            <option>Small=3</option>
-                            <option>Medium=4</option>
-                            <option>Large=5</option>
-                            <option>X-large=6</option>
-                        </select>
+                        <input type="number" min="0" name="price" id="priceForAssignment" class="form-control border border-danger col-4 d-flex" placeholder="Price For Assignment"   required>
                     </div>
+                    
                     <div class="d-none">
                         <input type="text" name="tablename" id="tablename" class="d-none" value="detail6">
                     </div>
