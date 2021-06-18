@@ -6,10 +6,10 @@ session_start();
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>SportsReg</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="icon" href="./img/logo2.png"/>
-    <!--bootstrap   -->
+    <title>Russekjøp</title>
+	<link rel="icon" href="./img/color-Russekjob-logo-ai.png"/>
+   <!--bootstrap   -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--JQUERY AND popper   -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -28,55 +28,58 @@ session_start();
  ob_start();
  require_once("./db.php");
  require_once("./header.php");
+ $news_query = "SELECT * FROM news ORDER BY top_news Desc, posted_on DESC";
+ $newsdata = db::getInstance()->get_result($news_query);
+
 ?>
 
 
 <div class="container-fluid">
 <?php
-// if($newsdata)
-// {
-//     $row_cnt = $newsdata->num_rows;
-//     $topnews = mysqli_fetch_assoc($newsdata);
-//     echo ('<div class="container-news d-flex ml-3 mb-2 h-100 jusitfy-content-center align-items-center flex-wrap col-12" id="news-body">');
-//     echo ('<div class="news-start col-12 d-flex jusitfy-content-center align-items-center row rounded" news-id="'.$topnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-//     echo ('<img class="col-12 my-1 news-img" src="./news/'.$topnews["image_name"].'" alt="Sportsreg news">');
-//     echo ('<div class="d-none"><h3>'.$topnews["news_headline"].'</h3></div>');
-//     echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$topnews["news_description"]);
-//     echo('</pre></div>');
-//     echo ('</div></div>');
-//     $newsposition = 1;
-//     $latest_n = "";
-//     while ($nextnews = mysqli_fetch_assoc($newsdata))
-//     {
-//         if(fmod($row_cnt,2)==0 and $newsposition==$row_cnt-1)
-//         {
-//             $grid_col = 12;
-//         }
-//         else
-//         {
-//             $grid_col = 6;
-//         }
-//         if(fmod($newsposition,2) == 1){
-//             $newsposition = $newsposition + 1;
-//             echo('<div class="row ml-2 px-0">');
-//             echo ('<div class="ml-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row" news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-//             echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
-//             echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
-//             echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
-//             echo('</pre></div>');
-//             echo ('</div>');
-//         }
-//         else{
-//             $newsposition = $newsposition + 1;
-//             echo ('<div class="news-start-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row " news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-//             echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
-//             echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
-//             echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
-//             echo('</pre></div>');        
-//             echo ('</div></div>');
-//         }
-//     }
-// }
+if($newsdata)
+{
+    $row_cnt = $newsdata->num_rows;
+    $topnews = mysqli_fetch_assoc($newsdata);
+    echo ('<div class="container-news d-flex ml-3 mb-2 h-100 jusitfy-content-center align-items-center flex-wrap col-12" id="news-body">');
+    echo ('<div class="news-start col-12 d-flex jusitfy-content-center align-items-center row rounded" news-id="'.$topnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+    echo ('<img class="col-12 my-1 news-img" src="./news/'.$topnews["image_name"].'" alt="Sportsreg news">');
+    echo ('<div class="d-none"><h3>'.$topnews["news_headline"].'</h3></div>');
+    echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$topnews["news_description"]);
+    echo('</pre></div>');
+    echo ('</div></div>');
+    $newsposition = 1;
+    $latest_n = "";
+    while ($nextnews = mysqli_fetch_assoc($newsdata))
+    {
+        if(fmod($row_cnt,2)==0 and $newsposition==$row_cnt-1)
+        {
+            $grid_col = 12;
+        }
+        else
+        {
+            $grid_col = 6;
+        }
+        if(fmod($newsposition,2) == 1){
+            $newsposition = $newsposition + 1;
+            echo('<div class="row ml-2 px-0">');
+            echo ('<div class="ml-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row" news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+            echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
+            echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
+            echo('</pre></div>');
+            echo ('</div>');
+        }
+        else{
+            $newsposition = $newsposition + 1;
+            echo ('<div class="news-start-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row " news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+            echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
+            echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
+            echo('</pre></div>');        
+            echo ('</div></div>');
+        }
+    }
+}
 ?>    
     <!-- end of news container -->
     </div>
@@ -124,6 +127,6 @@ require_once("./footer.php");
 
 </body>
 
-<script src="blog.js"></script>
+<script src="./js/blog.js"></script>
 <!-- <script src="admin.js"></script> -->
 </html>
