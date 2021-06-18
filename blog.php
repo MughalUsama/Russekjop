@@ -116,13 +116,14 @@ if($newsdata)
         </div>
     </div>
     </div>
+</div>
+</div
 <!-- Footer -->
 <br>
 <?php
 require_once("./footer.php");
 ?>
 <!-- Footer -->
-</div>
 
 
 </body>

@@ -26,6 +26,7 @@ session_start();
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/admin.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/managenews.css'>
   </head>
 <body>
 	<div class="wrapper">
@@ -37,7 +38,9 @@ session_start();
 			<?php
              ob_start();
              require_once("./db.php");
-			 require_once("./header_user.php")
+			 require_once("./header_user.php");
+             $successmsg = "";
+
 			 ?>
 </header>
 <div class="row" id="body-row">
@@ -100,83 +103,143 @@ session_start();
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
     <!-- MAIN -->
-    <div class="col pt-4">
-    <div class="container-fluid px-5 mt-2" id="card-container">
-        <div class="row ">
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-blue">
-                    <div class="inner py-4 ml-2">
-                        <h3 class="pb-1"> My Profile </h3>
-                        <h6> Manage your profile </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </div>
-                    <a href="./profile.php" class="card-box-footer py-3"><b>Lets Go!</b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
+    <div class="col pt-0 px-0 mx-0">
+    <div class="container-fluid px-0" id="card-container">
+<?php 
+    if (isset($_REQUEST["addnews"])){
+    $headline = mysqli_escape_string(db::getInstance(), $_REQUEST["newsheadline"]);
+    $description = mysqli_escape_string(db::getInstance(), $_REQUEST["newsdescription"]);
+    $topnews = "0";
+    $latestnews = "0";
+    if(isset($_REQUEST["topnews"]))
+    {
+        $topnews = "1";
+        $updatetop = "Update news Set top_news = \"0\"";
+        if(!db::getInstance()->dbquery($updatetop))
+        {
+            echo("Something went wrong. Try again later");
+        }
+    }
+    // Check if image file is a actual image or fake image
+    $check = getimagesize($_FILES["postimage"]["tmp_name"]);
+    $newname = "";
+    if($check !== false) {
+        $uploadOk = 1;
+        $info = pathinfo($_FILES['postimage']['name']);
+        $ext = $info['extension']; // get the extension of the file
+        $nameid = uniqid();
+        $newname = $nameid.".".$ext; 
+        $target = 'news/'.$newname;
+        move_uploaded_file( $_FILES['postimage']['tmp_name'], $target);
+    }
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-green">
-                    <div class="inner ml-1 pl-1 py-4">
-                        <h3 class="pb-1"> Categories & Products </h3>
-                        <h6> Manage categories and products </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                    </div> 
-                    <a href="./addproducts.php" class="card-box-footer py-3"><b>Lets Go!</b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-orange">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1"> Club Requests </h3>
-                        <h6> See products requests from clubs </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-usd" aria-hidden="true"></i>
-                    </div> 
-                    <a href="./clubrequests.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-red">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Add Business</h3>
-                        <h6> Add new business accounts </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <a href="./business_Registration.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-dark">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage Business</h3>
-                        <h6> Edit or delete business accounts </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-trash"></i>
-                    </div>
-                    <a href="./managebusiness.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-secondary">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage News</h3>
-                        <h6> Manage news and blog page </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-newspaper-o"></i>
-                    </div>
-                    <a href="./managenews.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
+    $addnews ="INSERT INTO `news`(`news_headline`, `news_description`, `image_name`, `top_news`) VALUES (\"$headline\",\"$description\",\"$newname\",\"$topnews\")";
+    if(db::getInstance()->dbquery($addnews))
+    {
+        $successmsg = "Post added successfully";
+    }
+    else{
+        $successmsg = "Post cannot added successfully";
+    }
+}
+$allnews = "SELECT * FROM news ORDER BY top_news DESC , posted_on DESC";
+$getallnews = db::getInstance()->get_result($allnews);
+?>
+
+    <div class="d-flex jusitfy-content-center align-items-center flex-wrap col-12 px-0 mx-0" id="news-body">
+
+    <div class="ml-0 col-12 py-1 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-secondary">
+    <h3 class="pt-1 text-white">Add new Post/News</h3>
+    </div>
+    <!-- NEWS BOXES BELOW -->
+    <div class="news-start ml-0 col-12 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-dark">
+    <div class="col-sm-12 col-md-3">
+                <table class="mx-auto" CELLPADDING="70">
+                    <tbody>
+                        <tr>
+                            <td class="bg-white">
+                            <img class="col-12 my-1 bg-white news-img d-none" src="" alt="Add Image" width="125" id="news-img"/> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+    <div class="col-sm-12 py-2 my-2 col-md-9 rounded border border-info bg-secondary newsclass">
+    <!-- form -->
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="addnewsform" enctype="multipart/form-data">
+    <div class="form-group">
+        <h6 class="text-success"><?php echo($successmsg); ?></h6>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">News/Post Headline:</label>
+        <textarea class="form-control" placeholder="Write News/Post Headline" name="newsheadline" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea2">News Description:</label>
+        <textarea class="form-control" placeholder="Write News/Post Description" name="newsdescription" id="exampleFormControlTextarea2" rows="5" required></textarea>
+    </div>
+    <div class="form-group">
+    <label for="postimage">Select Image:</label>
+        <input type="file" accept=".gif,.png.,.jpg,.jpeg,.jpeg" class="form-control-file" id="postimage" name="postimage" required>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" name="topnews" type="checkbox" id="topnews" value="1" >
+        <label class="form-check-label" for="topnews">Top News</label>
+    </div>
+    <div class="form-check-inline float-right col-auto">
+      <button type="submit" class="btn btn-primary mb-2" name="addnews">Add News</button>
+    </div>
+    <div class="form-check col-auto mt-2">
+     <p class="ml-1 mt-3">
+        Top News = News at the top of the page<br>
+    </p>
+    </div>
+</form>
+</div>
+
+
+</div>
+
+    <!-- ending box container  -->
+</div>
+<div class="d-flex mb-0 pb-0 px-0 mx-0 jusitfy-content-center align-items-center flex-wrap col-12">
+
+<table class="table table-hover table-dark mb-0 rounded border border-info">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Headline</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col">Posted on</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php 
+    if($getallnews)
+    {   //loop and print
+        $serial_num = 0;
+        while($nnews = mysqli_fetch_assoc($getallnews))
+        {
+            $serial_num+=1;
+            echo '<tr>';
+            echo '<th scope="row">'.$serial_num.'</th>';
+            echo '<td colspan="3">'.$nnews["news_headline"].'</td>';
+            echo '<td>'.$nnews["posted_on"].'</td>';
+            echo '<td><button class="btn btn-danger delete-news" news-id="'.$nnews["news_id"].'">Delete</button></td>';
+            echo '<td><form action="editpost.php" method="POST" class="d-inline"><input class="d-none" name="editnewsid" value = "'.$nnews["news_id"].'" type="number" ><button type="submit" name="edit-btn" class="btn btn-warning edit-news" news-id="'.$nnews["news_id"].'">Edit</button></form></td>';
+            echo '</tr>';
+        }
+    }
+  
+  ?>
+  </tbody>
+</table>
+
+</div>
+
     </div>
 
 
@@ -190,6 +253,7 @@ session_start();
 		require_once("./footer.php");
 		?>
 
+    <script src="./js/managenews.js"></script>
 
     <script src="./js/sidebar.js"></script>
 </body>

@@ -1,0 +1,34 @@
+
+#news-body{
+    color: #44D9E6;
+}
+hr{
+    border-top: 1px solid #44D9E6;
+}
+td 
+{
+        vertical-align: middle !important;
+}
+p { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.newsclass:hover{
+    cursor:pointer;
+    transform: scale(1.01);
+} 
+p{
+    color: white;
+}
+h3, h5, label, textarea{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.zz{
+    font-family: Brush Script MT, Brush Script Std, cursive;        
+}
+.bg-mycolor{
+    background-color:  #44D9E6;
+}

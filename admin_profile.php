@@ -41,13 +41,13 @@
 	<span id="errormsg" class="d-none <?php echo($errormsg)?>"></span>
 
 	</header>
-	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
+	<section class="create-account-sec py-8 py-md-10 py-lg-12 pt-5">
 				<div class="container">
 					<div class="row mb-6 mb-lg-10 mb-xl-14">
 						<div class="col-12 text-center mb-4">
 							<h2 class="heading mb-3" >
 								<strong class="font-weight-medium">Welcome to </strong>
-								<strong class="text-danger">Russekjøp</strong>
+								<strong>Russekjøp</strong>
 							</h2>
 							<span class="title">Your Profile</span>
 						</div>

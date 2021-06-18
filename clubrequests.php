@@ -101,83 +101,9 @@ session_start();
     </div><!-- sidebar-container END -->
     <!-- MAIN -->
     <div class="col pt-4">
-    <div class="container-fluid px-5 mt-2" id="card-container">
-        <div class="row ">
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-blue">
-                    <div class="inner py-4 ml-2">
-                        <h3 class="pb-1"> My Profile </h3>
-                        <h6> Manage your profile </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </div>
-                    <a href="./profile.php" class="card-box-footer py-3"><b>Lets Go!</b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
+        <div class="container-fluid px-5 mt-2" id="fillcards">
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-green">
-                    <div class="inner ml-1 pl-1 py-4">
-                        <h3 class="pb-1"> Categories & Products </h3>
-                        <h6> Manage categories and products </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                    </div> 
-                    <a href="./addproducts.php" class="card-box-footer py-3"><b>Lets Go!</b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-orange">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1"> Club Requests </h3>
-                        <h6> See products requests from clubs </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-usd" aria-hidden="true"></i>
-                    </div> 
-                    <a href="./clubrequests.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-red">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Add Business</h3>
-                        <h6> Add new business accounts </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <a href="./business_Registration.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-dark">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage Business</h3>
-                        <h6> Edit or delete business accounts </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-trash"></i>
-                    </div>
-                    <a href="./managebusiness.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-box bg-secondary">
-                    <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage News</h3>
-                        <h6> Manage news and blog page </h6>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-newspaper-o"></i>
-                    </div>
-                    <a href="./managenews.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
         </div>
-    </div>
 
 
     </div><!-- Main Col END -->
@@ -190,7 +116,7 @@ session_start();
 		require_once("./footer.php");
 		?>
 
-
+    <script src="./js/clubrequests.js"></script>
     <script src="./js/sidebar.js"></script>
 </body>
 </html>

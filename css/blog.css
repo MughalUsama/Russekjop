@@ -32,7 +32,8 @@ hr{
     border-top: 1px solid #dc3545;
 }
 .news-img {
-    min-height: 250px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
     animation-name: stretch;
     animation-duration: 2s; 
     animation-timing-function: linear; 
@@ -88,26 +89,8 @@ h3, h5, h6{
     background-color:  #dc3545;
 }
 @media only screen and (min-width: 600px){
-    footer{
-        margin: 0% !important;
-    } 
     .secondcol{
         margin-left: 0.95rem !important;
     }
 }
 
-@media only screen and (max-width: 600px){
-    footer{
-        margin-top: 1% !important;
-    } 
-    #news-body{
-        margin-top: 27% !important;
-        margin-left: 8.5% !important;
-    }
-    .marginclass{
-        margin-left: 0.25rem !important;
-    }
-    .news-start-2{
-        margin-left: 2% !important;
-    } 
-}
