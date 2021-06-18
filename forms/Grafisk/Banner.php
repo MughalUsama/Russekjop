@@ -12,7 +12,7 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Banner-form text-center" method="POST" action="./forms/submit/detail5.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row justify-content-between form-group mb-5 mb-lg-6">
-                        <input type="text" name="quantity" id="NumberOfBanner" class=" form-control border border-danger col-4 d-flex justify-content-start" placeholder="Number of banners" required>
+                        <input type="number" name="quantity" id="NumberOfBanner" class=" form-control border border-danger col-4 d-flex justify-content-start" placeholder="Number of banners" required>
                         
                         <select type="text" name="size" class="form-control border border-danger col-4 d-flex" id="sizeOfBanner">
                             <option value="" selected disabled>Size</option>

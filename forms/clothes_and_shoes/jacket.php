@@ -15,7 +15,7 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Jacket-form text-center" method="POST" action="./forms/submit/detail1.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="text" name="quantity" id="quantity" class=" form-control border border-danger" placeholder="Number of jackets" style="width: 33%;"  required>
+                        <input type="number" name="quantity" id="quantity" class=" form-control border border-danger" placeholder="Number of jackets" style="width: 33%;"  required>
                         <input type="text" name="color" id="color" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
                         <select type="text" name="size" class="form-control border border-danger" id="size" style="margin-left:2.95%;width:33%">
                             <option value="" selected disabled>Size</option>

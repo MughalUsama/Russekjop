@@ -12,7 +12,7 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Orepropper-form text-center" method="POST" action="./forms/submit/detail2.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="text" name="quantity" id="numberOfOrepropper" class=" form-control border border-danger" placeholder="Number of orepropper" style="width: 33%;"  required>
+                        <input type="number" name="quantity" id="numberOfOrepropper" class=" form-control border border-danger" placeholder="Number of orepropper" style="width: 33%;"  required>
                         <input type="text" name="color" id="colorOfOrepropper" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
                         <select type="text" name="size" class="form-control border border-danger" id="sizeOfOrepropper" style="margin-left:2.95%;width:33%">
                             <option value="" selected disabled>Size</option>
