@@ -52,7 +52,7 @@ session_start();
             </li>
             <!-- /END Separator -->
             <!-- Menu with submenu -->
-            <a href="./admin.php"class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
                     <span class="menu-collapsed">Homepage</span>

@@ -162,7 +162,7 @@ session_start();
 									<input type="email" name="bemail" id="bemail" class="form-control border border-danger" placeholder="Business contact email" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="email" name="website" id="website" class="form-control border border-danger" placeholder="Website" required>
+									<input type="text" name="website" id="website" class="form-control border border-danger" placeholder="Website" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
 									<input type="text" name="bperson" id="bperson" class="form-control border border-danger" placeholder="Contact Person" required>
