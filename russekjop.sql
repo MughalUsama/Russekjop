@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 05:50 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.5
+-- Generation Time: Jun 18, 2021 at 02:34 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,6 +33,18 @@ CREATE TABLE `business_categories` (
   `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `business_categories`
+--
+
+INSERT INTO `business_categories` (`business_category_id`, `business_id`, `category_id`) VALUES
+(202, 30, 23),
+(203, 30, 25),
+(204, 30, 26),
+(205, 30, 27),
+(206, 30, 28),
+(207, 30, 29);
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +56,17 @@ CREATE TABLE `business_counties` (
   `business_id` int(11) NOT NULL,
   `county_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `business_counties`
+--
+
+INSERT INTO `business_counties` (`business_counties_id`, `business_id`, `county_name`) VALUES
+(77, 30, 'Hele Norge (all over the country)'),
+(78, 30, 'Oslo'),
+(79, 30, 'Rogaland'),
+(80, 30, 'Møre og Romsdal'),
+(81, 30, 'Nordland');
 
 -- --------------------------------------------------------
 
@@ -66,6 +89,13 @@ CREATE TABLE `business_info` (
   `logo_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `business_info`
+--
+
+INSERT INTO `business_info` (`business_id`, `business_name`, `vat`, `address`, `telephone`, `business_email`, `website`, `contact_person`, `contact_email`, `email`, `password`, `logo_name`) VALUES
+(30, 'Business 1', 'skj', 'uikjasd', 'lkasnkdnkl', 'mughal@gmail.com', 'cvb@cd.com', 'Usama Shahid1', 'mughal@gmail.com', 'mughal@gmail.com', 'aaaaaaaaa', '60cb69dc2bedb.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -78,6 +108,29 @@ CREATE TABLE `business_products` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `business_products`
+--
+
+INSERT INTO `business_products` (`business_products_id`, `business_id`, `product_id`, `category_id`) VALUES
+(241, 30, 122, 23),
+(242, 30, 123, 23),
+(243, 30, 120, 23),
+(244, 30, 125, 23),
+(245, 30, 121, 23),
+(246, 30, 124, 23),
+(247, 30, 136, 29),
+(248, 30, 132, 27),
+(249, 30, 127, 25),
+(250, 30, 129, 25),
+(251, 30, 128, 25),
+(252, 30, 126, 25),
+(253, 30, 130, 26),
+(254, 30, 131, 26),
+(255, 30, 133, 28),
+(256, 30, 135, 28),
+(257, 30, 134, 28);
 
 -- --------------------------------------------------------
 
@@ -131,13 +184,13 @@ CREATE TABLE `clubs` (
 --
 
 INSERT INTO `clubs` (`club_id`, `club_name`, `contact_person`, `telephone`, `email`, `address`, `post_code`, `city`, `password`, `isadmin`) VALUES
-(1, 'Usama\'s Club', 'Usama Shahid', '03104115426', 'mughalusama1133@gmail.com', 'Shad bagh', '54000', 'Lahore', 'aaaaaaaa', 0),
+(1, 'Usama\'s Club', 'Usama Shahid', '03201418635', 'mughalusama1133@gmail.com', 'Shad bagh, Lahore', '54000', 'unknown', 'aaaaaaaa', 0),
 (5, 'Real Madrid', 'aaaaa', 'llll44', 'aaaa@ssss.cpm', 'wswwwwwwwww', 'wwwww', 'wwww', 'aaaaaaaa', 0),
 (6, 'mu', 'aaaaa', 'llll44', 'waleedshahid@rocketmails.com', 'wswwwwwwwww', 'wwwww', 'wwww', 'aaaaaaaaaaa', 0),
 (7, 'Real Madrid', 'aaaaa', 'llll44', '03244014942@d.com', 'wswwwwwwwww', 'wwwww', 'wwww', 'zzzzzzzzzzzzz', 0),
 (8, 'Real Madrid', 'aaaaa', 'llll44', 'bsef17m035@pucit.edu.pk', 'wswwwwwwwww', 'wwwww', 'Lahore', 'usamashahid', 0),
 (9, 'abc12345', 'Usama Shahid', '0300000000', 'usama@d.com', 'aaaaaaaaa aaa a', '54000', 'Lahore', 'aaaaaaaa', 0),
-(11, 'Administrator', 'N/A', 'N/A', 'admin@russekjop.com', 'N/A', 'N/A', 'N/A', 'admin@sportsreg123', 1),
+(11, 'Admin', 'N/A', 'N/A', 'admin@russekjop.com', 'N/A', 'N/A', 'N/A', 'admin123', 1),
 (12, 'New club', 'abc', '0310101010', 'musama@gmail.com', 'Lahore', '54000', 'Lahore', 'aaaaaaaa', 0);
 
 -- --------------------------------------------------------
@@ -157,10 +210,95 @@ CREATE TABLE `club_requests` (
   `description` text DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
   `accepted_by` int(11) DEFAULT NULL COMMENT 'business_id',
-  `created_on` date NOT NULL DEFAULT current_timestamp(),
+  `created_on` text NOT NULL DEFAULT current_timestamp(),
   `accepted_on` datetime DEFAULT NULL,
   `filename` varchar(30) DEFAULT NULL,
   `table_name` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `club_requests`
+--
+
+INSERT INTO `club_requests` (`request_id`, `club_id`, `category_id`, `product_id`, `quantity`, `color`, `size`, `description`, `status`, `accepted_by`, `created_on`, `accepted_on`, `filename`, `table_name`) VALUES
+(92, 1, 23, 123, 2, 'red', 'Small=3', 'kjnds', 0, NULL, '2021-06-17', NULL, '', 'detail1'),
+(93, 1, 23, 123, 12, 'red', 'Small=3', 'kjasdsn', 0, NULL, '2021-06-17 01:39:12pm', NULL, '', 'detail1'),
+(94, 1, 23, 123, 12, 'red', 'Small=3', 'kjasdsn', 0, NULL, '2021-06-17 01:40:09pm', NULL, '', 'detail1'),
+(95, 1, 23, 123, 12, 'red', 'Small=3', 'kjasdsn', 0, NULL, '2021-06-17 01:41:54pm', NULL, '', 'detail1'),
+(96, 1, 23, 123, 12, 'red', 'Small=3', 'bdskjbc', 0, NULL, '2021-06-17 01:42:21pm', NULL, '', 'detail1'),
+(97, 1, 23, 123, 12, 'red', 'Small=3', 'bdskjbc', 0, NULL, '2021-06-17 01:42:57pm', NULL, '', 'detail1'),
+(98, 1, 23, 123, 12, 'red', 'Small=3', 'bdskjbc', 0, NULL, '2021-06-17 01:43:20pm', NULL, '', 'detail1'),
+(99, 1, 23, 123, 12, 'red', 'Small=3', ',s', 0, NULL, '2021-06-17 01:44:02pm', NULL, '', 'detail1'),
+(100, 1, 23, 123, 12, 'red', 'Small=3', ',s', 0, NULL, '2021-06-17 01:48:17pm', NULL, '', 'detail1'),
+(101, 1, 23, 123, 12, 'red', 'Small=3', 'kx', 0, NULL, '2021-06-17 01:48:47pm', NULL, '60cb369fe04c8.pptx', 'detail1'),
+(102, 1, 23, 123, 12, 'red', 'Small=3', 'kx', 0, NULL, '2021-06-17 01:55:52pm', NULL, '60cb3848c3502.pptx', 'detail1'),
+(103, 1, 23, 123, 12, 'red', 'Small=3', 'kx', 0, NULL, '2021-06-17 01:56:48pm', NULL, '60cb3880b6a24.pptx', 'detail1'),
+(104, 1, 23, 123, 12, 'red', 'Small=3', 'kx', 0, NULL, '2021-06-17 01:58:09pm', NULL, '60cb38d1480f4.pptx', 'detail1'),
+(105, 1, 33, 149, 12, 'red', 'Small=3', 'lknadskll', 0, NULL, '2021-06-17 03:40:44pm', NULL, '60cb50dc77bd6.pptx', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail1`
+--
+
+CREATE TABLE `detail1` (
+  `request_id` int(20) NOT NULL,
+  `Print` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detail1`
+--
+
+INSERT INTO `detail1` (`request_id`, `Print`) VALUES
+(104, 'Yes');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail3`
+--
+
+CREATE TABLE `detail3` (
+  `request_id` int(20) NOT NULL,
+  `Number_of_People` int(20) NOT NULL,
+  `Number_of_Products_per_Person` int(20) NOT NULL,
+  `Number_of_Sales_Round` int(20) NOT NULL,
+  `Toilet_Paper` text NOT NULL,
+  `Paper_Towels` text NOT NULL,
+  `Socks` text NOT NULL,
+  `Lighter_Briquettes` text NOT NULL,
+  `Cleaning_Products` text NOT NULL,
+  `Cookies_and_Goodies` text NOT NULL,
+  `Greeting_Card_Or_Christmas_Card` text NOT NULL,
+  `Cured_Meat_and_Meat_Products` text NOT NULL,
+  `Other` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail4`
+--
+
+CREATE TABLE `detail4` (
+  `request_id` int(20) NOT NULL,
+  `Number_of_Total_Russekort` int(20) NOT NULL,
+  `Number_of_Different_Russekort` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail6`
+--
+
+CREATE TABLE `detail6` (
+  `request_id` int(20) NOT NULL,
+  `From_Date` text NOT NULL,
+  `To_Date` text NOT NULL,
+  `Price_For_Assignment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -316,6 +454,30 @@ ALTER TABLE `club_requests`
   ADD KEY `club_id` (`club_id`);
 
 --
+-- Indexes for table `detail1`
+--
+ALTER TABLE `detail1`
+  ADD PRIMARY KEY (`request_id`);
+
+--
+-- Indexes for table `detail3`
+--
+ALTER TABLE `detail3`
+  ADD PRIMARY KEY (`request_id`);
+
+--
+-- Indexes for table `detail4`
+--
+ALTER TABLE `detail4`
+  ADD PRIMARY KEY (`request_id`);
+
+--
+-- Indexes for table `detail6`
+--
+ALTER TABLE `detail6`
+  ADD PRIMARY KEY (`request_id`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -343,25 +505,25 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `business_categories`
 --
 ALTER TABLE `business_categories`
-  MODIFY `business_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
+  MODIFY `business_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT for table `business_counties`
 --
 ALTER TABLE `business_counties`
-  MODIFY `business_counties_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `business_counties_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `business_info`
 --
 ALTER TABLE `business_info`
-  MODIFY `business_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `business_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `business_products`
 --
 ALTER TABLE `business_products`
-  MODIFY `business_products_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
+  MODIFY `business_products_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -379,7 +541,7 @@ ALTER TABLE `clubs`
 -- AUTO_INCREMENT for table `club_requests`
 --
 ALTER TABLE `club_requests`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `news`
