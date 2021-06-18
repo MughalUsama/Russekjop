@@ -26,6 +26,8 @@ session_start();
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/addproducts.css'>
+    <script src="./js/notify.min.js"></script>
+
   </head>
 <body>
 	<div class="wrapper">
@@ -39,11 +41,8 @@ session_start();
              require_once("./db.php");
 			 require_once("./header_user.php");
 			 
-             $query1="Select * from category;";
-             $cdata = db::getInstance()->get_result($query1);
-             $cdata1 = db::getInstance()->get_result($query1);
-             $cdata2 = db::getInstance()->get_result($query1);
-
+             $ac_er = "" ;
+             //add category
              if (isset($_REQUEST["addcat-btn"])){
                 $cat_name = mysqli_escape_string(db::getInstance(),$_REQUEST["cat-name"]);
                 $query = "Select * from category where category_name = \"{$cat_name}\"";
@@ -51,14 +50,64 @@ session_start();
                 {
                     $query = "Insert into category (category_name) values  (\"{$cat_name}\")";
                     db::getInstance()->dbquery($query);
-                    $ac_er = "caexists." ;
+                    $ac_er = "asuccess" ;
                 }
                 else{
-                    $ac_er = "Category already exists." ;
+                    $ac_er = "caexists" ;
                 }
             }
+            if (isset($_REQUEST["addpro-btn"])){
+                $pro_name = mysqli_escape_string(db::getInstance(),$_REQUEST["pro-name"]);
+                $cat1 = mysqli_escape_string(db::getInstance(),$_REQUEST["category1"]);
+                $query = "Select * from products where product_name =\"{$pro_name}\" and category_id = \"{$cat1}\";";
+                if(!db::getInstance()->get_result($query))
+                {
+                    $query = "Insert into products (product_name, category_id) values(\"{$pro_name}\", \"{$cat1}\");";
+                    if(db::getInstance()->dbquery($query)){
+                        $ac_er = "asuccess" ;
+                    }
+                }
+                else{
+                    $ac_er = "paexists" ;
+                }
+            }
+            if (isset($_REQUEST["remcat-btn"])){
+                $remcat_name = mysqli_escape_string(db::getInstance(),$_REQUEST["remcat-name"]);
+            
+                $query = "Select * from category where category_id = \"{$remcat_name}\"";
+                if(db::getInstance()->get_result($query))
+                {
+                    $query = "Delete from category where category_id = \"{$remcat_name}\"";
+                    db::getInstance()->dbquery($query);
+                    $ac_er = "rsuccess" ;
+                }
+                else{
+                    $ac_er = "crexists" ;
+                }
+            }
+            if (isset($_REQUEST["rempro-btn"])){
+                $query = "Select * from products where product_id =\"{$_REQUEST["rempro-name"]}\" and category_id = \"{$_REQUEST["category2"]}\"";
+                if(db::getInstance()->get_result($query))
+                {
+                    $rm_pro_name = mysqli_escape_string(db::getInstance(),$_REQUEST["rempro-name"]);
+                    $rm_cat2 = mysqli_escape_string(db::getInstance(),$_REQUEST["category2"]);
+                    $query = "Delete from products where  product_id=\"{$rm_pro_name}\" and category_id=\"{$rm_cat2}\";";
+                    db::getInstance()->dbquery($query);
+                    $ac_er = "rsuccess" ;
+                }
+                else{
+                    $ac_er = "prexists" ;
+                }            
+            }
+            $query1="Select * from category;";
+            $cdata = db::getInstance()->get_result($query1);
+            $cdata1 = db::getInstance()->get_result($query1);
+            $cdata2 = db::getInstance()->get_result($query1);
+
              ?>
 </header>
+<span id="errormsg" class="d-none <?php echo($ac_er)?>"></span>
+
 <div class="row" id="body-row">
     <!-- Sidebar -->
     <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">

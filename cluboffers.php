@@ -109,11 +109,11 @@ session_start();
     <div class="col">
         <nav class="mt-2" aria-label="...">
             <ul class="pagination pagination-md  justify-content-end">
-                <li class="page-item active" aria-current="page">
+                <li class="page-item" aria-current="page">
                 <span class="page-link bg-danger border-danger text-white" id="off-tab">Offers</span>
                 </li>
-                <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" href="#">All Requests</a></li>
-                <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" href="#">Accepted Offers</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" >All Requests</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" >Accepted Offers</a></li>
             </ul>
         </nav>
         
@@ -227,7 +227,8 @@ session_start();
 		?>
 
 
-    <script src="./js/cluboffers.js"></script>
     <script src="./js/sidebar.js"></script>
+    <script src="./js/cluboffers.js"></script>
+
 </body>
 </html>

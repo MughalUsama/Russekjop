@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    $("#ar-table").toggle();
+    
+
+    $("#accordionExample").show();
+    $("#ar-table").hide();
+    $("#acc-table").hide();
 
     cardno= 0;
 
@@ -251,6 +255,7 @@ $("#all-req").on("click",function() {
     $("#all-req").addClass("bg-danger");
     $("#all-req").removeClass("text-danger")
     $("#all-req").addClass("text-white");
+    $("#all-req").removeClass("bg-white");
     
     $("#acc-off").removeClass("bg-danger");
     $("#acc-off").addClass("text-danger");
@@ -269,7 +274,8 @@ $("#acc-off").on("click",function() {
     $("#acc-off").addClass("bg-danger");
     $("#acc-off").removeClass("text-danger")
     $("#acc-off").addClass("text-white");
-    
+    $("#acc-off").removeClass("bg-white");
+
     $("#all-req").removeClass("bg-danger");
     $("#all-req").addClass("text-danger");
     $("#all-req").addClass("bg-white");
@@ -288,6 +294,7 @@ $("#off-tab").on("click",function() {
     $("#off-tab").addClass("bg-danger");
     $("#off-tab").removeClass("text-danger")
     $("#off-tab").addClass("text-white");
+    $("#off-tab").removeClass("bg-white");
     
     $("#all-req").removeClass("bg-danger");
     $("#all-req").addClass("text-danger");

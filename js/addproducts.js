@@ -33,5 +33,28 @@ $(document).ready(function() {
 			$('#prod').append(item);
 		}
     }
+    function showmsg(message,state) {
+        $.notify.defaults({globalPosition: 'bottom right'});
+        $.notify(message, state);    
+    }
+        if($("#errormsg").hasClass("prexists")){
+            showmsg("Product does not exist!", "error");
+        }
+        if($("#errormsg").hasClass("crexists")){
+            showmsg("Category does not exist!", "error");
+        }
+        if($("#errormsg").hasClass("asuccess")){
+            showmsg("Added Successfully!","success");
+        }
+        if($("#errormsg").hasClass("rsuccess")){
+            showmsg("Removed Successfully!","success");
+        }
+        if($("#errormsg").hasClass("caexists")){
+            showmsg("Already Exists!","error");
+        }
+        if($("#errormsg").hasClass("paexists")){
+            showmsg("Already Exists!","error");
+        }
 
+    
 });
