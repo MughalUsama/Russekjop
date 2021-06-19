@@ -63,7 +63,7 @@ session_start();
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding" >
 				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-					<h3 style="font-weight: bolder;color: white;font-size: 2.7vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
+					<h3 style="color: white;font-size: 2.6vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
 				</div>
 				<form action="./login.php">
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">

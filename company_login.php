@@ -45,8 +45,8 @@ session_start();
 		$errormsg = "";
 		if (isset($_REQUEST["login"]))
 		{
-			$email = $_REQUEST["email"];
-			$passwd = $_REQUEST["passwd"];
+			$email = mysqli_escape_string(db::getInstance(), $_REQUEST["email"]);
+			$passwd = mysqli_escape_string(db::getInstance(), $_REQUEST["passwd"]);
 			$query = "Select * from business_info where email = \"$email\" and password = \"$passwd\";";
 			$data = db::getInstance()->get_result($query);
 			if ($data)
@@ -80,10 +80,10 @@ session_start();
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center" method="POST">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="email" id="companyEmail" class="form-control" placeholder="Email (Username)" required>
+									<input type="text" name="email" id="companyEmail" class="form-control border border-warning" placeholder="Email (Username)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="passwd" id="companyPassword" class="form-control" placeholder="Password" minlength="8" required>
+									<input type="password" name="passwd" id="companyPassword" class="form-control border border-success" placeholder="Password" minlength="8" required>
 								</div>
 								<div class="pt-4 mb-3">
 									<button type="submit" name="login" id="companyLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>

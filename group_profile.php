@@ -12,7 +12,7 @@
 		 require_once("./header_user.php");
 		$errormsg = "";
 		if (isset($_POST["update"])){
-			$email = $_POST["email"];
+			$email = mysqli_escape_string(db::getInstance(), $_POST["email"]);
 			$query="Select * from clubs where email = '$email';";
 			$data = db::getInstance()->get_result($query);
             

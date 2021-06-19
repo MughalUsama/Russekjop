@@ -1,0 +1,48 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+ .card, .card-header{
+     background-color: #dc3545;
+     ;
+ }
+pre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ .card-header{
+     border: none;
+ }
+.messages>pre{
+    background-color: #dc3545;
+    font-size: 16px;
+    color: black;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+ .mid-body{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+.outline-1{
+
+    min-height: 420px;
+}
+ pre {
+     white-space: pre-wrap;       /* Since CSS 2.1 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
+.rej-btn, .acc-btn, .send-btn{
+    border-radius: 6%;
+    border: none;
+    background-color: #dc3545;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+}
+
+.card-body{
+    background-color: white !important;
+    border-radius: 3px;
+}

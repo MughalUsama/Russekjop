@@ -26,6 +26,8 @@ session_start();
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/admin.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/managebusiness.css'>
+
   </head>
 <body>
 	<div class="wrapper">
@@ -95,15 +97,48 @@ session_start();
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
     <!-- MAIN -->
-    <div class="col pt-4" style="font-family: 'Times New Roman', Times, serif;">
-        <div class="container-fluid px-5 mt-2 ml-1 pb-2 text-left"><h3>Club Requests:</h3></div>
-        <div class="container-fluid px-5 mt-2" id="fillcards">
-
+    <div class="col pt-0">
+    <div class="container-fluid px-4" id="card-container">
+    <div class="row mb-3">
+        <table class="table table-box table-responsive mt-4 table-striped">
+            <thead>
+                <tr>
+                <th class="bg-info" scope="col">#</th>
+                <th class="bg-info" scope="col">Business Name</th>
+                <th class="bg-info" scope="col">Email</th>
+                <th class="bg-warning" scope="col"></th>
+                <th class="bg-danger" scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+            </table>
         </div>
+</div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable0" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle0" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle0">Delete Business</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            Are you sure you want to delete this account?
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="delete-business" class="btn btn-danger" data-dismiss="modal">Delete</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
     </div><!-- Main Col END -->
-</div><!-- body-row END -->
+    </div><!-- body-row END -->
     <!-- Page Content -->
 
 
@@ -112,7 +147,7 @@ session_start();
 		require_once("./footer.php");
 		?>
 
-    <script src="./js/clubrequests.js"></script>
+    <script src="./js/managebusiness.js"></script>
     <script src="./js/sidebar.js"></script>
 </body>
 </html>

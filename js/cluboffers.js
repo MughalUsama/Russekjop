@@ -150,13 +150,13 @@ $(document).ready(function() {
     
             $.ajax(
                 {
-                    url: './api/sendmsg.php',
+                    url: './api/update/sendmsg.php',
                     type: 'POST',
                     dataType : 'text',
                     data: {mdata:data},
                     success: sent,
                     error: function(err,errt){
-                        console.log(errt);
+                        console.log(errt,err);
                     }
                 }
             );
@@ -183,7 +183,7 @@ $(document).ready(function() {
             }
             $.ajax(
                 {
-                    url: 'respondoffer.php',
+                    url: './api/update/respondoffer.php',
                     type: 'POST',
                     dataType : 'text',
                     data: {mdata:data},
@@ -209,7 +209,7 @@ $(document).ready(function() {
             }
             $.ajax(
                 {
-                    url: 'respondoffer.php',
+                    url: './api/update/respondoffer.php',
                     type: 'POST',
                     dataType : 'text',
                     data: {mdata:data},

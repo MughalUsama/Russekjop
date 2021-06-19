@@ -23,7 +23,7 @@ $(document).ready(function() {
         req.forEach(function (arrayItem, index) {
             var cards = '<div class="card col-12 rounded mb-2 justify-content-center bg-danger">'+
                 '                    <div class="card-header" data-toggle="collapse" aria-expanded="false" data-target="#collapse'+cardno+'" aria-controls="collapse'+cardno+'"><h5 class="mb-0 justify-content-between">'+
-                '                        <a class="text-left text-dark">'+
+                '                        <a class="text-left text-white">'+
                 '                        '+prod[index]["product_name"]+' – '+club[index]["club_name"]+
                 '                        </a>'+
                 '                        <i class="fa fa-caret-down d-inline float-right" style="font-size:24px"></i>'+
@@ -31,7 +31,7 @@ $(document).ready(function() {
                 '                    </h5>'+
                 '                    </div>'+
                 '                    <div aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse border-top border-light" id="collapse'+cardno+'">'+
-                '                    <div class="card-body col-12">'+
+                '                    <div class="card-body col-12 text-white">'+
                 '                            <div class="row pl-2" id="text-wrap request-2">';
                 if(arrayItem["quantity"]!=null){
                     cards+='                            <p class="pl-4 row col-12">No of '+prod[index]["product_name"]+':            '+ arrayItem["quantity"]+'</p>';

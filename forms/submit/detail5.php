@@ -10,9 +10,9 @@ if(!array_key_exists("clubloggedin", $_SESSION)){
 require_once("../../db.php");
 if(isset($_REQUEST["send"])){
     
-    $_SESSION["size"]= $_REQUEST["size"];
-    $_SESSION["quantity"]= $_REQUEST["quantity"];
-    $_SESSION["description"]= $_REQUEST["description"];
+    $_SESSION["size"]= mysqli_escape_string(db::getInstance(), $_REQUEST["size"]);
+    $_SESSION["quantity"]= mysqli_escape_string(db::getInstance(), $_REQUEST["quantity"]);
+    $_SESSION["description"]= mysqli_escape_string(db::getInstance(), $_REQUEST["description"]);
 }
 else{
     header("Location: ../../index.php"); /* Redirect browser */

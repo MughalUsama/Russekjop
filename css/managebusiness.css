@@ -1,0 +1,21 @@
+.edituser:hover{
+    transform: scale(1.07);
+    text-decoration: underline;
+}
+
+.deleteuser:hover{
+    transform: scale(1.07);
+    text-decoration: underline;
+}
+
+.edituser, .deleteuser{
+    cursor: pointer;
+}
+@media only screen and (min-width: 600px) {
+    .table-responsive{
+        display: table !important;
+    }
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}

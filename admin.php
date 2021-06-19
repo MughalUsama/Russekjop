@@ -65,11 +65,6 @@ session_start();
                     <span class="menu-collapsed">Profile</span>
                 </div>
             </a>
-            <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers <span class="badge badge-pill badge-primary ml-2"><i class="fa fa-envelope"></i></span></span>                </div>
-            </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                 <small>OPTIONS</small>

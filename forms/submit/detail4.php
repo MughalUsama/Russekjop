@@ -10,10 +10,12 @@ if(!array_key_exists("clubloggedin", $_SESSION)){
 require_once("../../db.php");
 
 if(isset($_REQUEST["send"])){
-    $_SESSION["numberOfTotalRussekort"]= $_REQUEST["numberOfTotalRussekort"];
-    $_SESSION["numberOfDifferentRussekort"]= $_REQUEST["numberOfDifferentRussekort"];
-    $_SESSION["color"]= $_REQUEST["color"];
-    $_SESSION["description"]= $_REQUEST["description"];
+    $_SESSION["numberOfTotalRussekort"]= mysqli_escape_string(db::getInstance(), $_REQUEST["numberOfTotalRussekort"]);
+    $_SESSION["numberOfDifferentRussekort"]= mysqli_escape_string(db::getInstance(), $_REQUEST["numberOfDifferentRussekort"]);
+    $_SESSION["color"]= mysqli_escape_string(db::getInstance(), $_REQUEST["color"]);
+    $_SESSION["description"]= mysqli_escape_string(db::getInstance(), $_REQUEST["description"]);
+    $_SESSION["tablename"]= mysqli_escape_string(db::getInstance(), $_REQUEST["tablename"]);
+    
 }
 else{
     header("Location: ../../index.php"); /* Redirect browser */
@@ -37,7 +39,7 @@ if(!$info["basename"]){
   $newname = null;    
 }
 $query_time = date("Y-m-d h:i:sa");
-$query = "INSERT INTO `club_requests`(`club_id`, `category_id`, `product_id`, `color`, `description`, `filename`, `created_on`) VALUES (\"{$_SESSION["userdata"]["club_id"]}\",\"{$_SESSION["cat_id"]}\",\"{$_SESSION["pro_id"]}\",\"{$_SESSION["color"]}\",\"{$_SESSION["description"]}\",\"$newname\",\"$query_time\")";
+$query = "INSERT INTO `club_requests`(`club_id`, `category_id`, `product_id`, `color`, `description`, `filename`, `created_on`,`table_name`) VALUES (\"{$_SESSION["userdata"]["club_id"]}\",\"{$_SESSION["cat_id"]}\",\"{$_SESSION["pro_id"]}\",\"{$_SESSION["color"]}\",\"{$_SESSION["description"]}\",\"$newname\",\"$query_time\",\"{$_SESSION["tablename"]}\")";
 db::getInstance()->dbquery($query);
 $query = "Select * from `club_requests` where `club_id` = \"{$_SESSION["userdata"]["club_id"]}\" and  `created_on` = \"{$query_time}\";";
 

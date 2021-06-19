@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px){
+    
+    .chosen-container{
+        width: 75% !important;
+        margin-left: 0% !important;
+    }
+    footer{
+        display: none;
+    }
+}
+footer{
+    margin-left: 0% !important;
+}
+.chosen-container{
+    width: 75% !important;
+    margin-left: 0% !important;
+}
+input, select{
+    border-radius: 2% !important;
+    border-color: red !important;
+}
+
+.create-account-sec{
+    background-image: url("../img/Pictureb.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}

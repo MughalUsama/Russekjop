@@ -1,3 +1,6 @@
 .accordion-button:not(.collapsed) {
     color: wheat !important;
 }
+body{
+    font-family: 'Times New Roman', Times, serif;
+}

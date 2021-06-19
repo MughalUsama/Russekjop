@@ -124,16 +124,19 @@ if (isset($_REQUEST["update"]))
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
                     <select id="counties"  multiple class="chosen" data-placeholder="Choose Counties" disabled>
-                    <?php 
-                        $query = "Select * from business_counties where business_id = \"{$_SESSION["userdata"]["business_id"]}\";";
-                        $pdata = (db::getInstance()->get_result($query));
-                        
-                        while($row = mysqli_fetch_assoc($pdata))
-                        {
-
-                            echo("<option value = \"{$row['business_counties_id']}\" disabled selected>{$row['county_name']}</option>");                            
-                        }
-                        ?>
+                    <option value="-1"></option>
+                        <option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>
+                        <option value="Oslo">Oslo</option>
+                        <option value="Rogaland">Rogaland</option>
+                        <option value="Møre og Romsdal">Møre og Romsdal</option>
+                        <option value="Nordland">Nordland</option>
+                        <option value="Viken">Viken</option>
+                        <option value="Innlandet">Innlandet</option>
+                        <option value="Vestfold og Telemark">Vestfold og Telemark</option>
+                        <option value="Agder">Agder</option>
+                        <option value="Vestland">Vestland</option>
+                        <option value="Trøndelag">Trøndelag</option>
+                        <option value="Troms og Finnmark">Troms og Finnmark</option>
                     </select>
                     </div>
                     <div class="pt-2 mb-5">

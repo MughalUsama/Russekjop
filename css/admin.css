@@ -9,7 +9,7 @@
 
 
 .table-box {
-    box-shadow: 0 0 3pt 2pt #44D9E6;
+    box-shadow: 0 0 3pt 2pt red;
     border-radius: 5px;
 }
 .card-box:hover {
@@ -79,4 +79,7 @@
         font-size: 90% !important;
     }
     
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
 }

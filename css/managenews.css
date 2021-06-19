@@ -32,3 +32,6 @@ h3, h5, label, textarea{
 .bg-mycolor{
     background-color:  #44D9E6;
 }
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
