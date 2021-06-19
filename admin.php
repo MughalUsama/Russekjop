@@ -148,7 +148,7 @@ session_start();
                     <div class="icon">
                         <i class="fa fa-users"></i>
                     </div>
-                    <a href="./business_Registration.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./business_registration.php" class="card-box-footer py-3"><b><b>Lets Go!</b></b> <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">

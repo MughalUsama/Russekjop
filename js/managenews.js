@@ -47,7 +47,7 @@ $(document).ready(function() {
 
         $.ajax(
             {
-                url: 'deletenews.php',
+                url: './api/delete/deletenews.php',
                 type: 'POST',
                 dataType : 'text',
                 data: {mdata:data},
