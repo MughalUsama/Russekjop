@@ -38,7 +38,10 @@ session_start();
              ob_start();
              require_once("./db.php");
 			 require_once("./header_user.php");
-
+             if (!array_key_exists( "clubloggedin",$_SESSION)) {
+                header("./index.php");
+                exit;
+               }
             $allquery = "Select * from club_requests where club_id = \"{$_SESSION["userdata"]["club_id"]}\"";
             $allresult = db::getInstance()->get_result($allquery);
             $accquery = "Select * from club_requests where club_id = \"{$_SESSION["userdata"]["club_id"]}\" and accepted_by is NOT NULL";

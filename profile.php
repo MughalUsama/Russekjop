@@ -37,11 +37,11 @@ session_start();
 		  if (array_key_exists('adminloggedin',$_SESSION)) {
 			require_once("./admin_profile.php");  
 		}
-		// else{
-		// 	header("Location: ./index.php"); /* Redirect browser */
-		// 	/* Make sure that code below does not get executed when we redirect. */
-		// 	exit;
-		// }
+		else{
+			header("Location: ./index.php"); /* Redirect browser */
+			/* Make sure that code below does not get executed when we redirect. */
+			exit;
+		}
 ?>
 </body>
 </html>

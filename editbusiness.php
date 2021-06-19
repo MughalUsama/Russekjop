@@ -42,6 +42,10 @@ session_start();
              ob_start();
              require_once("./db.php");
 			 require_once("./header_user.php");
+             if (!array_key_exists( "adminloggedin",$_SESSION)) {
+                header("./index.php");
+                exit;
+               }
 //----------------------------------------------
 
 if (isset($_REQUEST["bid"])) {

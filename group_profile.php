@@ -9,6 +9,10 @@
 		<?php
 		 ob_start();
 		 require_once("./db.php");
+		 if (!array_key_exists( "clubloggedin",$_SESSION)) {
+			header("./index.php");
+			exit;
+		   }
 		 require_once("./header_user.php");
 		$errormsg = "";
 		if (isset($_POST["update"])){

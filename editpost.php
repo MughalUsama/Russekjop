@@ -40,6 +40,10 @@ session_start();
              require_once("./db.php");
 			 require_once("./header_user.php");
              $successmsg = "";
+             if (!array_key_exists( "adminloggedin",$_SESSION)) {
+                header("./index.php");
+                exit;
+               }
 
 			 ?>
 </header>
