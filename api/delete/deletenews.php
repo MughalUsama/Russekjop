@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-require_once("./db.php");
+require_once("../../db.php");
 
 if (!array_key_exists( "adminloggedin",$_SESSION)) {
     # code...

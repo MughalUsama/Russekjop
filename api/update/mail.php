@@ -9,6 +9,12 @@ $_SESSION["resetmail"] = $to_email;
 $subject = "Reset SportsReg password";
 $body = "Hi, your reset code for SportsReg account is $resetcode";
 $headers = "From: SportsReg";
+$headers = 'From: Russekjop' . "\r\n" . 
+
+    'Reply-To: test@test.com' . "\r\n" . 
+
+    'X-Mailer: PHP/' . phpversion(); 
+
 $mailsent[] = [];
 if (mail($to_email, $subject, $body, $headers)) {
     $mailsent[]=array(

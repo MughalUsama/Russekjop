@@ -25,14 +25,42 @@ session_start();
 		 ob_start();
 		 require_once("./db.php");
 		 require_once("./header.php");
-		 if (isset($_POST["send"])){
+if (isset($_POST["send"])){
 			$name = mysqli_escape_string(db::getInstance(), $_POST["Name"]);
 			$email = mysqli_escape_string(db::getInstance(), $_POST["Email"]);
 			$telephone = mysqli_escape_string(db::getInstance(), $_POST["Telephone"]);
 			$message = mysqli_escape_string(db::getInstance(), $_POST["message"]);
- 
-		}
+			$query="Insert into contact_us(Name, Email, Telephone, Message) VALUES ('$name','$email','$telephone','$message');";
+			db::getInstance()->dbquery($query);
+			$to      = 'russekjop@xn--russekjp-c5a.no'; 
+			$subject = 'RussekJop - Contact us'; 
+			$Name = $name;
+			$Email = $email;
+			$Telephone = $telephone;
+			$CMessage = $message;
+			$mail_msg = "Hi, this is $Name here. I contacted you through Russekjop.
+			Name: $Name
+			Email : $Email
+			Telephone : $Telephone
+			Message: $CMessage
+			";
+			$message = $mail_msg;
+			$headers = 'From: $Email' . "\r\n" . 
+
+			'Reply-To: $Email' . "\r\n" . 
+
+			'X-Mailer: PHP/' . phpversion(); 
+			// mail here
+			mail($to, $subject, $message, $headers); 
+
+
+			$updatequery = "UPDATE contact_us SET sent = '1' where sent = '0';";
+			db::getInstance()->dbquery($updatequery);
+
+			//header("./contact_us.php");
+		 }	
 		 ?>
+		 
 	</header>
 	<section class="create-account-sec py-8 py-md-10 py-lg-12" style="margin-top:1.5%">
 				<div class="container">
