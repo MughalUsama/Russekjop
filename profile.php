@@ -28,13 +28,16 @@ session_start();
   </head>
 <body>
 <?php
-		if (array_key_exists('businessloggedin' ,$_SESSION)) {
+		if (array_key_exists('businessloggedin' ,$_SESSION))
+		{
 			require_once("./business_profile.php");
 		}    
-		  if(array_key_exists('clubloggedin',$_SESSION)){
+		elseif(array_key_exists('clubloggedin',$_SESSION))
+		{
 			require_once("./group_profile.php");  
 		}
-		  if (array_key_exists('adminloggedin',$_SESSION)) {
+		elseif(array_key_exists('adminloggedin',$_SESSION)) 
+		{
 			require_once("./admin_profile.php");  
 		}
 		else{

@@ -32,18 +32,18 @@ session_start();
 		 ?>
 </header>
 
-<div class="container-fluid bg-dark text-white pb-3" id="part-container">
+<div class="container-fluid bg-white text-dark pb-3" id="part-container">
     <div class="container col-10 pr-0" id="outline-term">
 
         <div class="row d-flex col-12 pb-1" id="center-page">
             <div class="d-none d-md-flex col-md-6 mt-5 pt-5 pb-5" id="partner-img" ></div>
             <div class="col-12 col-md-6">
                 <div class="row pt-4 mt-3 pb-1 col-12 ml-1 d-flex justify-content-center">
-                <h2>About Us</h2>
+                <h2>About <span class="text-danger">Us</span></h2>
                 </div>
                 <!-- first paragraph-->
                 <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
-                Text on this page needs to be changed.......... Russekjøp er derfor den foretrukne plattformen.
+                Russekjøp er derfor den foretrukne plattformen.
                 </p>
                 <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
                 Ved å registrere seg som leverandør vil din bedrift få direkte tilgang til planlagte kjøp fra russegrupper. Dette gir dere muligheten til å kjempe om nye kunder og nye salg.

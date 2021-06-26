@@ -97,3 +97,13 @@ h3, h5, h6{
     }
 }
 
+.news-start{
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+}
+.container-1{
+    text-align: center;
+    padding: 5px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

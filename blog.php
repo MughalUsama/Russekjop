@@ -41,8 +41,9 @@ if($newsdata)
     $row_cnt = $newsdata->num_rows;
     $topnews = mysqli_fetch_assoc($newsdata);
     echo ('<div class="container-news d-flex ml-3 mb-2 h-100 jusitfy-content-center align-items-center flex-wrap col-12" id="news-body">');
-    echo ('<div class="news-start col-12 d-flex jusitfy-content-center align-items-center row rounded" news-id="'.$topnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-    echo ('<img class="col-12 my-1 news-img" src="./news/'.$topnews["image_name"].'" alt="Sportsreg news">');
+    echo ('<div class="news-start px-0 py-0 col-12 d-flex jusitfy-content-center align-items-center row rounded" news-id="'.$topnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+    echo ('<img class="col-12 my-0 news-img px-0 py-0" src="./news/'.$topnews["image_name"].'" alt="Sportsreg news">');
+    echo ('<div class="container-1 d-flex justify-content-center align-items-center col-12"><p class="text-dark mb-0 font-weight-bold">'.$topnews["news_headline"].'</p></div>');
     echo ('<div class="d-none"><h3>'.$topnews["news_headline"].'</h3></div>');
     echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$topnews["news_description"]);
     echo('</pre></div>');
@@ -61,9 +62,10 @@ if($newsdata)
         }
         if(fmod($newsposition,2) == 1){
             $newsposition = $newsposition + 1;
-            echo('<div class="row ml-2 px-0">');
-            echo ('<div class="ml-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row" news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-            echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo('<div class="ml-2 mr-2 d-flex jusitfy-content-center align-items-center flex-wrap">');
+            echo ('<div class="ml-2 news-start px-0 py-0 mx-auto mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row" news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+            echo ('<img class="col-12 news-img px-0 py-0 my-0" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo ('<div class="container-1 d-flex justify-content-center align-items-center col-12"><p class="text-dark mb-0 font-weight-bold">'.$nextnews["news_headline"].'</p></div>');
             echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
             echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
             echo('</pre></div>');
@@ -71,8 +73,9 @@ if($newsdata)
         }
         else{
             $newsposition = $newsposition + 1;
-            echo ('<div class="news-start-2 news-start mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row " news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
-            echo ('<img class="col-12 my-1 news-img" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo ('<div class="news-start-2 news-start px-0 py-0 mx-auto mt-1 col-sm-12 col-md-'.$grid_col.' d-flex align-self-stretch jusitfy-content-center align-items-center rounded row " news-id="'.$nextnews["news_id"].'" data-toggle="modal" data-target="#newsModalCenter">');
+            echo ('<img class="col-12 news-img px-0 py-0 my-0" src="./news/'.$nextnews["image_name"].'" alt="Sportsreg news">');
+            echo ('<div class="container-1 d-flex justify-content-center align-items-center col-12"><p class="text-dark mb-0 font-weight-bold">'.$nextnews["news_headline"].'</p></div>');
             echo ('<div class="d-none"><h5>'.$nextnews["news_headline"].'</h5></div>');
             echo('<div class="col-0 py-2 d-none"><pre class="main-para">'.$nextnews["news_description"]);
             echo('</pre></div>');        

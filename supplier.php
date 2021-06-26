@@ -32,26 +32,26 @@ session_start();
 		 ?>
 </header>
 
-<div class="container-fluid bg-dark text-white pb-3" id="part-container">
+<div class="container-fluid bg-white text-dark pb-3" id="part-container">
     <div class="container col-10 pr-0" id="outline-term">
 
         <div class="row d-flex col-12 pb-1" id="center-page">
             <div class="d-none d-md-flex col-md-6 mt-5 pt-5 pb-5" id="partner-img" ></div>
             <div class="col-12 col-md-6">
-                <div class="row pt-4 mt-3 pb-1 col-12 ml-1 d-flex justify-content-center">
-                <h2>Become a Supplier</h2>
+                <div class="row pt-4 mt-4 pb-1 col-12 ml-1 d-flex justify-content-center">
+                <h2>Become a <span class="text-danger">Supplier</span></h2>
                 </div>
                 <!-- first paragraph-->
-                <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
+                <p class="ml-1 mt-2 mb-2 pb-2 col-12 text-justify">
                 Er din bedrift på utkikk etter flere kunder, eller har som mål å øke salget og inntjeningen? Russekjøp er derfor den foretrukne plattformen.
                 </p>
-                <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
+                <p class="ml-1 mt-1 mb-2 pb-2 col-12 text-justify">
                 Ved å registrere seg som leverandør vil din bedrift få direkte tilgang til planlagte kjøp fra russegrupper. Dette gir dere muligheten til å kjempe om nye kunder og nye salg.
                 </p>
-                <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
+                <p class="ml-1 mt-1 mb-2 pb-2 col-12 text-justify">
                 Ved siden av ovennevnte vil din bedrift også bli registret i vårt leverandørregister og vi tilbyr tilgang til kjøp av innholdsmarkedsføring i våre kanaler.                
                 </p>
-                <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
+                <p class="ml-1 mt-1 mb-2 pb-2 col-12 text-justify">
                 Dersom dette høres interessant ut – kontakt oss i skjemaet nedenfor. Dere vil så bli kontaktet av oss i løpet av kort tid.
             </div>
             <!-- second paragraph-->

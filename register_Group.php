@@ -48,7 +48,18 @@ session_start();
 				$query="Insert into clubs(club_name, contact_person, telephone, email, address, post_code, city, password) VALUES ('$name','$person','$telph','$email','$address','$code','$city','$passwd');";
 				if(db::getInstance()->dbquery($query))
 				{
-					$errormsg = "signedup";    
+					$errormsg = "signedup";
+					$query="Select * from clubs where email = '$email' and password = '$passwd' ;";
+					$data = db::getInstance()->get_result($query);
+					
+					if($data){
+					  $_SESSION["login_time_stamp"] = time(); // login time used for expiring session
+					  $_SESSION['userdata'] = mysqli_fetch_assoc($data) ;
+					  $_SESSION["username"] = $_SESSION['userdata']['club_name'];
+					  $_SESSION['clubloggedin'] = "yes";
+					  header("Location: ./userhome.php"); /* Redirect browser */
+					  exit;
+					}						  
 				}
 			}
 			else

@@ -14,16 +14,10 @@
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
                         <input type="number" name="quantity" id="numberOfShoes" class=" form-control border border-danger" placeholder="Number of shoes" style="width: 33%;"  required>
                         <input type="text" name="color" id="colorOfShoes" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
-                        <select type="text" name="size" class="form-control border border-danger" id="sizeOfShoes" style="margin-left:2.95%;width:33%">
-                            <option value="" selected disabled>Size</option>
-                            <option>Small=3</option>
-                            <option>Medium=4</option>
-                            <option>Large=5</option>
-                            <option>X-large=6</option>
-                        </select>
+                        <input type="text" name="size" class="form-control border border-danger" id="sizeOfShoes" placeholder="Size" style="margin-left:2.95%;width:33%">
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="description" id="paragraph_text_Shoes" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs." required></textarea>
+                        <textarea name="description" id="paragraph_text_Shoes" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
                     </div>
 
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">

@@ -1,6 +1,4 @@
-select{
-  color: wheat !important;
-}
+
 select option { color: black; }
 select option:first-child{
   color: wheat;

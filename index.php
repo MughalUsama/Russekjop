@@ -67,7 +67,7 @@ session_start();
 				</div>
 				<form action="./login.php">
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
+				  <select style="background-color: white; color:black; width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
 				  	<option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
 					  <?php
                             while($row = mysqli_fetch_assoc($category_data))
@@ -78,12 +78,9 @@ session_start();
 				  </select>
 				</div>
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-				  <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product">
+				  <select style="background-color: white; color:black; width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product">
 				  	<option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
-				    <option>1</option>
-				    <option>2</option>
-				    <option>3</option>
-				    <option>4</option>
+				    
 				  </select>
 				</div>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
@@ -193,9 +190,9 @@ session_start();
 		</div>
 		<div class="divider d-md-none d-none d-md-flex"></div>
 
-		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0 bimage" onclick="window.location='http://google.com';">
+		<div class="col-lg-6 col-md-6 col-sm-6 p-0 m-0 bimage" onclick="window.location='./blog.php';">
 			<div class="divs">
-				<img class="imagesStyle img-fluid col-12 p-0 m-0" src="./img/Picture20.png">
+				<img class="imagesStyle img-fluid col-12 p-0 m-0" src="./img/Picture-news.png">
 			</div>
 		</div>
 	</div>
