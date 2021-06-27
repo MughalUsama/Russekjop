@@ -131,7 +131,7 @@ session_start();
 				</div>
                 <form method="POST" action="./request.php">
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
+                    <select style="background-color: white; color:black;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
                         <option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
                         <?php
                             while($row = mysqli_fetch_assoc($category_data))
@@ -142,7 +142,7 @@ session_start();
                     </select>
                     </div>
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-                    <select style="background-color: transparent;width:88%;border-color: black;" type="text" name="Product" placeholder=" Choose You Category " class="form-control" id="Product" required>
+                    <select style="background-color: white; color:black;width:88%;border-color: black;" type="text" name="Product" placeholder=" Choose You Category " class="form-control" id="Product" required>
                         <option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
                         
                     </select>

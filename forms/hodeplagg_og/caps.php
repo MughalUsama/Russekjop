@@ -12,10 +12,11 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Caps-form text-center" method="POST" action="./forms/submit/detail1.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="quantity" id="numberOfCaps" class=" form-control border border-danger" placeholder="Number of caps" style="width: 33%;"  required>
-                        <input type="text" name="color" id="colorOfCaps" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
-                        <input type="text" name="size" class="form-control border border-danger" id="sizeOfCaps" placeholder="Size" style="margin-left:2.95%;width:33%">
-
+                        <input type="number" name="quantity" id="numberOfCaps" class=" form-control border border-danger" placeholder="Number of caps" style="width: 50%;"  required>
+                        <input type="text" name="color" id="colorOfCaps" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:50%"  required>
+                    </div>
+                    <div class="d-flex flex-row form-group mb-4 mb-lg-6">
+                        <input type="text" name="size" class="form-control border border-danger" id="sizeOfCaps" placeholder="Size" style="width:48.5%">
                     </div>
                     <div class="form-check d-flex flex-row" style="margin-bottom: 3%;margin-top: -2%;">
                         <label class="form-check-label" for="exampleCheck1" style="font-size:95%;">Print </label>

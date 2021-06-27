@@ -12,9 +12,11 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Salgsdugnad-form text-center" method="POST" action="./forms/submit/detail3.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="numberOfPeople" id="numberOfPeople" class=" form-control border border-danger" placeholder="Number of people" style="width: 33%;"  required>
-                        <input type="number" name="NumberOfProductsPerPerson" id="NumberOfProductsPerPerson" class=" form-control border border-danger" placeholder="Number of Products Per Person" style="margin-left:2.95%;width:33%"  required>
-                        <input type="number" name="NumberOfSalesRound" id="NumberOfSalesRounds" class=" form-control border border-danger" placeholder="Number of sales round" style="margin-left:2.95%;width:33%"  required>
+                        <input type="number" name="numberOfPeople" id="numberOfPeople" class=" form-control border border-danger" placeholder="Number of people" style="width: 50%;"  required>
+                        <input type="number" name="NumberOfSalesRound" id="NumberOfSalesRounds" class=" form-control border border-danger" placeholder="Number of sales round" style="margin-left:2.95%;width:50%"  required>
+                    </div>
+                    <div class="d-flex flex-row form-group mb-4 mb-lg-6">
+                        <input type="number" name="NumberOfProductsPerPerson" id="NumberOfProductsPerPerson" class=" form-control border border-danger" placeholder="Number of Products Per Person" style="width:51.5%"  required>
                     </div>
                     <div class="d-none">
                         <input type="text" name="tablename" id="tablename" class="d-none" value="detail3">

@@ -11,13 +11,13 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Russelue-form text-center" method="POST" action="./forms/submit/detail2.php" enctype="multipart/form-data">
-                    <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="number" name="quantity" id="numberOfRusselue" class=" form-control border border-danger" placeholder="Number of russelue" style="width: 33%;"  required>
-                        <input type="text" name="color" id="colorOfRusselue" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
-                        <input type="text" name="size" class="form-control border border-danger" placeholder="Size" id="sizeOfRusselue" style="margin-left:2.95%;width:33%">
-
+                    <div class="d-flex flex-row form-group mb-4 mb-lg-6">
+                        <input type="number" name="quantity" id="numberOfRusselue" class=" form-control border border-danger" placeholder="Number of russelue" style="width: 50%;"  required>
+                        <input type="text" name="color" id="colorOfRusselue" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:50%"  required>
                     </div>
-                    
+                    <div class="d-flex flex-row form-group mb-5 mb-lg-6">
+                        <input type="text" name="size" class="form-control border border-danger" placeholder="Size" id="sizeOfRusselue" style="width:48.5%;">
+                    </div>
                     <div class="form-group mb-4 mb-lg-6">
                         <textarea name="description" id="paragraph_text_Russelue" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
                     </div>

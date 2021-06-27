@@ -12,12 +12,14 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Russekort-form text-center" method="POST" action="./forms/submit/detail4.php" enctype="multipart/form-data">
                 <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="text" name="tablename" value="detail4">
+                    <input type="text" name="tablename" value="detail4" hidden>
                 </div>
+                    <div class="d-flex flex-row form-group mb-4 mb-lg-6">
+                        <input type="number" name="numberOfTotalRussekort" id="numberOfTotalRussekort" class=" form-control border border-danger" placeholder="Number of total russekort" style="width: 48.5%;"  required>
+                        <input type="number" name="numberOfDifferentRussekort" id="numberOfDifferentRussekort" class=" form-control border border-danger" placeholder="Number of different russekort" style="margin-left:2.95%;width:51.5%"  required>
+                    </div>
                     <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="number" name="numberOfTotalRussekort" id="numberOfTotalRussekort" class=" form-control border border-danger" placeholder="Number of total russekort" style="width: 33%;"  required>
-                        <input type="number" name="numberOfDifferentRussekort" id="numberOfDifferentRussekort" class=" form-control border border-danger" placeholder="Number of different russekort" style="margin-left:2.95%;width:33%"  required>
-                        <input type="text" name="color" id="colorOfRussekort" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:33%"  required>
+                        <input type="text" name="color" id="colorOfRussekort" class=" form-control border border-danger" placeholder="Color" style="width:47%"  required>
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
                         <textarea name="description" id="paragraph_text_Russekort" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
