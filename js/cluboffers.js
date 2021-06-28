@@ -36,11 +36,10 @@ $(document).ready(function() {
             acc_count=acc_count + 1;
             var strVar = "<div class=\"accordion-item\">\n"+
             "<h2 class=\"accordion-header c-heading\" rid=\""+arrayItem["request_id"]+" id=\"heading"+acc_count+"One\">"+
-            "<button class=\"accordion-button bg-danger\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse"+acc_count+"\" aria-expanded=\"true\" aria-controls=\"collapse"+acc_count+"\">\n"+
-            " \n"+
+            "<button class=\"accordion-button bg-danger text-white\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse"+acc_count+"\" aria-expanded=\"true\" aria-controls=\"collapse"+acc_count+"\">\n"+
             "<\/button>\n"+
             "<\/h2>\n"+
-            "<div id=\"collapse"+acc_count+"\" class=\"accordion-collapse collapse show\" aria-labelledby=\"heading"+acc_count+"\" data-bs-parent=\"#accordionExample\">"+
+            "<div id=\"collapse"+acc_count+"\" class=\"accordion-collapse collapse\" aria-labelledby=\"heading"+acc_count+"\" data-bs-parent=\"#accordionExample\">"+
             "<div class=\"accordion-body\">\n"+
             "<div class=\"row text-left ml-1\">"+
             "                                <b>You have got the following offer:<\/b>"+
@@ -55,37 +54,9 @@ $(document).ready(function() {
             "                                <div class=\"d-flex row col-10 justify-content-end\"><button class=\"col-4 ml-auto mt-1 px-4 send-btn\">Send<\/button><\/div>"+
             "                            <\/div>"+
             "<\/div>"+
+            
             "<\/div>"+
             "<\/div>";
-            // var strVar="";
-            // strVar += "<div class=\"card col-xs-12 col-md-10 rounded mb-2 justify-content-center\">";
-            // strVar += "                    <div class=\"card-header\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#collapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
-            // strVar += "                        <a class=\"text-left c-heading text-dark\">";
-            // strVar += "                        [Product] – (partners name)";
-            // strVar += "                        <\/a>";
-            // strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i><p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
-            // strVar += "";
-            // strVar += "                    <\/h5>";
-            // strVar += "                    <\/div>";
-            // strVar += "                    <div aria-labelledby=\"headingOne\" data-parent=\"#accordionExample\" class=\"collapse border-top border-light\" id=\"collapse"+cardno+"\">";
-            // strVar += "                    <div class=\"card-body col-12\">";
-            // strVar += "                            <div class=\"row text-left ml-1\">";
-            // strVar += "                                <b>You have got the following offer:<\/b>";
-            // strVar += "                            <\/div>";
-            // strVar += "                            <div class=\"row text-wrap m-offer-div col-10\" rid=\""+arrayItem["request_id"]+"\" bid=\""+arrayItem["business_id"]+ "\" id=\"text-wrap offer-2\">";
-            // strVar += "                                <div class=\"text-wrap offer-details mt-4\"  rid=\""+arrayItem["request_id"]+"\" bid=\""+arrayItem["business_id"]+ "\"><\/div></div> ";
-            // strVar += "                             <div class=\"row btn-classes col-10\">  <button class = \"d-inline ml-auto float-right rej-btn\" >Reject Offer<\/button>";
-            // strVar += "                                <button class = \"d-inline ml-1 mr-1 float-right acc-btn\">Accept Offer<\/button>";
-            // strVar += "                            <\/div>";
-            // strVar += "                            <div class=\"row msg-div m-2 col-12 border-light\">";
-            // strVar += "                                <textarea rows=\"5\" class=\"tarea row col-10\" rid=\""+arrayItem["request_id"]+"\" bid=\""+arrayItem["business_id"]+"\" id=\"off1-msg\" placeholder=\"or Send a message back to business\"><\/textarea>";
-            // strVar += "                                <div class=\"d-flex row col-10 justify-conter-end\"><button class=\"ml-auto mt-1 px-4 send-btn\">Send<\/button><\/div>";
-            // strVar += "                            <\/div>";
-            // strVar += "                        <\/div>";
-            // strVar += "                    <\/div>";
-            // strVar += "                <\/div>";
-            // strVar += "";
-
             $("#accordionExample").append(strVar);
             cardno+=1;
         });
@@ -134,8 +105,43 @@ $(document).ready(function() {
                 $(myvar).append("<p>"+arrayItem["datetime"]+"   "+business[i]["business_name"]+":    "+arrayItem["message"]+"</p>");                
                 }
                 $(myvar).closest(".collapse").siblings(".c-heading").find("button").text(pro[i]["product_name"] + " - "+business[i]["business_name"]);
+                if (arrayItem["is_seen"]=="0" && arrayItem["sentby"]=="1")
+                {
+                    let btext = $(myvar).closest(".collapse").siblings(".c-heading").find("button").text();
+                    btext = btext + '<pre>  </pre><span class="badge badge-light">New</span>';
+                    $(myvar).closest(".collapse").siblings(".c-heading").find("button").empty();
+                    $(myvar).closest(".collapse").siblings(".c-heading").find("button").append(btext);
+                }
         });
                 
+        }
+
+        $(document).on('click', '.accordion-header', function() {
+            if(!$(this).find(".msg-icon").is(':empty')){
+                var rid = $(this).attr("rid");
+                let btext = $(myvar).closest(".collapse").siblings(".c-heading").find("button").text();
+                btext = btext + '<pre>  </pre><span class="badge badge-light">New</span>';
+                $(myvar).closest(".collapse").siblings(".c-heading").find("button").empty();
+                $(myvar).closest(".collapse").siblings(".c-heading").find("button").append(btext);                var data = {"rid": rid};
+
+                    $.ajax(
+                        {
+                            url: './api/update/updateseen.php',
+                            type: 'POST',
+                            dataType : 'text',
+                            data: {req:data},
+                            context: this,
+                            success: seensuccess,
+                            error: function(err,errt){
+                                console.log(errt);
+                            }
+                        });
+            }
+
+        });
+        function seensuccess(data)
+        {
+            var done=1;
         }
         $(document).on('click','.send-btn',function(){
             var msg = $(this).parent().siblings("textarea").val();
@@ -290,31 +296,197 @@ $("#acc-off").on("click",function() {
 });
 
 
-$("#off-tab").on("click",function() {
-    $("#off-tab").addClass("bg-danger");
-    $("#off-tab").removeClass("text-danger")
-    $("#off-tab").addClass("text-white");
-    $("#off-tab").removeClass("bg-white");
-    
-    $("#all-req").removeClass("bg-danger");
-    $("#all-req").addClass("text-danger");
-    $("#all-req").addClass("bg-white");
+    $("#off-tab").on("click",function() {
+        $("#off-tab").addClass("bg-danger");
+        $("#off-tab").removeClass("text-danger")
+        $("#off-tab").addClass("text-white");
+        $("#off-tab").removeClass("bg-white");
+        
+        $("#all-req").removeClass("bg-danger");
+        $("#all-req").addClass("text-danger");
+        $("#all-req").addClass("bg-white");
 
-    $("#acc-off").removeClass("bg-danger");
-    $("#acc-off").addClass("text-danger");
-    $("#acc-off").addClass("bg-white");
+        $("#acc-off").removeClass("bg-danger");
+        $("#acc-off").addClass("text-danger");
+        $("#acc-off").addClass("bg-white");
 
-    $("#accordionExample").show();
-    $("#ar-table").hide();
-    $("#acc-table").hide();
-    
-});
-
-
-
-
-
-
-
+        $("#accordionExample").show();
+        $("#ar-table").hide();
+        $("#acc-table").hide();
+        
     });
+
+
+
+
+    var accepted = "0";
+    var cardno = 0;
+    $.ajax(
+          {
+              url: './api/get/getrequests.php',
+              type: 'POST',
+              dataType : 'json',
+              data: {accepted:accepted},
+              success: successfn,
+              error: function(err,errt){
+                  console.log(errt);
+              }
+          }
+      );
+
+  function successfn(data) {
+      cardno = 0;
+      var req = data["req"];
+      var club = data["user"];
+      var prod = data["product"];
+      var additionaldata = data["additionaldata"];
+
+      $("#ar-table").empty();
+        req.forEach(function (arrayItem, index) {
+            let downloadbtn ='';
+            if(req[index]["filename"]){
+                downloadbtn ='                            <p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="btn-primary float-right py-1">Download Attachment</button></a>';
+
+            }
+            var strVar="";
+                strVar += "<div class=\"card col-sm-12 col-md-12 px-0 rounded mb-2 justify-content-center\">";
+                strVar += "                    <div class=\"card-header bg-dark text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
+                strVar += "                        <a class=\"text-left\">";
+                strVar += "                        "+prod[index]["product_name"]+" – "+club[index]["club_name"];
+                strVar += "                        <\/a>";
+                strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
+                strVar += "";
+                strVar += "                    <\/h5>";
+                strVar += "                    <\/div>";
+                strVar += "                    <div aria-labelledby=\"headingOne\" data-parent=\"#ar-table\" class=\"collapse border-top border-light\" id=\"arcollapse"+cardno+"\">";
+                strVar += "                    <div class=\"card-body text-dark col-12\">";
+                strVar += '                            <div class="row pl-2 text-wrap request-2">';
+                if(arrayItem["quantity"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">No of '+prod[index]["product_name"]+':         '+ arrayItem["quantity"]+'</p>';
+                }
+                if(arrayItem["size"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Size of '+prod[index]["product_name"]+':       '+ arrayItem["size"]+'</p>';
+                }
+                
+                if(arrayItem["color"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Color of '+prod[index]["product_name"]+':      '+ arrayItem["color"]+'</p>';
+                }
+                if(arrayItem["table_name"]!=null)
+                {
+
+                        Object.keys(additionaldata[index]).forEach(function(key) {
+                            if(additionaldata[index][key]!=null && key!="request_id"){
+                                strVar+='                            <p class="pl-4 row col-12">'+key+':            '+additionaldata[index][key]+'</p>';
+                        
+                                }
+                            });
+                }
+                strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+                if(arrayItem["created_on"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+                }
+                if(arrayItem["accepted_on"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
+                }
+
+                strVar+=downloadbtn;
+                strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
+                strVar += "                        <\/div>";
+                strVar += "                    <\/div>";
+                strVar += "                <\/div>";
+                strVar += "";
+
+            $("#ar-table").append(strVar);
+            cardno+=1;
+        });
+      }
+      // accepted requests
+      var accepted = "1";
+      var cardno = 0;
+      $.ajax(
+            {
+                url: './api/get/getrequests.php',
+                type: 'POST',
+                dataType : 'json',
+                data: {accepted:accepted},
+                success: successfn1,
+                error: function(err,errt){
+                    console.log(errt);
+                }
+            }
+        );
+  
+    function successfn1(data) {
+        cardno = 0;
+        var req = data["req"];
+        var club = data["user"];
+        var prod = data["product"];
+        var additionaldata = data["additionaldata"];
+        var business = data["business"];
+        console.log(business);
+        $("#acc-table").empty();
+          req.forEach(function (arrayItem, index) {
+              let downloadbtn ='';
+              if(req[index]["filename"]){
+                  downloadbtn ='<p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="btn-primary float-right py-1">Download Attachment</button></a>';
+  
+              }
+              var strVar="";
+                  strVar += "<div class=\"card col-sm-12 col-md-12 px-0 rounded mb-2 justify-content-center\">";
+                  strVar += "                    <div class=\"card-header bg-dark text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#acccollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
+                  strVar += "                        <a class=\"text-left\">";
+                  strVar += "                        "+prod[index]["product_name"]+" – "+club[index]["club_name"];
+                  strVar += "                        <\/a>";
+                  strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
+                  strVar += "";
+                  strVar += "                    <\/h5>";
+                  strVar += "                    <\/div>";
+                  strVar += "                    <div aria-labelledby=\"headingOne\" data-parent=\"#ar-table\" class=\"collapse border-top border-light\" id=\"acccollapse"+cardno+"\">";
+                  strVar += "                    <div class=\"card-body text-dark col-12\">";
+                  strVar += '                            <div class="row pl-2 text-wrap request-2">';
+                  if(arrayItem["quantity"]!=null){
+                      strVar += '                            <p class="pl-4 row col-12">No of '+prod[index]["product_name"]+':         '+ arrayItem["quantity"]+'</p>';
+                  }
+                  if(arrayItem["size"]!=null){
+                      strVar += '                            <p class="pl-4 row col-12">Size of '+prod[index]["product_name"]+':       '+ arrayItem["size"]+'</p>';
+                  }
+                  
+                  if(arrayItem["color"]!=null){
+                      strVar += '                            <p class="pl-4 row col-12">Color of '+prod[index]["product_name"]+':      '+ arrayItem["color"]+'</p>';
+                  }
+                  if(arrayItem["table_name"]!=null)
+                  {
+  
+                          Object.keys(additionaldata[index]).forEach(function(key) {
+                              if(additionaldata[index][key]!=null && key!="request_id"){
+                                  strVar+='                            <p class="pl-4 row col-12">'+key+':            '+additionaldata[index][key]+'</p>';
+                          
+                                  }
+                              });
+                  }
+                  strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+                  if(arrayItem["created_on"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+                }
+                if(arrayItem["accepted_on"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
+                }
+                if(arrayItem["accepted_on"]!=null){
+                    strVar += '                            <p class="pl-4 row col-12">Accepted By:      '+ business[index]["business_name"]+'</p>';
+                }
+
+                  strVar+=downloadbtn;
+                  strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
+                  strVar += "                        <\/div>";
+                  strVar += "                    <\/div>";
+                  strVar += "                <\/div>";
+                
+  
+              $("#acc-table").append(strVar);
+              cardno+=1;
+          });
+        }
+
+//end of doc
+});
 

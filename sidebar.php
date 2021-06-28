@@ -73,7 +73,7 @@
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="fa fa-info-circle fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>
                 </div>
             </a>

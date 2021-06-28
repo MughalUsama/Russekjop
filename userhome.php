@@ -42,12 +42,12 @@ session_start();
         }
 		 $query="Select * from category;";
 		 $category_data = db::getInstance()->get_result($query);
-         $newmsg = "d-none";
+         $newmsg = "";
 		 $msgquery="Select * from offer_messages where club_id =\"{$_SESSION["userdata"]["club_id"]}\" and is_seen = 0 and sentby = 1 and status = 0;";
          $msgdata = db::getInstance()->get_result($msgquery);
          if($msgdata)
          {
-            $newmsg = "d-inline;";
+            $newmsg = "<span class=\"badge badge-success\">New</span>";
          }
 
 		 ?>
@@ -80,7 +80,7 @@ session_start();
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers </span></div>
+                    <span class="menu-collapsed">My Offers<pre class="d-inline"> </pre> <?php echo($newmsg) ?> </span></div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -89,13 +89,13 @@ session_start();
             <!-- /END Separator -->
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
+                    <span class="fa fa-info-circle fa-fw mr-3"></span>
                     <span class="menu-collapsed">About Us</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="fa fa-sign-out fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>
                 </div>
             </a>

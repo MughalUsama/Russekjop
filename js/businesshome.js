@@ -1,12 +1,13 @@
 $(document).ready(function() {
-    var mail = "admin";
+
+    var accepted = "0"
     var cardno = 0;
     $.ajax(
           {
               url: './api/get/getrequests.php',
               type: 'POST',
               dataType : 'json',
-              data: {admin:mail},
+              data: {accepted:accepted},
               success: successfn,
               error: function(err,errt){
                   console.log(errt);
@@ -31,7 +32,7 @@ $(document).ready(function() {
         var strVar="";
             strVar += "<div class=\"card col-sm-12 col-md-10 rounded mb-2 justify-content-center\">";
             strVar += "                    <div class=\"card-header\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#collapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
-            strVar += "                        <a class=\"text-left  text-dark\">";
+            strVar += "                        <a class=\"text-left text-white\">";
             strVar += "                        "+prod[index]["product_name"]+"' – '"+club[index]["club_name"];
             strVar += "                        <\/a>";
             strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
@@ -176,8 +177,112 @@ $(document).ready(function() {
             }
 
         });
+        $(document).on('click', '#acc-off', function() {
+            $(".badge-warning").empty();
+            var accepted = "1";
+                    $.ajax(
+                        {
+                            url: './api/update/updateseen.php',
+                            type: 'POST',
+                            dataType : 'text',
+                            data: {accepted:accepted},
+                            context: this,
+                            success: seensuccess,
+                            error: function(err,errt){
+                                console.log(errt);
+                            }
+                        });
+        });
+
         function seensuccess(data)
         {
+            console.log(data);
             var done=1;
         }
+
+
+        var accepted = "1";
+        var cardno = 0;
+        $.ajax(
+              {
+                  url: './api/get/getrequests.php',
+                  type: 'POST',
+                  dataType : 'json',
+                  data: {accepted:accepted},
+                  success: successfn1,
+                  error: function(err,errt){
+                      console.log(errt);
+                  }
+              }
+          );
+    
+      function successfn1(data) {
+          cardno = 0;
+          var req = data["req"];
+          var club = data["user"];
+          var prod = data["product"];
+          var additionaldata = data["additionaldata"];
+    
+          $("#acc-offers").empty();
+            req.forEach(function (arrayItem, index) {
+                let downloadbtn ='';
+                if(req[index]["filename"]){
+                    downloadbtn ='                            <p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="btn-primary float-right py-1">Download Attachment</button></a>';
+    
+                }
+                var strVar="";
+                    strVar += "<div class=\"card col-sm-12 col-md-12 px-0 rounded mb-2 justify-content-center\">";
+                    strVar += "                    <div class=\"card-header bg-danger text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
+                    strVar += "                        <a class=\"text-left\">";
+                    strVar += "                        "+prod[index]["product_name"]+" – "+club[index]["club_name"];
+                    strVar += "                        <\/a>";
+                    strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
+                    strVar += "";
+                    strVar += "                    <\/h5>";
+                    strVar += "                    <\/div>";
+                    strVar += "                    <div aria-labelledby=\"headingOne\" data-parent=\"#ar-table\" class=\"collapse border-top border-light\" id=\"arcollapse"+cardno+"\">";
+                    strVar += "                    <div class=\"card-body text-dark col-12\">";
+                    strVar += '                            <div class="row pl-2 text-wrap request-2">';
+                    if(arrayItem["quantity"]!=null){
+                        strVar += '                            <p class="pl-4 row col-12">No of '+prod[index]["product_name"]+':         '+ arrayItem["quantity"]+'</p>';
+                    }
+                    if(arrayItem["size"]!=null){
+                        strVar += '                            <p class="pl-4 row col-12">Size of '+prod[index]["product_name"]+':       '+ arrayItem["size"]+'</p>';
+                    }
+                    
+                    if(arrayItem["color"]!=null){
+                        strVar += '                            <p class="pl-4 row col-12">Color of '+prod[index]["product_name"]+':      '+ arrayItem["color"]+'</p>';
+                    }
+                    if(arrayItem["table_name"]!=null)
+                    {
+    
+                            Object.keys(additionaldata[index]).forEach(function(key) {
+                                if(additionaldata[index][key]!=null && key!="request_id"){
+                                    strVar+='                            <p class="pl-4 row col-12">'+key+':            '+additionaldata[index][key]+'</p>';
+                            
+                                    }
+                                });
+                    }
+                    strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+                    if(arrayItem["created_on"]!=null){
+                        strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+                    }
+                    if(arrayItem["accepted_on"]!=null){
+                        strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
+                    }
+    
+                    strVar+=downloadbtn;
+                    strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
+                    strVar += "                        <\/div>";
+                    strVar += "                    <\/div>";
+                    strVar += "                <\/div>";
+                    strVar += "";
+    
+                $("#acc-offers").append(strVar);
+                cardno+=1;
+            });
+          }
+    
+
+
 });

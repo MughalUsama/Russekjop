@@ -47,12 +47,17 @@ session_start();
          $accquery = "Select * from club_requests where accepted_by =  \"{$_SESSION["userdata"]["business_id"]}\"";
          $accresult = db::getInstance()->get_result($accquery);
 
-//		 $msgquery="Select * from offer_messages where club_id =\"{$_SESSION["userdata"]["club_id"]}\" and is_seen = 0 and sentby = 1 and status = 0;";
-//         $msgdata = db::getInstance()->get_result($msgquery);
-        //  if($msgdata)
-        //  {
-        //     $newmsg = "d-inline;";
-        //  }
+         $accoffquerymsg = "";
+
+		 $accoffquery="Select count(*) from offer_messages where business_id =\"{$_SESSION["userdata"]["business_id"]}\" and is_seen = 0 and sentby = 0 and status = 1;";
+         $accoffquerydata = db::getInstance()->get_result($accoffquery);
+         if($accoffquerydata)
+         {
+            $row = mysqli_fetch_array($accoffquerydata);
+            if($row[0]== 1){
+                $accoffquerymsg = "<span class=\"badge badge-warning\">New</span>";
+            }
+         }
 
 		 ?>
 </header>
@@ -95,7 +100,7 @@ session_start();
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="fa fa-info-circle fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>
                 </div>
             </a>
@@ -119,7 +124,7 @@ session_start();
             <div class=" col-sm-12 col-md-4">
             <!-- Button trigger modal -->
             <button type="button" id="acc-off" class="btn ml-2 col-sm-12 col-md-8 mt-1 btn-primary float-right" data-toggle="modal" data-target="#exampleModalScrollable0">
-            Accepted Offers
+            Accepted Offers  <?php echo($accoffquerymsg)?>
             </button>
 
             </div>
@@ -145,60 +150,9 @@ session_start();
         </button>
       </div>
       <div class="modal-body">
-      <div class="wrappera">
-        <div class="diva"></div>
-      </div>
         
-        <div class="table-responsive wrapperb">
-        <table class="table table-striped divb text-dark">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Category</th>
-            <th scope="col">Product</th>
-            <th scope="col">Club name</th>
-            <th scope="col">Size</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Color</th>
-            <th scope="col">Description</th>
-            <th scope="col">Created On</th>
-            <th scope="col">Accepted On</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php 
-        $count =0;
-        if ($accresult) {
-            while($row = $accresult->fetch_assoc())
-            {
-                $cquery = "Select * from category where category_id = \"{$row["category_id"]}\"";
-                $cresult = db::getInstance()->get_result($cquery);
-                $row1 = $cresult->fetch_assoc();
-                $pquery = "Select * from products where product_id = \"{$row["product_id"]}\"";
-                $presult = db::getInstance()->get_result($pquery);
-                $row2 = $presult->fetch_assoc();
-                $bquery = "Select * from clubs where club_id = \"{$row["club_id"]}\"";
-                $bresult = db::getInstance()->get_result($bquery);
-                $row3 = $bresult->fetch_assoc();
-                $count = $count + 1;
-                $htmlline = "<tr>
-                <th scope=\"row\">$count</th>
-                <td>{$row1["category_name"]}</td>
-                <td>{$row2["product_name"]}</td>
-                <td>{$row3["club_name"]}</td>
-                <td>{$row["size"]}</td>
-                <td>{$row["quantity"]}</td>
-                <td>{$row["color"]}</td>
-                <td><div class=\"scrollable\">{$row["description"]}</div></td>
-                <td>{$row["created_on"]}</td>
-                <td>{$row["accepted_on"]}</td>
-                </tr>";    
-                echo($htmlline);
-            }
-        }
-        ?>
-        </tbody>
-        </table>      
+        <div class="table-responsive wrapperb" id="acc-offers">
+        <!-- accepted cards here-->
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

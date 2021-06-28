@@ -86,13 +86,13 @@ session_start();
             <!-- /END Separator -->
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
+                    <span class="fa fa-info-circle fa-fw mr-3"></span>
                     <span class="menu-collapsed">About Us</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="fa fa-sign-out fa-fw mr-3"></span>
                     <span class="menu-collapsed">Logout</span>
                 </div>
             </a>
@@ -123,100 +123,12 @@ session_start();
         <div class="accordion col-12 mb-5 pb-2 justify-content-start" id="accordionExample">
         <!-- cards here -->
         </div>
-        <div class="table-responsive" id="ar-table">
-        <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Category</th>
-            <th scope="col">Product</th>
-            <th scope="col">Accepted-By</th>
-            <th scope="col">Size</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Color</th>
-            <th scope="col">Description</th>
-            <th scope="col">Created On</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-        $count =0;
-        if ($allresult) {
-            while($row = $allresult->fetch_assoc())
-            {
-                $cquery = "Select * from category where category_id = \"{$row["category_id"]}\"";
-                $cresult = db::getInstance()->get_result($cquery);
-                $row1 = $cresult->fetch_assoc();
-                $pquery = "Select * from products where product_id = \"{$row["product_id"]}\"";
-                $presult = db::getInstance()->get_result($pquery);
-                $row2 = $presult->fetch_assoc();
-                $count = $count + 1;
-                $htmlline = "<tr>
-                <th scope=\"row\">$count</th>
-                <td>{$row1["category_name"]}</td>
-                <td>{$row2["product_name"]}</td>
-                <td>{$row["size"]}</td>
-                <td>{$row["quantity"]}</td>
-                <td>{$row["color"]}</td>
-                <td><div class=\"scrollable\">{$row["description"]}</div></td>
-                <td>{$row["created_on"]}</td>
-                </tr>";
-                echo($htmlline);
-            }
-        }
-        ?>
-        </tbody>
-        </table>
+        <div id="ar-table">
+            <!-- All requests cards here-->
         </div>
 
-        <div class="table-responsive" id="acc-table">
-        <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Category</th>
-            <th scope="col">Product</th>
-            <th scope="col">Accepted-By</th>
-            <th scope="col">Size</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Color</th>
-            <th scope="col">Description</th>
-            <th scope="col">Created On</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-        $count =0;
-        if ($accresult) {
-            while($row = $accresult->fetch_assoc())
-            {
-                $cquery = "Select * from category where category_id = \"{$row["category_id"]}\"";
-                $cresult = db::getInstance()->get_result($cquery);
-                $row1 = $cresult->fetch_assoc();
-                $pquery = "Select * from products where product_id = \"{$row["product_id"]}\"";
-                $presult = db::getInstance()->get_result($pquery);
-                $row2 = $presult->fetch_assoc();
-                $bquery = "Select * from business_info where business_id = \"{$row["accepted_by"]}\"";
-                $bresult = db::getInstance()->get_result($bquery);
-                $row3 = $bresult->fetch_assoc();
-                $count = $count + 1;
-                $htmlline = "<tr>
-                <th scope=\"row\">$count</th>
-                <td>{$row1["category_name"]}</td>
-                <td>{$row2["product_name"]}</td>
-                <td>{$row3["business_name"]}</td>
-                <td>{$row["size"]}</td>
-                <td>{$row["quantity"]}</td>
-                <td>{$row["color"]}</td>
-                <td><div class=\"scrollable\">{$row["description"]}</div></td>
-                <td>{$row["created_on"]}</td>
-                </tr>";
-                echo($htmlline);
-            }
-        }
-        ?>
-        </tbody>
-        </table>
+        <div id="acc-table">
+        
         </div>
 
     </div><!-- Main Col END -->

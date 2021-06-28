@@ -17,7 +17,10 @@ if(array_key_exists( "clubloggedin",$_SESSION))
         $result = array();
         $query = "Update offer_messages Set status = \"$status\" where request_id = \"$rid\";";
         $bresult = db::getInstance()->dbquery($query);
-    
+
+        $query = "INSERT INTO `offer_messages`(`business_id`, `club_id`, `message`,`request_id`, `sentby`, `status`, `is_seen`) VALUES ('{$bid}','{$_SESSION["userdata"]["club_id"]}','Offer Accepted','{$rid}','0', '1' ,'0');";
+        $msgresult = db::getInstance()->dbquery($query);
+        
         if ($bresult) {
             $result = array(
                 "msg" =>"done"
@@ -28,8 +31,8 @@ if(array_key_exists( "clubloggedin",$_SESSION))
                 "msg" =>"failed"
                 );
         }
-    
-    }
+
+}
     else{
         $status = "-1";
         $conn = db::getInstance();
