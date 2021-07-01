@@ -1,0 +1,8 @@
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  include(./config.php): failed to open stream: No such file or directory in /home/pxx2xninpimm/public_html/db.php on line 2
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  include(): Failed opening './config.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/pxx2xninpimm/public_html/db.php on line 2
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  Use of undefined constant DBUSER - assumed 'DBUSER' (this will throw an Error in a future version of PHP) in /home/pxx2xninpimm/public_html/db.php on line 23
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  Use of undefined constant DBPWD - assumed 'DBPWD' (this will throw an Error in a future version of PHP) in /home/pxx2xninpimm/public_html/db.php on line 23
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  Use of undefined constant DBNAME - assumed 'DBNAME' (this will throw an Error in a future version of PHP) in /home/pxx2xninpimm/public_html/db.php on line 23
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  Use of undefined constant DBHOST - assumed 'DBHOST' (this will throw an Error in a future version of PHP) in /home/pxx2xninpimm/public_html/db.php on line 23
+[19-Jun-2021 16:11:30 UTC] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'DBHOST' (0) in /home/pxx2xninpimm/public_html/db.php on line 39
+[19-Jun-2021 16:16:33 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/pxx2xninpimm/public_html/db.php on line 58
