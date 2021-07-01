@@ -41,7 +41,6 @@ $query_time = date("Y-m-d h:i:sa");
 $query = "INSERT INTO `club_requests`(`club_id`, `category_id`, `product_id`, `quantity`, `description`, `filename`, `created_on`,`table_name`) VALUES (\"{$_SESSION["userdata"]["club_id"]}\",\"{$_SESSION["cat_id"]}\",\"{$_SESSION["pro_id"]}\",\"{$_SESSION["quantity"]}\",\"{$_SESSION["description"]}\",\"$newname\",\"$query_time\",\"{$_SESSION["tablename"]}\")";
 db::getInstance()->dbquery($query);
 $query = "Select * from `club_requests` where `club_id` = \"{$_SESSION["userdata"]["club_id"]}\" and  `created_on` = \"{$query_time}\";";
-echo($query);
 
 $result = db::getInstance()->get_result($query);
 if($result)
@@ -49,10 +48,10 @@ if($result)
     $row = mysqli_fetch_assoc($result);
     $query="INSERT INTO `detail6`(request_id,From_Date,To_Date,Price_For_Assignment) values (\"{$row["request_id"]}\",\"{$_SESSION["Start_Date"]}\",\"{$_SESSION["End_Date"]}\",\"{$_SESSION["price"]}\");";
     db::getInstance()->dbquery($query);
-    echo($query);
 
-//    header("Location: ../../userhome.php");
-//    exit();  
+    header("Location: ../../userhome.php");
+    exit();
+
 }
 else{
     echo("Something went wrong. Try again later.");
