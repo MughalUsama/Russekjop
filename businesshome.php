@@ -167,7 +167,27 @@ session_start();
     <!-- Page Content -->
 
 
-			
+    <div class="modal fade" id="newsModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg modal-xl" role="document">
+        <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title" id="exampleModalLongTitle">Chat History</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body bg-danger text-white">
+            <div class="m-para col-12 ml-3 mt-2 ml-2 row">
+                No Chat History
+            </div>
+        </div>
+        <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
 		<?php
 		require_once("./footer.php");
 		?>

@@ -1,4 +1,22 @@
 $(document).ready(function() {
+    let b_name = [];
+
+    $.ajax(
+        {
+            url: './api/get/getbname.php',
+            type: 'POST',
+            dataType : 'json',
+            data: {bid:0},
+            context: this,
+            success: appbname,
+            error: function(err,errt){
+                console.log(errt);
+            }
+        });
+    function appbname(data) {
+        b_name = data;
+        console.log(b_name);
+}
     
 
     $("#accordionExample").show();
@@ -345,15 +363,17 @@ $("#acc-off").on("click",function() {
         req.forEach(function (arrayItem, index) {
             let downloadbtn ='';
             if(req[index]["filename"]){
-                downloadbtn ='                            <p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="btn-primary float-right py-1">Download Attachment</button></a>';
+                downloadbtn ='                            <p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="col-5 btn-primary float-right py-1">Download Attachment</button></a>';
 
             }
             var strVar="";
                 strVar += "<div class=\"card col-sm-12 col-md-12 px-0 rounded mb-2 justify-content-center\">";
-                strVar += "                    <div class=\"card-header bg-dark text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
+                strVar += "                    <div class=\" ar-card card-header bg-dark text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
                 strVar += "                        <a class=\"text-left\">";
                 strVar += "                        "+prod[index]["product_name"]+" – "+club[index]["club_name"];
                 strVar += "                        <\/a>";
+                strVar+=  "<div class = \"ar-messages d-none\"></div>";
+
                 strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
                 strVar += "";
                 strVar += "                    <\/h5>";
@@ -381,7 +401,7 @@ $("#acc-off").on("click",function() {
                                 }
                             });
                 }
-                strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+                strVar += '                            <p class="pl-4 row col-12 text-wrap">Additional Information:<br><pre class="d-inline ml-4 text-wrap">'+ arrayItem["description"]+'</pre></p>';
                 if(arrayItem["created_on"]!=null){
                     strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
                 }
@@ -389,7 +409,10 @@ $("#acc-off").on("click",function() {
                     strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
                 }
 
-                strVar+=downloadbtn;
+            strVar += downloadbtn;
+            modalbtn ='<button class="col-4 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter1">Chat History</button>';
+            strVar += modalbtn;
+
                 strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
                 strVar += "                        <\/div>";
                 strVar += "                    <\/div>";
@@ -399,6 +422,8 @@ $("#acc-off").on("click",function() {
             $("#ar-table").append(strVar);
             cardno+=1;
         });
+        getmessages2();
+
       }
       // accepted requests
 var accepted = "1";
@@ -427,7 +452,7 @@ $("#acc-table").empty();
     req.forEach(function (arrayItem, index) {
         let downloadbtn ='';
         if(req[index]["filename"]){
-            downloadbtn ='<p class="row col-10 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="col-5 btn-primary float-right py-1">Download Attachment</button></a>';
+            downloadbtn ='<p class="row col-6 justify-content-start><a href="./requestuploads/'+req[index]["filename"]+'" download><button class="col-5 btn-primary float-right py-1">Download Attachment</button></a>';
 
         }
         var strVar="";
@@ -503,7 +528,7 @@ function getmessages1(getdata) {
         var data = {
             "rid": rid,
             "bid": bid,
-            "required": getdata };
+            "required": "1" };
         
             $.ajax(
                 {
@@ -521,7 +546,6 @@ function getmessages1(getdata) {
         }
     function addmsgvalues1(data) { //printing data inside cards of accepted offers
         var msg = data["msg"];
-        console.log(data);
         var business = data["business"];
         var pro = data["products"];
         myvar = $(this).find(".acc-messages");
@@ -553,6 +577,75 @@ function getmessages1(getdata) {
     })
 
 
+
+    // all req messages
+    function getmessages2() {
+
+        $(".ar-card").each(function(i, object) {
+            var rid = $(this).attr("rid");
+            var bid = $(this).attr("bid");
+    
+            var data = {
+                "rid": rid,
+                "bid": bid,
+                "required": "0" };
+            
+                $.ajax(
+                    {
+                        url: './api/get/getchat.php',
+                        type: 'POST',
+                        dataType : 'json',
+                        data: {mdata:data},
+                        context: this,
+                        success: addmsgvalues2,
+                        error: function(err,errt){
+                            console.log(errt);
+                        }
+                    });
+            });
+            }
+        function addmsgvalues2(data) { //printing data inside cards of accepted offers
+            var msg = data["msg"];
+            var pro = data["products"];
+            myvar = $(this).find(".ar-messages");
+            if (msg!=null) {
+                msg.forEach(function (arrayItem, i) {
+                    if (arrayItem["sentby"] == "0") {
+                        $(myvar).append("<p>" + arrayItem["datetime"] + "<br>    You:    " + arrayItem["message"] + "</p>");
+                    }
+                    else {
+                        bid = arrayItem["business_id"];
+                        let bname = getBusinessName(bid);
+                        $(myvar).append("<p>" + arrayItem["datetime"] + "<br>    "+bname+"    " + arrayItem["message"] + "</p>");
+                     }
+                 });
+            }
+        }
+            
+    //appending to modal    
+        $(document).on('click', '.ar-card',function()
+        {
+            $(".m-para1").empty();
+    
+            var msgs = $(this).find(".ar-messages").html();
+            if(msgs=="")
+            {
+                msgs = "No history found.";
+            }
+    
+            $(".m-para1").append(msgs);
+    
+        })
+    function getBusinessName(bid) {
+        var bname_data = b_name["business"];
+        for (let index = 0; index < bname_data.length; index++) {
+            console.log(b_name[index]);
+            if (bname_data[index]["business_id"] == ""+bid+"")
+            {
+                return bname_data[index]["business_name"]
+            }
+        }
+    }
 //end of doc
 });
 

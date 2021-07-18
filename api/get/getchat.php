@@ -6,26 +6,39 @@ $clubdata = array();
 $productdata = array();
 $msgdata = array();
 $businessdata = array();
-
+$result = array();
 if (array_key_exists("clubloggedin", $_SESSION)) {
     $creq = array();
     $givendata = $_REQUEST["mdata"];
     $conn = db::getInstance();
     $data = $_REQUEST["mdata"];
-    $bid = mysqli_escape_string($conn, $data["bid"]);
+    
     $rid = mysqli_escape_string($conn, $data["rid"]);
+    $req = mysqli_escape_string($conn, $data["required"]);
     $cid = $_SESSION["userdata"]["club_id"];
-    $query = "Select * from offer_messages where status= \"1\" and club_id = \"$cid\" and business_id = \"$bid\" and request_id = \"$rid\";";
+
+    if($req=="1")
+    {
+        $bid = mysqli_escape_string($conn, $data["bid"]);
+        $query = "Select * from offer_messages where status= \"1\" and club_id = \"$cid\" and business_id = \"$bid\" and request_id = \"$rid\";";
+    }
+    else{
+        $query = "Select * from offer_messages where club_id = \"$cid\" and request_id = \"$rid\" order by business_id, datetime;";
+    }
+
     $bresult = db::getInstance()->get_result($query);
     if ($bresult) {
         while ($row = $bresult->fetch_assoc()) {
             array_push($msgdata, $row);
-            $query1 = "Select * from business_info where business_id = \"$bid\"";
-            $cresult = db::getInstance()->get_result($query1);
-            if ($cresult) {
-                $row1 = $cresult->fetch_assoc();
-                array_push($businessdata, $row1);
+            if($req=="1")
+            {
+                $query1 = "Select * from business_info where business_id = \"$bid\"";
+                $cresult = db::getInstance()->get_result($query1);
+                if ($cresult) {
+                    $row1 = $cresult->fetch_assoc();
+                    array_push($businessdata, $row1);
 
+                }
             }
             $query2 = "Select * from club_requests where  status= \"0\" and request_id = \"$rid\";";
             $reqresult = db::getInstance()->get_result($query2);

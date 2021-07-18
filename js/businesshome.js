@@ -196,7 +196,6 @@ $(document).ready(function() {
 
         function seensuccess(data)
         {
-            console.log(data);
             var done=1;
         }
 
@@ -232,8 +231,8 @@ $(document).ready(function() {
                 }
                 var strVar="";
                     strVar += "<div class=\"card col-sm-12 col-md-12 px-0 rounded mb-2 justify-content-center\">";
-                    strVar += "                    <div class=\"card-header bg-danger text-white\" rid=\""+arrayItem["request_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
-                    strVar += "                        <a class=\"text-left\">";
+                    strVar += "                    <div class=\"acc-card card-header bg-danger text-white\" rid=\""+arrayItem["request_id"]+"\" cid=\""+arrayItem["club_id"]+"\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#arcollapse"+cardno+"\" aria-controls=\"collapse"+cardno+"\"><h5 class=\"mb-0 justify-content-between\">";
+                    strVar += "<div class=\"acc-messages d-none\"></div>                        <a class=\"text-left\">";
                     strVar += "                        "+prod[index]["product_name"]+" – "+club[index]["club_name"];
                     strVar += "                        <\/a>";
                     strVar += "                        <i class=\"fa fa-caret-down d-inline float-right\" style=\"font-size:24px\"><\/i> <p class=\"d-inline msg-icon mr-2 float-right\" style=\"font-size:24px\"><\/p>";
@@ -271,8 +270,10 @@ $(document).ready(function() {
                         strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
                     }
     
-                    strVar+=downloadbtn;
-                    strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
+                    strVar += downloadbtn;
+                    modalbtn ='<button class="col-5 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter">Chat History</button>';
+                    strVar += modalbtn;
+                    strVar += '                            </div><hr><div class="messages" clubid="' + club[index]["club_id"] + '" reqid="' + arrayItem["request_id"] + '"></div>';
                     strVar += "                        <\/div>";
                     strVar += "                    <\/div>";
                     strVar += "                <\/div>";
@@ -281,8 +282,79 @@ $(document).ready(function() {
                 $("#acc-offers").append(strVar);
                 cardno+=1;
             });
+            getdata = {
+                "required": "1"} 
+            getmessages1(getdata);
+        
           }
     
+//getting data inside cards for accepted offers
+function getmessages1(getdata) {
 
+    $(".acc-card").each(function(i, object) {
+        var rid = $(this).attr("rid");
+        var cid = $(this).attr("cid");
 
+        var data = {
+            "rid": rid,
+            "cid": cid,
+            "required": "1" };
+        
+            $.ajax(
+                {
+                    url: './api/get/getbusinesschat.php',
+                    type: 'POST',
+                    dataType : 'json',
+                    data: {mdata:data},
+                    context: this,
+                    success: addmsgvalues1,
+                    error: function(err,errt){
+                        console.log(errt);
+                    }
+                });
+        });
+        }
+    function addmsgvalues1(data) { //printing data inside cards of accepted offers
+        var msg = data["msg"];
+        console.log(data);
+        var business = data["club"];
+        var pro = data["products"];
+        myvar = $(this).find(".acc-messages");
+        if (msg) {
+            msg.forEach(function (arrayItem, i) {
+                if (arrayItem["sentby"] == "0") {
+                    $(myvar).append("<p class=\"row col-12\">" + arrayItem["datetime"] + "<br>    You:    " + arrayItem["message"] + "</p><br>");
+                }
+                else {
+                    $(myvar).append("<p class=\"row col-12\">" + arrayItem["datetime"] + "<br>   " + business[i]["club_name"] + ":    " + arrayItem["message"] + "</p><br>");
+                }
+            });
+        }
+    }
+        
+//appending to modal    
+    $(document).on('click', '.acc-card',function()
+    {
+        $(".m-para").empty();
+
+        var msgs = $(this).find(".acc-messages").html();
+        if(msgs=="")
+        {
+            msgs = "No history found.";
+        }
+
+        $(".m-para").append(msgs);
+
+    })
+    $(document).on('click', '.chat-btn', function () {
+        $("#exampleModalScrollable0").modal('toggle');;
+        
+    }
+    );
+    $("#newsModalCenter").on('hidden.bs.modal', function () {
+        $("#exampleModalScrollable0").modal('toggle');;
+        
+    }
+    );
+    
 });
