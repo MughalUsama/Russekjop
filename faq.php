@@ -47,11 +47,11 @@ session_start();
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-headingOne">
 						<button class="accordion-button collapsed bg-danger" style="padding: 1.4rem; font-size:1.2rem;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-						Er det gratis å registrere en kjøpsforespørsel?
+						Er det gratis å registrere en kjøpsforespørsel?						
 						</button>
 						</h2>
 						<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">Ja, det er helt gratis for din klubb, lag eller organisasjon.</div>
+						<div class="accordion-body">- Ja, det er helt gratis for din russegruppe å registrere en forespørsel på <a class="text-danger" href="https://russekjøp.no"> russekjøp.no</a>.</div>
 						</div>
 					</div>
 					<div class="accordion-item">
@@ -61,27 +61,39 @@ session_start();
 						</button>
 						</h2>
 						<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">En forespørsel kan registreres av ledere, trenere, lagledere, kontaktpersoner eller andre knyttet til klubben eller laget. Bruker må dog være fylt 18 år. </div>
+						<div class="accordion-body">- Du må være over 18 år for å registrere en forespørsel på russekjøp.no. Er du kommende russ men fortsatt ikke fylt 18 år, kan en foresatt eller ansvarlig person over 18 år registrere en forespørsel på vegne av deg eller din russegruppe.</div>
 						</div>
 					</div>
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-headingThree">
 						<button class="accordion-button collapsed bg-danger" style="padding: 1.4rem; font-size: 1.2rem;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-						Må det foretas et kjøp etter at man har mottatt et tilbud?
+						Må det foretas et kjøp etter at man har mottatt et tilbud?						
 						</button>
 						</h2>
 						<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-							<div class="accordion-body">Det er ikke noe krav om å foreta et kjøp etter at forespørselen din er registrert.
+							<div class="accordion-body">- Det er ikke noe krav om å foreta et kjøp etter at forespørselen din er registrert og du har mottatt et tilbud fra én eller flere av våre samarbeidsleverandører.
 							</div>
 						</div>
 					</div>
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-headingFour">
 						<button class="accordion-button collapsed bg-danger" style="padding: 1.4rem; font-size: 1.2rem;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-						Lages det en avtale med SportsReg eller den aktuelle leverandøren?						</button>
+						Dersom man aksepterer et tilbud, er avtalen bindende?
+						</button>
 						</h2>
 						<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-							<div class="accordion-body">SportsReg er kun en formidler, og har ikke ansvar for avtalen mellom partene. SportsReg jobber derimot kontinuerlig for å ha seriøse leverandører og brukere av tjenesten.</div>
+							<div class="accordion-body">- Avtalen er bindende dersom det er gitt aksept på et mottatt tilbud.</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingFive">
+						<button class="accordion-button collapsed bg-danger" style="padding: 1.4rem; font-size: 1.2rem;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+						Lages det en avtale med Russekjøp eller den aktuelle leverandøren?
+						</button>
+						</h2>
+						<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">- Det er din russegruppe og den respektive leverandøren som er ansvarlige parter i avtalen. Russekjøp er kun en formidler, og står ikke ansvarlig for avtalen mellom partene. 
+						</div>
 						</div>
 					</div>
 

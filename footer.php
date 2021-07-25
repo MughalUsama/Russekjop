@@ -72,7 +72,7 @@
             <a href="./how_it_works.php">How it works</a>
           </li>
           <li>
-            <a href="./FAQ.php">FAQs</a>
+            <a href="./faq.php">FAQs</a>
           </li>
           <li>
             <a href="./supplier.php">Become a Supplier</a>
