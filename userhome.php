@@ -147,6 +147,21 @@ session_start();
                         
                     </select>
                     </div>
+                    <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%; display:none" id="subproduct-div">
+                        <select style="background-color: white; color:black; width:88%;border-color: black;" type="text" name="Subproduct" placeholder=" Choose You Sub Product " class="form-control" id="Sub-Product">
+                            <option value="" style="font-weight:bold;"  disabled>Choose Sub Product</option>
+                            <option value="1" selected>Toiletpaper</option>
+                            <option value="2">Paper towels</option>
+                            <option value="3">Socks</option>
+                            <option value="4">Lighter briquettes</option>
+                            <option value="5">Cleaning products</option>
+                            <option value="6">Cookies and Goodies</option>
+                            <option value="7">Greeting card/Christmas card</option>
+                            <option value="8">Cured meat & meat products</option>
+                            <option value="9">Other</option>					                       
+                        </select>
+	
+                    </div>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
 					<button class="py-1" name="submit-next" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
 				</div>

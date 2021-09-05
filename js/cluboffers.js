@@ -15,7 +15,6 @@ $(document).ready(function() {
         });
     function appbname(data) {
         b_name = data;
-        console.log(b_name);
 }
     
 
@@ -524,7 +523,7 @@ function getmessages1(getdata) {
     $(".acc-card").each(function(i, object) {
         var rid = $(this).attr("rid");
         var bid = $(this).attr("bid");
-
+        console.log(rid);
         var data = {
             "rid": rid,
             "bid": bid,
@@ -584,7 +583,8 @@ function getmessages1(getdata) {
         $(".ar-card").each(function(i, object) {
             var rid = $(this).attr("rid");
             var bid = $(this).attr("bid");
-    
+            console.log(rid);
+
             var data = {
                 "rid": rid,
                 "bid": bid,

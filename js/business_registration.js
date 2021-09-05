@@ -5,6 +5,8 @@ $(document).ready(function() {
   inherit_select_classes: true
   });
 
+  var isVisibleSP = false;
+  var isVisibleSP1 = false;
 
 $('#breg-form').submit(function(){  
   var image_name = $('#fileToUpload').val();  
@@ -27,9 +29,11 @@ $('#breg-form').submit(function(){
 $('#category').chosen().on('change', function()  {
     if($('#category').val().length>0)
     {
-        var cat = $('#category').val();
-        displayoption();
-         for(var i of cat){
+      var cat = $('#category').val();
+      
+      displayoption();
+      isVisibleSP = false;
+      for (var i of cat) {
           $.ajax(
               {
                   url: './api/get/getproducts.php',
@@ -43,16 +47,46 @@ $('#category').chosen().on('change', function()  {
               }
           );
         }  
-
+      
     }
-    else{
+    else {
       $('#prod').empty();
       $('#prod').prop('disabled', true);
       $("#prod").trigger("chosen:updated");
 
-    }
+  }
+  $("#subproducts-div").hide();
+  $("#prod option").prop("selected", false);
 });
+  $('#prod').chosen().on('change', function () {
+    if ($('#prod').val().length > 0) {
+      var pro = $('#prod').val();
+      isVisibleSP1 = false;
+      for (var i of pro) {
 
+        if (i.split(" ")[1] == "136") {
+          isVisibleSP1 = true;
+          console.log(i);
+        }
+      }
+      if (isVisibleSP1 == false)
+      {
+        $("#subproducts-div").hide();
+        $("#prod option").prop("selected", false);
+
+      }
+      else {
+        $("#subproducts-div").show();
+
+      }
+    }
+    else {
+      isVisibleSP1 = false;
+      $("#subproducts-div").hide();
+      $("#prod option").prop("selected", false);
+
+    }
+  });
 function displayoption()
 {
   $('#prod').empty();

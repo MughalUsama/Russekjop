@@ -15,25 +15,25 @@ if(isset($_REQUEST["send"])){
     $_SESSION["description"]= mysqli_escape_string(db::getInstance(), $_REQUEST["description"]);
     $_SESSION["tablename"]= mysqli_escape_string(db::getInstance(), $_REQUEST["tablename"]);
 //checkboxes below    
-    if(isset($_REQUEST["checkToiletpaper"])){
+    if($_REQUEST["spid"]=="1"){
     $_SESSION["checkToiletpaper"]= "Yes";
     }
     else{
     $_SESSION["checkToiletpaper"]= "No";
     }    
-    if(isset($_REQUEST["checkPaperTowels"])){
+    if($_REQUEST["spid"]=="2"){
         $_SESSION["checkPaperTowels"]= "Yes";
     }
         else{
         $_SESSION["checkPaperTowels"]= "No";
     }
-    if(isset($_REQUEST["checkSocks"])){
+    if($_REQUEST["spid"]=="3"){
         $_SESSION["checkSocks"]= "Yes";
     }
         else{
         $_SESSION["checkSocks"]= "No";
     }
-    if(isset($_REQUEST["checkLighterBriquettes"])){
+    if($_REQUEST["spid"]=="4"){
         $_SESSION["checkLighterBriquettes"]= "Yes";
     }
         else{
@@ -41,37 +41,37 @@ if(isset($_REQUEST["send"])){
     }    
 
     
-    if(isset($_REQUEST["checkCleaningProducts"])){
+    if($_REQUEST["spid"]=="5"){
         $_SESSION["checkCleaningProducts"]= "Yes";
     }
     else{
         $_SESSION["checkCleaningProducts"]= "No";
     }    
-    if(isset($_REQUEST["checkCookiesAndGoodies"])){
+    if($_REQUEST["spid"]=="6"){
         $_SESSION["checkCookiesAndGoodies"]= "Yes";
     }
     else{
         $_SESSION["checkCookiesAndGoodies"]= "No";
     }
-    if(isset($_REQUEST["checkGreetingCardOrChristmasCard"])){
+    if($_REQUEST["spid"]=="7"){
         $_SESSION["checkGreetingCardOrChristmasCard"]= "Yes";
     }
     else{
         $_SESSION["checkGreetingCardOrChristmasCard"]= "No";
     }
-    if(isset($_REQUEST["checkOther"])){
+    if($_REQUEST["spid"]=="8"){
+        $_SESSION["checkCuredMeatSndMeatProducts"]= "Yes";
+    }
+    else{
+        $_SESSION["checkCuredMeatSndMeatProducts"]= "No";
+    }    
+    if($_REQUEST["spid"]=="9"){
         $_SESSION["checkOther"]= "Yes";
     }
     else{
         $_SESSION["checkOther"]= "No";
     }    
 
-    if(isset($_REQUEST["checkCuredMeatSndMeatProducts"])){
-        $_SESSION["checkCuredMeatSndMeatProducts"]= "Yes";
-    }
-    else{
-        $_SESSION["checkCuredMeatSndMeatProducts"]= "No";
-    }    
 }
 else{
     header("Location: ../../index.php"); /* Redirect browser */

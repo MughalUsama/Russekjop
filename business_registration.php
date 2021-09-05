@@ -69,6 +69,10 @@ session_start();
 		if(array_key_exists("counties",$_REQUEST)){
 			$counties = $_REQUEST["counties"];
 		}
+		if(array_key_exists("subproducts",$_REQUEST)){
+			$subproducts = $_REQUEST["subproducts"];
+		}
+		$hasSubprod = false;
 		$bquery = "Select * from business_info where email = \"{$_REQUEST["useremail"]}\";";
 		if(db::getInstance()->get_result($bquery)){
 			$ac_er = "<p class =\"bg-danger px-1 text-white\">Email already in use.</p>" ;
@@ -109,10 +113,21 @@ session_start();
 					{                    
 						foreach ($products as $product) {
 							$cat_pro = explode(" ",trim($product));
+							if ($cat_pro[1]=="136") {
+								$hasSubprod = true;
+							}
 							$insert_query = "INSERT INTO business_products(business_id, product_id, category_id) VALUES (\"$bid\",\"$cat_pro[1]\",\"$cat_pro[0]\");";
 							db::getInstance()->dbquery($insert_query);
 						}
 					} 
+				}
+				if((array_key_exists("subproducts",$_REQUEST)) and !empty($subproducts) and $hasSubprod==true)
+				{                    
+					foreach ($subproducts as $sp) {
+						$sp = mysqli_escape_string(db::getInstance(), $sp);
+						$insert_query = "INSERT INTO business_subproducts(business_id, subproduct_id) VALUES (\"$bid\",\"$sp\");";
+						db::getInstance()->dbquery($insert_query);
+					}
 				}
 				
 				//add counties
@@ -191,6 +206,19 @@ session_start();
 									
 									</select>
 								</div>
+								<div class="form-group mb-3 mb-lg-6" style="display: none;" id="subproducts-div">
+								<select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Choose Sub Products">
+									<option value="1">Toiletpaper</option>
+									<option value="2">Paper towels</option>
+									<option value="3">Socks</option>
+									<option value="4">Lighter briquettes</option>
+									<option value="5">Cleaning products</option>
+									<option value="6">Cookies and Goodies</option>
+									<option value="7">Greeting card/Christmas card</option>
+									<option value="8">Cured meat & meat products</option>
+								</select>
+								</div>
+
 								<div class="form-group mb-3 mb-lg-6">
 								<select id="counties" name="counties[]"  multiple class="chosen" data-placeholder="Choose Counties">
 									<option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>

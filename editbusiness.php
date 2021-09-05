@@ -97,6 +97,11 @@ if (isset($_REQUEST["regsub-btn"]))
     if(array_key_exists("counties",$_REQUEST)){
         $counties = $_REQUEST["counties"];
     }
+    if(array_key_exists("subproducts",$_REQUEST)){
+        $subproducts = $_REQUEST["subproducts"];
+    }
+    $hasSubprod = false;
+
     if(isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['size'] > 0){
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -140,10 +145,24 @@ if (isset($_REQUEST["regsub-btn"]))
                 {                    
                     foreach ($products as $product) {
                         $cat_pro = explode(" ",trim($product));
+                        if ($cat_pro[1]=="136") {
+                            $hasSubprod = true;
+                        }
                         $insert_query = "INSERT INTO business_products(business_id, product_id, category_id) VALUES (\"$bid\",\"$cat_pro[1]\",\"$cat_pro[0]\");";
                         db::getInstance()->dbquery($insert_query);
                     }
-                } 
+                }
+                $updatequery = "Delete from business_subproducts where business_id = \"$bid\";";
+                db::getInstance()->dbquery($updatequery);
+                if((array_key_exists("subproducts",$_REQUEST)) and !empty($subproducts) and $hasSubprod==true)
+				{                    
+					foreach ($subproducts as $sp) {
+						$sp = mysqli_escape_string(db::getInstance(), $sp);
+						$insert_query = "INSERT INTO business_subproducts(business_id, subproduct_id) VALUES (\"$bid\",\"$sp\");";
+						db::getInstance()->dbquery($insert_query);
+					}
+				}
+				 
             }
 
             }
@@ -277,7 +296,18 @@ if (isset($_REQUEST["regsub-btn"]))
                         </select>
 
                     </div>
-                    
+                    <div class="form-group row  col-12 justify-content-center" style="display: none;" id="subproducts-div">
+                        <select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Choose Sub Products">
+                            <option value="1">Toiletpaper</option>
+                            <option value="2">Paper towels</option>
+                            <option value="3">Socks</option>
+                            <option value="4">Lighter briquettes</option>
+                            <option value="5">Cleaning products</option>
+                            <option value="6">Cookies and Goodies</option>
+                            <option value="7">Greeting card/Christmas card</option>
+                            <option value="8">Cured meat & meat products</option>
+                        </select>
+					</div>
                     <div class="form-group row d-flex col-12 justify-content-center">
                         
                         <select data-placeholder="Choose Counties" name="counties[]" id="county" multiple class="chosen">

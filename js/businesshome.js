@@ -54,7 +54,7 @@ $(document).ready(function() {
             }
             if(arrayItem["table_name"]!=null)
             {
-
+console.log(arrayItem["table_name"]);
                     Object.keys(additionaldata[index]).forEach(function(key) {
                         if(additionaldata[index][key]!=null && key!="request_id"){
                             strVar+='                            <p class="pl-4 row col-12">'+key+':            '+additionaldata[index][key]+'</p>';
