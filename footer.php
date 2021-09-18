@@ -78,7 +78,7 @@
             <a href="./supplier.php">Become a Supplier</a>
           </li>
           <li>
-            <a href="./terms.php">Conditions and terms</a>
+            <a href="./terms.php" class="d-none">Conditions and terms</a>
           </li>
        
         </ul>

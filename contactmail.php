@@ -1,12 +1,13 @@
 <?php
-ob_start();
-require_once("./db.php");
+require_once("/home/pxx2xninpimm/cron/db.php");
 $query = "Select * from contact_us where sent='0';";
 $data = db::getInstance()->get_result($query);
-$to      = 'russekjop@xn--russekjp-c5a.no'; 
+$to      = 'post@xn--russekjp-c5a.no'; 
 $subject = 'RussekJop - Contact us'; 
 
 
+$updatequery = "UPDATE contact_us SET sent = '1' where sent = '0';";
+db::getInstance()->dbquery($updatequery);
 
 
 if($data){
@@ -16,12 +17,15 @@ if($data){
     $Email = $brow["Email"];
     $Telephone = $brow["Telephone"];
     $CMessage = $brow["Message"];
-    $mail_msg = "Hi, this is $Name here. I contacted you through Russekjop.
+    $mail_msg = "    Hi, this is $Name here. I contacted you through Russekjop.
+    
+    
     Name: $Name
     Email : $Email
     Telephone : $Telephone
     Message: $CMessage
     ";
+    echo($Name);
     $message = $mail_msg;
     $headers = 'From: $Email' . "\r\n" . 
 
@@ -33,7 +37,5 @@ if($data){
 
 
 }
-$updatequery = "UPDATE contact_us SET sent = '1' where sent = '0';";
-db::getInstance()->dbquery($updatequery);
 }
 ?>

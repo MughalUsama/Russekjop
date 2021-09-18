@@ -9,8 +9,9 @@ $(document).ready(function() {
   var isVisibleSP1 = false;
 
 $('#breg-form').submit(function(){  
-  var image_name = $('#fileToUpload').val();  
-  if(image_name == '')  
+  var image_name = $('#fileToUpload').val();
+
+  if (image_name == '')
   {  
        alert("Please Select Image");  
        return false;  
@@ -50,17 +51,17 @@ $('#category').chosen().on('change', function()  {
       
     }
     else {
-      $('#prod').empty();
-      $('#prod').prop('disabled', true);
-      $("#prod").trigger("chosen:updated");
+      $('#products').empty();
+      $('#products').prop('disabled', true);
+      $("#products").trigger("chosen:updated");
 
   }
   $("#subproducts-div").hide();
-  $("#prod option").prop("selected", false);
+  $("#subproducts option").prop("selected", false);
 });
-  $('#prod').chosen().on('change', function () {
-    if ($('#prod').val().length > 0) {
-      var pro = $('#prod').val();
+  $('#products').chosen().on('change', function () {
+    if ($('#products').val().length > 0) {
+      var pro = $('#products').val();
       isVisibleSP1 = false;
       for (var i of pro) {
 
@@ -72,7 +73,7 @@ $('#category').chosen().on('change', function()  {
       if (isVisibleSP1 == false)
       {
         $("#subproducts-div").hide();
-        $("#prod option").prop("selected", false);
+        $("#subproducts option").prop("selected", false);
 
       }
       else {
@@ -83,13 +84,13 @@ $('#category').chosen().on('change', function()  {
     else {
       isVisibleSP1 = false;
       $("#subproducts-div").hide();
-      $("#prod option").prop("selected", false);
+      $("#subproducts option").prop("selected", false);
 
     }
   });
 function displayoption()
 {
-  $('#prod').empty();
+  $('#products').empty();
 
 }
 function displayproducts(data)
@@ -97,11 +98,11 @@ function displayproducts(data)
    for (var prod of data) {
           var item=  "<option value = \""+ prod['category_id']+ " " +
           + prod['product_id']+"\">"+prod['product_name']+"</option>";
-    $('#prod').append(item);
+    $('#products').append(item);
   }
-  $('#prod').prop('disabled', false);
+  $('#products').prop('disabled', false);
 
-  $("#prod").trigger("chosen:updated");
+  $("#products").trigger("chosen:updated");
 
 }
 });

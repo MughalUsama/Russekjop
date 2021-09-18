@@ -59,12 +59,12 @@ session_start();
 		$contactemail = mysqli_escape_string(db::getInstance(), $_REQUEST["contactemail"]);
 		$useremail = mysqli_escape_string(db::getInstance(), $_REQUEST["useremail"]);
 		$password = mysqli_escape_string(db::getInstance(), $_REQUEST["password"]);
+		$products = $_REQUEST["products"];
 		if(array_key_exists("categories",$_REQUEST)){
 			$categories = $_REQUEST["categories"];
 		}
 		if(array_key_exists("products",$_REQUEST)){
 			$products = $_REQUEST["products"];
-
 		}
 		if(array_key_exists("counties",$_REQUEST)){
 			$counties = $_REQUEST["counties"];
@@ -202,7 +202,7 @@ session_start();
 									</select>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<select id="prod" name="products[]"  multiple class="chosen" data-placeholder="Choose Products">
+									<select id="products" name="products[]"  multiple class="chosen" data-placeholder="Choose Products">
 									
 									</select>
 								</div>
