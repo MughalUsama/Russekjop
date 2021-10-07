@@ -97,7 +97,7 @@ session_start();
 						<div class="pt-4 mb-3">
 							<button type="submit" name="login" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Logg inn</button>
 						</div>
-						<p><a href="#forgetpassmodal" data-toggle="modal" data-target="#forgetpassmodal" style="font-size: 65%;">Forgot Password?</a></p>
+						<p><a href="#forgetpassmodal" data-toggle="modal" data-target="#forgetpassmodal" style="font-size: 65%;">Glemt passord?</a></p>
 						<hr style="width: 70%;">
 						<p style="font-size: 65%;">Har du ingen konto? </p>
 						<a href="register_Group.php" name="userRegister" id="userRegister" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Registrer</a>
