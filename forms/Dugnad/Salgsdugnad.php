@@ -48,11 +48,11 @@ switch ($_REQUEST["Subproduct"]) {
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Salgsdugnad-form text-center" method="POST" action="./forms/submit/detail3.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="numberOfPeople" id="numberOfPeople" class=" form-control border border-danger" placeholder="Number of people" style="width: 50%;"  required>
-                        <input type="number" name="NumberOfSalesRound" id="NumberOfSalesRounds" class=" form-control border border-danger" placeholder="Number of sales round" style="margin-left:2.95%;width:50%"  required>
+                        <input type="number" name="numberOfPeople" id="numberOfPeople" class=" form-control border border-danger" placeholder="Antall personer" style="width: 50%;"  required>
+                        <input type="number" name="NumberOfSalesRound" id="NumberOfSalesRounds" class=" form-control border border-danger" placeholder="Antall salgsrunder" style="margin-left:2.95%;width:50%"  required>
                     </div>
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="NumberOfProductsPerPerson" id="NumberOfProductsPerPerson" class=" form-control border border-danger" placeholder="Number of Products Per Person" style="width:51.5%"  required>
+                        <input type="number" name="NumberOfProductsPerPerson" id="NumberOfProductsPerPerson" class=" form-control border border-danger" placeholder="Antall produkter pr. person" style="width:51.5%"  required>
                     </div>
                     <div class="d-none">
                         <input type="text" name="tablename" id="tablename" class="d-none" value="detail3">
@@ -61,7 +61,7 @@ switch ($_REQUEST["Subproduct"]) {
                         <input type="text" name="spid" id="spid" class="d-none" value="<?php echo($_REQUEST["Subproduct"])?>">
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="description" id="paragraph_text_Salgsdugnad" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
+                        <textarea name="description" id="paragraph_text_Salgsdugnad" cols="50" rows="10" class="form-control border border-danger" placeholder="Vær vennlig å fyll inn tilleggsinformation om deres behov."></textarea>
                     </div>
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">
                         <input class="form-control border border-danger col-6 d-flex justify-content-start" type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.xlsx,.png,.jpg,.jpeg,.pdf,.pptx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">

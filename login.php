@@ -81,7 +81,7 @@ session_start();
 			<div class="row mb-4">
 				<div class="col-12 text-center">
 					<h2 class="heading mb-4" style="font-family: 'Times New Roman', Times, serif;">
-						<strong class="font-weight-medium">Login</strong>
+						<strong class="font-weight-medium">Logg inn</strong>
 					</h2>
 				</div>
 			</div>
@@ -89,18 +89,18 @@ session_start();
 				<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 					<form class="login-form text-center" action="<?php  echo $_SERVER['PHP_SELF'];?>" id="login-form" method="POST">
 						<div class="form-group mb-4 mb-lg-6">
-							<input type="text" class="form-control" name="email" id="userEmail" placeholder="Email (Username)" required>
+							<input type="text" class="form-control" name="email" id="userEmail" placeholder="Epost (Brukernavn)" required>
 						</div>
 						<div class="form-group mb-2 mb-lg-6">
-							<input type="password" class="form-control" name="passwd" id="userPassword" placeholder="Password" minlength="8" required>
+							<input type="password" class="form-control" name="passwd" id="userPassword" placeholder="Passord" minlength="8" required>
 						</div>
 						<div class="pt-4 mb-3">
-							<button type="submit" name="login" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
+							<button type="submit" name="login" id="userLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Logg inn</button>
 						</div>
 						<p><a href="#forgetpassmodal" data-toggle="modal" data-target="#forgetpassmodal" style="font-size: 65%;">Forgot Password?</a></p>
 						<hr style="width: 70%;">
-						<p style="font-size: 65%;">Don't you have an account? </p>
-						<a href="register_Group.php" name="userRegister" id="userRegister" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Register</a>
+						<p style="font-size: 65%;">Har du ingen konto? </p>
+						<a href="register_Group.php" name="userRegister" id="userRegister" class="btn btn-lg py-1 btn-light text-capitalize font-weight-bold mx-1 text-dark">Registrer</a>
 					</form>
 				</div>
 			</div>
@@ -111,17 +111,17 @@ session_start();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Fogot Password?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Glemt passord??</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <input type="email" class="form-control col-12" id="useremail" placeholder="Enter your Email" required>
+      <input type="email" class="form-control col-12" id="useremail" placeholder="Skriv inn din epost-adresse" required>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" id = "reset-btn" data-target="#resetpassmodal">Next</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" id = "reset-btn" data-target="#resetpassmodal">Neste</button>
       </div>
     </div>
   </div>
@@ -132,18 +132,18 @@ session_start();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Reset Code</h5>
+        <h5 class="modal-title">Reset-kode</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <label class="col-12"><b><i> Check your mail for reset code.</i></b></label>
-      <input type="number" class="form-control col-12" id="resetcode" placeholder="Reset Code" required>
+      <label class="col-12"><b><i> Sjekk din epost for reset-kode.</i></b></label>
+      <input type="number" class="form-control col-12" id="resetcode" placeholder="Reset-kode" required>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="nextpass-btn">Next</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="nextpass-btn">Neste</button>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@ session_start();
       <input type="password" class="form-control col-12" id="newpass" placeholder="New Password" required>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="change-btn" data-toggle="modal">Change</button>
       </div>
     </div>

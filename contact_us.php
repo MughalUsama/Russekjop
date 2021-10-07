@@ -41,28 +41,28 @@ if (isset($_POST["send"])){
 					<div class="row mb-6 mb-lg-10 mb-xl-14">
 						<div class="col-12 text-center mb-4">
 							<h2 class="heading mb-3" >
-								<strong class="font-weight-medium">Welcome to </strong>
+								<strong class="font-weight-medium">Velkommen til </strong>
 								<strong class="text-danger">Russekjøp</strong>
 							</h2>
-							<span class="title">Contact Us</span>
+							<span class="title">Kontakt oss</span>
 						</div>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center" method="POST" action="#">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="Name" id="Name" class="form-control border border-danger" placeholder="Name" required>
+									<input type="text" name="Name" id="Name" class="form-control border border-danger" placeholder="Navn" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" name="Email" id="Email" class="form-control border border-danger" placeholder="Email" required>
+									<input type="email" name="Email" id="Email" class="form-control border border-danger" placeholder="Epost" required>
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-4 mb-lg-6">
-										<input type="text" name="Telephone" id="Telephone" class="form-control border border-danger" placeholder="Telephone (optional)">
+										<input type="text" name="Telephone" id="Telephone" class="form-control border border-danger" placeholder="Telefon (optional)">
 									</div>
 								</div>
 								<div class="form-group mb-1 mb-lg-6">
-									<textarea name="message" id="paragraph_text" cols="50" rows="10" class="form-control border border-danger" placeholder="Your Message" required></textarea>
+									<textarea name="message" id="paragraph_text" cols="50" rows="10" class="form-control border border-danger" placeholder="Din melding" required></textarea>
 								</div>
 								<div class="pt-4 mb-5">
 									<button type="submit" name="send" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">Send</button>

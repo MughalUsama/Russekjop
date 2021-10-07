@@ -52,23 +52,23 @@ session_start();
 	<div class="row py-5" id="div1st">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex flex-column justify-content-center py-4" >
 				<div class="py-2" >
-					<img src="./img/Picturec.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h4>
+					<img src="./img/Picturec.png" class="tick-img"><h5 class="d-inline" style="font-weight: bold;color: black;"> Få tilbud fra flere leverandører</h5>
 				</div>
 				<div class="py-2">
-					<img src="./img/Picturec.png" class="tick-img"><h4 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h4>
+					<img src="./img/Picturec.png" class="tick-img"><h5 class="d-inline" style="font-weight: bold;color: black;"> Velg det beste tilbudet basert på deres behov</h5>
 				</div>
 				<div class="py-2">
-					<img src="./img/Picturec.png" class="tick-img" ><h4 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h4>
+					<img src="./img/Picturec.png" class="tick-img" ><h5 class="d-inline" style="font-weight: bold;color: black;"> Det er gratis og uforpliktende!</h5>
 				</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nopadding" >
 				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-					<h3 style="color: white;font-size: 2.6vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
+					<h3 style="color: white;font-size: 2.6vw;"> FÅ UFORPLIKTENDE TILBUD - SPAR TID OG PENGER PÅ DINE KJØP </h3>
 				</div>
 				<form action="./login.php">
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
 				  <select style="background-color: white; color:black; width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category">
-				  	<option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
+				  	<option value="" style="font-weight:bold;" selected disabled>Velg Kategori</option>
 					  <?php
                             while($row = mysqli_fetch_assoc($category_data))
                             {
@@ -79,7 +79,7 @@ session_start();
 				</div>
 				<div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
 				  <select style="background-color: white; color:black; width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Product">
-				  	<option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
+				  	<option value="" style="font-weight:bold;" selected disabled>Velg produkt / tjeneste</option>
 				    
 				  </select>
 				</div>
@@ -98,28 +98,28 @@ session_start();
 				  </select>
 				</div>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
-					<button class="py-1" type="submit" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
+					<button class="py-1" type="submit" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Neste </button>
 				</div>
 				</form>
 		</div>
 	</div>
-	<h1 id="menu-heading" style="text-align: center;margin-top: 5%;margin-bottom: 3%;">How Russekjøp works</h1>
+	<h1 id="menu-heading" style="text-align: center;margin-top: 5%;margin-bottom: 3%;">Hvordan fungerer det</h1>
 	
 	<!-- How Russekjøp works div -->
 	<div class="row">
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
   				<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
-  				<section><p style="font-size: 2.4vw;font-weight: bold">Fill out the form</p></section>
-  				<p class="text-center" style="padding-left: 10%;">Save time by simply filling out the form. We obtain offers from several providers based on your needs.</p>
+  				<section><p style="font-size: 2.4vw;font-weight: bold">Fyll ut skjemaet</p></section>
+  				<p class="text-center" style="padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører. We obtain offers from several providers based on your needs.</p>
   			</div>
   		</div>
 
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
   				<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
-  				<section><p style="font-size: 2.4vw;font-weight: bold">Receive offers</p></section>
-  				<p class="text-center" style="padding-left: 10%;">Receive offers from several different suppliers and see which offer suits you best.</p>
+  				<section><p style="font-size: 2.4vw;font-weight: bold">Motta tilbud</p></section>
+  				<p class="text-center" style="padding-left: 10%;">Motta tilbud from several different suppliers and see which offer suits you best.</p>
   			</div>
   		</div>
 
@@ -129,8 +129,8 @@ session_start();
   		<div class="col-lg-4 col-md-4 col-sm-12">
   			<div class="divs">
   				<img class="imagesStyle" src="./img/Picturef.png" width="30%" height="75%" style="margin:auto;display: block;">
-  				<section><p style="font-size: 2.4vw;font-weight: bold">Choose offer</p></section>
-  				<p class="text-center" style="padding-left: 10%;">Choose the best offer based on your needs.</p>
+  				<section><p style="font-size: 2.4vw;font-weight: bold">Velg tilbud</p></section>
+  				<p class="text-center" style="padding-left: 10%;">Velg det beste tilbudet basert på deres behov.</p>
   			</div>
   		</div>
   </div>

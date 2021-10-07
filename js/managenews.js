@@ -6,7 +6,7 @@ $(document).ready(function() {
         var image_name = $('#postimage').val();  
         if(image_name == '')  
         {  
-             alert("Please Select Image");  
+             alert("Please Endre nyhet");  
              return false;  
         }  
         else  

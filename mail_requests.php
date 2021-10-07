@@ -118,5 +118,4 @@ while ($row = $unsent_requests->fetch_assoc()) {
 $update_sent = "Update requests SET mail_sent = \"1\";";
 db::getInstance()->dbquery($update_sent);
 
-
-mail($to, $subject, $message, $headers);
+?>

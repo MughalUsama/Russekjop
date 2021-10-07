@@ -22,7 +22,7 @@ $('#Category').on('change', function()  {
 function displayproducts(data)
 {
     $('#Product').empty();
-    var item=  "<option  value = '' selected>Choose Product / Service </option>";
+    var item=  "<option  value = '' selected>Velg produkt / tjeneste </option>";
     $('#Product').append(item);
 
     for (var prod of data) {

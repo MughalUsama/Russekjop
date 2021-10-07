@@ -57,39 +57,39 @@ if (isset($_REQUEST["update"]))
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="login-form text-center" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="breg-form" enctype="multipart/form-data">
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="text" name="bname" id="businessName" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["business_name"]) ;?>" placeholder="Business Name" required disabled>
+                        <input type="text" name="bname" id="businessName" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["business_name"]) ;?>" placeholder="Bedriftsnavn" required disabled>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="text" name="vat" id="vat" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["vat"]) ;?>" placeholder="VAT Number" required disabled>
+                        <input type="text" name="vat" id="vat" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["vat"]) ;?>" placeholder="Org.nr" required disabled>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="text" name="address" id="address" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["address"]) ;?>" placeholder="Address" required >
+                        <input type="text" name="address" id="address" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["address"]) ;?>" placeholder="Adresse" required >
                     </div>
                     <div class="position-relative">
                         <div class="form-group mb-3 mb-lg-6">
-                            <input type="text" name="btelephone" id="btelephone" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["telephone"]) ;?>" placeholder="Telephone" required>
+                            <input type="text" name="btelephone" id="btelephone" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["telephone"]) ;?>" placeholder="Telefon" required>
                         </div>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="email" name="bemail" id="bemail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["business_email"]) ;?>" placeholder="Business contact email" required disabled>
+                        <input type="email" name="bemail" id="bemail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["business_email"]) ;?>" placeholder="Kontaktepost" required disabled>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="text" name="website" id="website" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["website"]) ;?>" placeholder="Website" required>
+                        <input type="text" name="website" id="website" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["website"]) ;?>" placeholder="Webside" required>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="text" name="bperson" id="bperson" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["contact_person"]) ;?>" placeholder="Contact Person" required>
+                        <input type="text" name="bperson" id="bperson" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["contact_person"]) ;?>" placeholder="Kontaktperson" required>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="email" name="contactemail" id="contactemail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["contact_email"]) ;?>" placeholder="Email Contact Person" required>
+                        <input type="email" name="contactemail" id="contactemail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["contact_email"]) ;?>" placeholder="Epost kontaktperson" required>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="email" name="useremail" id="useremail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["email"]) ;?>" placeholder="Email (Username)" readonly>
+                        <input type="email" name="useremail" id="useremail" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["email"]) ;?>" placeholder="Epost (Brukernavn)" readonly>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <input type="password" name="password" id="password" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["password"]) ;?>" placeholder="Password" required>
+                        <input type="password" name="password" id="password" class="form-control border border-danger" value="<?php echo($_SESSION["userdata"]["password"]) ;?>" placeholder="Passord" required>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <select id="category" name="categories[]" multiple class="chosen" data-placeholder="Choose Categories" disabled> 
+                        <select id="category" name="categories[]" multiple class="chosen" data-placeholder="Velg kategori" disabled> 
                         <?php 
                         while($row = mysqli_fetch_assoc($cdata))
                         {
@@ -104,7 +104,7 @@ if (isset($_REQUEST["update"]))
                         </select>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                        <select id="prod"  multiple class="chosen" data-placeholder="Choose Products" disabled>
+                        <select id="prod"  multiple class="chosen" data-placeholder="Velg produkt" disabled>
                         <?php
                     
                         $query = "Select * from business_products where business_id = \"{$_SESSION["userdata"]["business_id"]}\";";
@@ -123,7 +123,7 @@ if (isset($_REQUEST["update"]))
                         </select>
                     </div>
                     <div class="form-group mb-3 mb-lg-6">
-                    <select id="counties"  multiple class="chosen" data-placeholder="Choose Counties" disabled>
+                    <select id="counties"  multiple class="chosen" data-placeholder="Velg salgssteder" disabled>
                     <option value="-1"></option>
                         <option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>
                         <option value="Oslo">Oslo</option>
@@ -140,7 +140,7 @@ if (isset($_REQUEST["update"]))
                     </select>
                     </div>
                     <div class="pt-2 mb-5">
-                        <button type="submit" name="update" id="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">update</button>
+                        <button type="submit" name="update" id="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">Oppdater</button>
                     </div>
                 </form>
             </div>

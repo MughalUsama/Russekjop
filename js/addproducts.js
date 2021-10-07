@@ -24,7 +24,7 @@ $(document).ready(function() {
     function displayproducts(data)
 	{
         $('#prod').empty();
-        var item=  "<option  val = '' selected>Choose Product/Service </option>";
+        var item=  "<option  val = '' selected>Velg produkt/tjeneste </option>";
         $('#prod').append(item);
 
         for (var prod of data) {

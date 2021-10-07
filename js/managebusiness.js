@@ -21,8 +21,8 @@ $(document).ready(function() {
                 '          <th scope="row">1</th>'+
                 '               <td>'+arrayItem["business_name"]+'</td>'+
                 '               <td>'+arrayItem["email"]+'</td>'+
-                '               <td class="bg-warning text-center edituser text-white">Edit</td>'+
-                '               <td class="bg-danger text-center deleteuser text-white">Delete</td>'+
+                '               <td class="bg-warning text-center edituser text-white">Endre</td>'+
+                '               <td class="bg-danger text-center deleteuser text-white">Slett</td>'+
                 '          </tr></form>';
                 $("#table-body").append(row);
             });

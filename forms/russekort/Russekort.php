@@ -15,14 +15,14 @@
                     <input type="text" name="tablename" value="detail4" hidden>
                 </div>
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="numberOfTotalRussekort" id="numberOfTotalRussekort" class=" form-control border border-danger" placeholder="Number of total russekort" style="width: 48.5%;"  required>
-                        <input type="number" name="numberOfDifferentRussekort" id="numberOfDifferentRussekort" class=" form-control border border-danger" placeholder="Number of different russekort" style="margin-left:2.95%;width:51.5%"  required>
+                        <input type="number" name="numberOfTotalRussekort" id="numberOfTotalRussekort" class=" form-control border border-danger" placeholder="Antall russekort" style="width: 48.5%;"  required>
+                        <input type="number" name="numberOfDifferentRussekort" id="numberOfDifferentRussekort" class=" form-control border border-danger" placeholder="Antall ulike russekort" style="margin-left:2.95%;width:51.5%"  required>
                     </div>
                     <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="text" name="color" id="colorOfRussekort" class=" form-control border border-danger" placeholder="Color" style="width:47%"  required>
+                        <input type="text" name="color" id="colorOfRussekort" class=" form-control border border-danger" placeholder="Farge" style="width:47%"  required>
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="description" id="paragraph_text_Russekort" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
+                        <textarea name="description" id="paragraph_text_Russekort" cols="50" rows="10" class="form-control border border-danger" placeholder="Vær vennlig å fyll inn tilleggsinformation om deres behov."></textarea>
                     </div>
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">
                         <input class="form-control border border-danger col-6 d-flex justify-content-start" type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.xlsx,.png,.jpg,.jpeg,.pdf,.pptx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">

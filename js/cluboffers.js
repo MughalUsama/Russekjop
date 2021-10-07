@@ -400,16 +400,16 @@ $("#acc-off").on("click",function() {
                                 }
                             });
                 }
-                strVar += '                            <p class="pl-4 row col-12 text-wrap">Additional Information:<br><pre class="d-inline ml-4 text-wrap">'+ arrayItem["description"]+'</pre></p>';
+                strVar += '                            <p class="pl-4 row col-12 text-wrap">Tilleggsinformasjon:<br><pre class="d-inline ml-4 text-wrap">'+ arrayItem["description"]+'</pre></p>';
                 if(arrayItem["created_on"]!=null){
-                    strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+                    strVar += '                            <p class="pl-4 row col-12">Registrert:      '+ arrayItem["created_on"]+'</p>';
                 }
                 if(arrayItem["accepted_on"]!=null){
                     strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
                 }
 
             strVar += downloadbtn;
-            modalbtn ='<button class="col-4 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter1">Chat History</button>';
+            modalbtn ='<button class="col-4 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter1">Chat-historie</button>';
             strVar += modalbtn;
 
                 strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
@@ -488,9 +488,9 @@ $("#acc-table").empty();
                             }
                         });
             }
-            strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4 text-wrap">'+ arrayItem["description"]+'</pre></p>';
+            strVar += '                            <p class="pl-4 row col-12">Tilleggsinformasjon:<br><pre class="d-inline ml-4 text-wrap">'+ arrayItem["description"]+'</pre></p>';
             if(arrayItem["created_on"]!=null){
-            strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+            strVar += '                            <p class="pl-4 row col-12">Registrert:      '+ arrayItem["created_on"]+'</p>';
         }
         if(arrayItem["accepted_on"]!=null){
             strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
@@ -500,7 +500,7 @@ $("#acc-table").empty();
         }
 
             strVar += downloadbtn;
-            modalbtn ='<button class="col-5 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter">Chat History</button>';
+            modalbtn ='<button class="col-5 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter">Chat-historie</button>';
             strVar += modalbtn;
             strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
             strVar += "                        <\/div>";

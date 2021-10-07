@@ -33,13 +33,13 @@ session_start();
 				<div class="container-fluid justify-content-center">
           <img class="img-fluid mx-auto col-12 top-img" style="max-height: 200px;" src="./img/Pictureb.png" alt="RUSSEKJOP">
           <div class="row d-flex col-12 pb-1 my-3 justify-content-center">
-              <h3 class="text-center">C<span class="text-danger">o</span><span class="text-dark">m</span><span class="text-danger">p</span><span class="text-dark">a</span><span class="text-danger">n</span><span class="text-dark">y R</span><span class="text-danger">e</span><span class="text-dark">g</span><span class="text-danger">i</span><span class="text-dark">s</span><span class="text-danger">t</span><span class="text-dark">e</span><span class="text-danger">r</span>
+              <h3 class="text-center">B<span class="text-danger">e</span><span class="text-dark">d</span><span class="text-danger">r</span><span class="text-dark">i</span><span class="text-danger">f</span><span class="text-dark">t</span><span class="text-danger">s</span><span class="text-dark">r</span><span class="text-danger">e</span><span class="text-dark">g</span><span class="text-danger">i</span><span class="text-dark">s</span><span class="text-danger">t</span><span class="text-dark">e</span><span class="text-danger">r</span>
               </h3>
           </div>
           <div class="row d-flex col-12 pb-1 justify-content-center ml-0">
             <div class="row d-flex col-12 justify-content-center align-items-center py-0" id="search-div">
-                <p class="hide-xs mx-auto col-md-3 mt-3" style="font-size: 1.1rem;"> Search <i class="fa fa-search" aria-hidden="true"></i></p>
-                <input type="text" class="d-inline col-xs-12 col-md-9 form-control " id="search-txt" name="search-txt" placeholder="Type here & Press enter to search">
+                <p class="hide-xs mx-auto col-md-3 mt-3" style="font-size: 1.1rem;"> Søk <i class="fa fa-search" aria-hidden="true"></i></p>
+                <input type="text" class="d-inline col-xs-12 col-md-9 form-control " id="search-txt" name="search-txt" placeholder="Skriv her og trykk enter for å søke">
             </div>
           </div>
         

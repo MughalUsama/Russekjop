@@ -61,14 +61,14 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <!-- Separator with title -->
@@ -79,13 +79,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -108,7 +108,7 @@ session_start();
             <thead>
                 <tr>
                 <th class="bg-info" scope="col">#</th>
-                <th class="bg-info" scope="col">Business Name</th>
+                <th class="bg-info" scope="col">Bedriftsnavn</th>
                 <th class="bg-info" scope="col">Email</th>
                 <th class="bg-warning" scope="col"></th>
                 <th class="bg-danger" scope="col"></th>
@@ -125,17 +125,17 @@ session_start();
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle0">Delete Business</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle0">Delete Bedrift</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-            Are you sure you want to delete this account?
-      </div>
+      Er du sikker på at du ønsker å slette denne kontoen?
+          </div>
       <div class="modal-footer">
         <button type="button" id="delete-business" class="btn btn-danger" data-dismiss="modal">Delete</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
       </div>
     </div>
   </div>

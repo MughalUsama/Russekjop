@@ -178,7 +178,7 @@ CREATE TABLE `contact_us` (
   `contactus_id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Email` text NOT NULL,
-  `Telephone` text NOT NULL,
+  `Telefon` text NOT NULL,
   `Message` text DEFAULT NULL,
   `sent` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

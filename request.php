@@ -61,20 +61,20 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers</span></div>
+                    <span class="menu-collapsed">Våre tilbud</span></div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -84,13 +84,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->

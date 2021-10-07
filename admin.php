@@ -59,14 +59,14 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <!-- Separator with title -->
@@ -77,13 +77,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -105,8 +105,8 @@ session_start();
             <div class="col-lg-4 col-sm-6">
                 <div class="card-box bg-blue">
                     <div class="inner py-4 ml-2">
-                        <h3 class="pb-1"> My Profile </h3>
-                        <h6> Manage your profile </h6>
+                        <h3 class="pb-1"> Min profil </h3>
+                        <h6> Administrer din profil </h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-user" aria-hidden="true"></i>
@@ -119,7 +119,7 @@ session_start();
                 <div class="card-box bg-green">
                     <div class="inner ml-1 pl-1 py-4">
                         <h3 class="pb-1"> Categories & Products </h3>
-                        <h6> Manage categories and products </h6>
+                        <h6> Manage Administret kategorier og produkter </h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -130,8 +130,8 @@ session_start();
             <div class="col-lg-4 col-sm-6">
                 <div class="card-box bg-orange">
                     <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1"> Club Requests </h3>
-                        <h6> See products requests from clubs </h6>
+                        <h3 class="pb-1"> Klubbforespørsler </h3>
+                        <h6> Se forespørsler </h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-usd" aria-hidden="true"></i>
@@ -142,8 +142,8 @@ session_start();
             <div class="col-lg-4 col-sm-6">
                 <div class="card-box bg-red">
                     <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Add Business</h3>
-                        <h6> Add new business accounts </h6>
+                        <h3 class="pb-1">Legg til bedrift</h3>
+                        <h6> Legg til ny bedriftskonto </h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-users"></i>
@@ -154,8 +154,8 @@ session_start();
             <div class="col-lg-4 col-sm-6">
                 <div class="card-box bg-dark">
                     <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage Business</h3>
-                        <h6> Edit or delete business accounts </h6>
+                        <h3 class="pb-1">Administrer bedrifter</h3>
+                        <h6> Endre eller slette bedriftskontoer </h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-trash"></i>
@@ -166,8 +166,8 @@ session_start();
             <div class="col-lg-4 col-sm-6">
                 <div class="card-box bg-secondary">
                     <div class="inner py-4 ml-2 ">
-                        <h3 class="pb-1">Manage News</h3>
-                        <h6> Manage news and blog page </h6>
+                        <h3 class="pb-1">Administrer nyheter</h3>
+                        <h6>Administrer nyhetesside</h6>
                     </div>
                     <div class="icon">
                         <i class="fa fa-newspaper-o"></i>

@@ -64,20 +64,20 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers </span>                </div>
+                    <span class="menu-collapsed">Våre tilbud </span>                </div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -87,13 +87,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -115,8 +115,8 @@ session_start();
                 <li class="page-item" aria-current="page">
                 <span class="page-link bg-danger border-danger text-white" id="off-tab">Offers</span>
                 </li>
-                <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" >All Requests</a></li>
-                <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" >Accepted Offers</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" >Alle forespørsler</a></li>
+                <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" >Aksepterte tilbud</a></li>
             </ul>
         </nav>
         
@@ -139,7 +139,7 @@ session_start();
     <div class="modal-dialog modal-dialog-centered  modal-lg modal-xl" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark text-white">
-            <h5 class="modal-title" id="exampleModalLongTitle">Chat History</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Chat-historie</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -149,7 +149,7 @@ session_start();
             </div>
         </div>
         <div class="modal-footer bg-dark">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Tilbake</button>
         </div>
         </div>
     </div>
@@ -159,7 +159,7 @@ session_start();
     <div class="modal-dialog modal-dialog-centered  modal-lg modal-xl" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark text-white">
-            <h5 class="modal-title" id="exampleModalLongTitle">Chat History</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Chat-historie</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -169,7 +169,7 @@ session_start();
             </div>
         </div>
         <div class="modal-footer bg-dark">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Tilbake</button>
         </div>
         </div>
     </div>

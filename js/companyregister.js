@@ -52,11 +52,11 @@ $(document).ready(function() {
 
 function displayproducts(data)
 {
-    var item=  "<option  val = '' selected>Choose Product/Service </option>";
+    var item=  "<option  val = '' selected>Velg produkt/tjeneste </option>";
     $('#prod').append(item);
-    var addhtml = "<img width=\"100\" class=\"d-inline\" src=\"uploads/"+data[0]["logo_name"]+"\"><br><b>Website: "+ data[0]["website"]+"</b><br>";
-    addhtml += "<b>Telephone: "+ data[0]["telephone"]+"</b><br>";
-    addhtml += "<b>Email: "+ data[0]["business_email"]+"</b><br>";
+    var addhtml = "<img width=\"100\" class=\"d-inline\" src=\"uploads/"+data[0]["logo_name"]+"\"><br><b>Webside: "+ data[0]["website"]+"</b><br>";
+    addhtml += "<b>Telefon: "+ data[0]["telephone"]+"</b><br>";
+    addhtml += "<b>Epost: "+ data[0]["business_email"]+"</b><br>";
     addhtml += "<b>Address: "+ data[0]["address"]+"</b>";
     instance.setContent(addhtml);
     instance.setProps({

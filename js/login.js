@@ -54,7 +54,7 @@ $(document).ready(function() {
                 $("#newpassmodal").modal("show");                
             }
             else{
-                alert("Wrong reset code. Please try again.");
+                alert("Feil reset-kode. Prøv igjen");
             }
         }
     })

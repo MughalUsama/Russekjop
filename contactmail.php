@@ -3,7 +3,7 @@ require_once("/home/pxx2xninpimm/cron/db.php");
 $query = "Select * from contact_us where sent='0';";
 $data = db::getInstance()->get_result($query);
 $to      = 'post@xn--russekjp-c5a.no'; 
-$subject = 'RussekJop - Contact us'; 
+$subject = 'RussekJop - Kontakt oss'; 
 
 
 $updatequery = "UPDATE contact_us SET sent = '1' where sent = '0';";

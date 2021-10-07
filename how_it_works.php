@@ -31,13 +31,13 @@ session_start();
 					<div class="row mb-6 col-12">
 						<div class="col-12 text-center mb-4">
 							<h2 class="heading mb-2 mt-3" >
-								<strong class="font-weight-medium">Welcome to </strong>
+								<strong class="font-weight-medium">Velkommen til </strong>
 								<strong class="text-danger">Russekjøp</strong>
 							</h2>
 						</div>
 					</div>
 					<div class="row justify-content-center col-12 px-0 mx-0 pt-4 pb-4" style="background-image: url('./img/pictureb.png');">
-					<h1 class="title mb-3">How It Works</h1>
+					<h1 class="title mb-3">Bedriftsregister</h1>
 
 						<div class="col-12 pt-3">
 							<!-- How Russekjøp works div -->
@@ -46,16 +46,16 @@ session_start();
 								<div class="col-lg-4 col-md-4 col-sm-12">
 									<div class="divs">
 										<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
-										<section><p style="font-size: 2rem;font-weight: bold">Fill out the form</p></section>
-										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Save time by simply filling out the form. We obtain offers from several providers based on your needs.</p>
+										<section><p style="font-size: 2rem;font-weight: bold">Fyll ut skjemaet</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører. We obtain offers from several providers based on your needs.</p>
 									</div>
 								</div>
 
 								<div class="col-lg-4 col-md-4 col-sm-12">
 									<div class="divs">
 										<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
-										<section><p style="font-size:  2rem;font-weight: bold">Receive offers</p></section>
-										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Receive offers from several different suppliers and see which offer suits you best.</p>
+										<section><p style="font-size:  2rem;font-weight: bold">Motta tilbud</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Motta tilbud from several different suppliers and see which offer suits you best.</p>
 									</div>
 								</div>
 							<!-- Choose products div -->
@@ -63,8 +63,8 @@ session_start();
 								<div class="col-lg-4 col-md-4 col-sm-12">
 									<div class="divs">
 										<img class="imagesStyle" src="./img/Picturef.png" width="30%" height="75%" style="margin:auto;display: block;">
-										<section><p style="font-size:  2rem;font-weight: bold">Choose offer</p></section>
-										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Choose the best offer based on your needs.</p>
+										<section><p style="font-size:  2rem;font-weight: bold">Velg tilbud</p></section>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Velg det beste tilbudet basert på deres behov.</p>
 									</div>
 								</div>
 						</div>

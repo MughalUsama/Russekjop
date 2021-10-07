@@ -153,46 +153,46 @@ session_start();
 				<div class="container">
 					<div class="row mb-6 mb-lg-10 mb-xl-14">
 						<div class="col-12 text-center mt-4 mb-4">
-							<span class="title text-white">Business Registration</span>
+							<span class="title text-white">Bedrift Registration</span>
 						</div>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="breg-form" enctype="multipart/form-data">
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="text" name="bname" id="businessName" class="form-control border border-danger" placeholder="Business Name" required>
+									<input type="text" name="bname" id="businessName" class="form-control border border-danger" placeholder="Bedriftsnavn" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="text" name="vat" id="vat" class="form-control border border-danger" placeholder="VAT Number" required>
+									<input type="text" name="vat" id="vat" class="form-control border border-danger" placeholder="Org.nr" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="text" name="address" id="address" class="form-control border border-danger" placeholder="Address" required>
+									<input type="text" name="address" id="address" class="form-control border border-danger" placeholder="Adresse" required>
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-3 mb-lg-6">
-										<input type="text" name="btelephone" id="btelephone" class="form-control border border-danger" placeholder="Telephone" required>
+										<input type="text" name="btelephone" id="btelephone" class="form-control border border-danger" placeholder="Telefon" required>
 									</div>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="email" name="bemail" id="bemail" class="form-control border border-danger" placeholder="Business contact email" required>
+									<input type="email" name="bemail" id="bemail" class="form-control border border-danger" placeholder="Kontaktepost" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="text" name="website" id="website" class="form-control border border-danger" placeholder="Website" required>
+									<input type="text" name="website" id="website" class="form-control border border-danger" placeholder="Webside" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="text" name="bperson" id="bperson" class="form-control border border-danger" placeholder="Contact Person" required>
+									<input type="text" name="bperson" id="bperson" class="form-control border border-danger" placeholder="Kontaktperson" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="email" name="contactemail" id="contactemail" class="form-control border border-danger" placeholder="Email Contact Person" required>
+									<input type="email" name="contactemail" id="contactemail" class="form-control border border-danger" placeholder="Epost kontaktperson" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="email" name="useremail" id="useremail" class="form-control border border-danger" placeholder="Email (Username)" required>
+									<input type="email" name="useremail" id="useremail" class="form-control border border-danger" placeholder="Epost (Brukernavn)" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<input type="password" name="password" id="password" class="form-control border border-danger" placeholder="Password" required>
+									<input type="password" name="password" id="password" class="form-control border border-danger" placeholder="Passord" required>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<select id="category" name="categories[]" multiple class="chosen" data-placeholder="Choose Categories">
+									<select id="category" name="categories[]" multiple class="chosen" data-placeholder="Velg kategori">
 									<?php 
 										while($row = mysqli_fetch_assoc($cdata))
 										{
@@ -202,12 +202,12 @@ session_start();
 									</select>
 								</div>
 								<div class="form-group mb-3 mb-lg-6">
-									<select id="products" name="products[]"  multiple class="chosen" data-placeholder="Choose Products">
+									<select id="products" name="products[]"  multiple class="chosen" data-placeholder="Velg produkt">
 									
 									</select>
 								</div>
 								<div class="form-group mb-3 mb-lg-6" style="display: none;" id="subproducts-div">
-								<select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Choose Sub Products">
+								<select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Velg produkt">
 									<option value="1">Toiletpaper</option>
 									<option value="2">Paper towels</option>
 									<option value="3">Socks</option>
@@ -220,7 +220,7 @@ session_start();
 								</div>
 
 								<div class="form-group mb-3 mb-lg-6">
-								<select id="counties" name="counties[]"  multiple class="chosen" data-placeholder="Choose Counties">
+								<select id="counties" name="counties[]"  multiple class="chosen" data-placeholder="Velg salgssteder">
 									<option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>
 									<option value="Oslo">Oslo</option>
 									<option value="Rogaland">Rogaland</option>
@@ -242,7 +242,7 @@ session_start();
 									<input class="form-control border border-danger" type="file" name="fileToUpload" id="fileToUpload" accept=".png,.jpg,.jpeg" required>
 								</div>
 								<div class="pt-2 mb-5">
-									<button type="submit" name="regsub-btn" id="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">Register</button>
+									<button type="submit" name="regsub-btn" id="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold" style="float:right;margin-bottom: 8%;">Registrer</button>
 								</div>
 							</form>
 						</div>

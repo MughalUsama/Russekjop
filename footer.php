@@ -20,10 +20,10 @@
 
         <ul class="mb-4 list-unstyled">
           <li class="pb-1">
-            Telephone: <p class="d-inline ml-1 mycolor">405 20 963</p>
+            Telefon: <p class="d-inline ml-1 mycolor">405 20 963</p>
           </li>
           <li class="pb-1">
-            Email:     <p class="d-inline ml-2 mycolor">post@russekjop.no</p>
+            Epost:     <p class="d-inline ml-2 mycolor">post@russekjop.no</p>
           </li>
           <li class="pb-1">
             Web:       <a href="https://www.sportsreg.no" class="d-inline ml-2 mycolor">www.russekjøp.no</a>
@@ -44,16 +44,16 @@
 
         <ul class="mb-4 list-unstyled">
         <li>
-            <a href="./contact_us.php">Contact</a>
+            <a href="./contact_us.php">Kontakt</a>
           </li>
           <li>
-            <a href="./about_us.php">About Us</a>
+            <a href="./about_us.php">Om oss</a>
           </li>
           <li>
-            <a href="./blog.php">News</a>
+            <a href="./blog.php">Nyheter</a>
           </li>
           <li>
-            <a href="./companyregister.php">Company Register</a>
+            <a href="./companyregister.php">Bedriftsregister</a>
           </li>
         </ul>
 
@@ -69,13 +69,13 @@
 
         <ul class="mb-4 list-unstyled">
         <li>
-            <a href="./how_it_works.php">How it works</a>
+            <a href="./how_it_works.php">Bedriftsregister</a>
           </li>
           <li>
             <a href="./faq.php">FAQs</a>
           </li>
           <li>
-            <a href="./supplier.php">Become a Supplier</a>
+            <a href="./supplier.php">Bli en leverandør</a>
           </li>
           <li>
             <a href="./terms.php" class="d-none">Conditions and terms</a>

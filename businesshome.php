@@ -76,14 +76,14 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             
@@ -95,13 +95,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -120,18 +120,18 @@ session_start();
     <div class="col text-white" id="div1st">
         <div class="row py-2" >
         <div class="row col-12 py-3 ml-1 justify-content-start">
-            <h2 class=" col-sm-12 col-md-8">Requests</h2>
+            <h2 class=" col-sm-12 col-md-8">Forespørsler</h2>
             <div class=" col-sm-12 col-md-4">
             <!-- Button trigger modal -->
             <button type="button" id="acc-off" class="btn ml-2 col-sm-12 col-md-8 mt-1 btn-primary float-right" data-toggle="modal" data-target="#exampleModalScrollable0">
-            Accepted Offers  <?php echo($accoffquerymsg)?>
+            Aksepterte tilbud  <?php echo($accoffquerymsg)?>
             </button>
 
             </div>
         </div>  
         <div class="row pl-3 ml-2 col-12 justify-content-start">
             <div class="row d-flex col-12 mb-5 pb-2 justify-content-start" id="fillcards">    
-            <h5 class="mx-auto">No Requests</h5>
+            <h5 class="mx-auto">No Forespørsler</h5>
             </div>
         </div>
 
@@ -144,7 +144,7 @@ session_start();
   <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header text-danger">
-        <h5 class="modal-title" id="exampleModalScrollableTitle0">Accepted Offers</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle0">Aksepterte tilbud</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -155,7 +155,7 @@ session_start();
         <!-- accepted cards here-->
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
       </div>
     </div>
   </div>
@@ -171,18 +171,18 @@ session_start();
     <div class="modal-dialog modal-dialog-centered  modal-lg modal-xl" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark text-white">
-            <h5 class="modal-title" id="exampleModalLongTitle">Chat History</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Chat-historie</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body bg-danger text-white">
             <div class="m-para col-12 ml-3 mt-2 ml-2 row">
-                No Chat History
+                No Chat-historie
             </div>
         </div>
         <div class="modal-footer bg-dark">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Tilbake</button>
         </div>
         </div>
     </div>

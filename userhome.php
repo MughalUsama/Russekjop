@@ -67,20 +67,20 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers<pre class="d-inline"> </pre> <?php echo($newmsg) ?> </span></div>
+                    <span class="menu-collapsed">Våre tilbud<pre class="d-inline"> </pre> <?php echo($newmsg) ?> </span></div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -90,13 +90,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -116,23 +116,23 @@ session_start();
     <div class="row py-5" id="div1st">
 		<div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center py-5" >
 				<div class="py-4 mt-3" >
-					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Get offers from several suppliers</h6>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Få tilbud fra flere leverandører</h6>
 				</div>
 				<div class="py-3">
-					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Choose the best offer based on your needs</h6>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Velg det beste tilbudet basert på deres behov</h6>
 				</div>
 				<div class="py-4 mb-1">
-					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> It's free and without obligation!</h6>
+					<img src="./img/Picturec.png" class="tick-img"><h6 class="d-inline" style="font-weight: bold;color: black;"> Det er gratis og uforpliktende!</h6>
 				</div>
 		</div>
 		<div class="col-md-6 col-sm-12 nopadding" >
 				<div style="margin-top: 7.5%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
-					<h3 class="mt-2" style="font-weight: bolder;color: white;font-size: 2.3vw;"> GET NON-BINDING OFFERS – SAVE TIME AND MONEY ON YOUR PURCHASES </h3>
+					<h3 class="mt-2" style="font-weight: bolder;color: white;font-size: 2.3vw;"> FÅ UFORPLIKTENDE TILBUD - SPAR TID OG PENGER PÅ DINE KJØP </h3>
 				</div>
                 <form method="POST" action="./request.php">
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
                     <select style="background-color: white; color:black;width:88%;border-color: black;" type="text" name="Category" placeholder=" Choose You Category " class="form-control" id="Category" required>
-                        <option value="" style="font-weight:bold;" selected disabled>Choose Category</option>
+                        <option value="" style="font-weight:bold;" selected disabled>Velg Kategori</option>
                         <?php
                             while($row = mysqli_fetch_assoc($category_data))
                             {
@@ -143,7 +143,7 @@ session_start();
                     </div>
                     <div class="form-group" style="margin-top: 3%;margin-left: 15%;margin-bottom: 3%;margin-right: 15%;">
                     <select style="background-color: white; color:black;width:88%;border-color: black;" type="text" name="Product" placeholder=" Choose You Category " class="form-control" id="Product" required>
-                        <option value="" style="font-weight:bold;" selected disabled>Choose Product / Service</option>
+                        <option value="" style="font-weight:bold;" selected disabled>Velg produkt / tjeneste</option>
                         
                     </select>
                     </div>
@@ -163,7 +163,7 @@ session_start();
 	
                     </div>
 				<div style="margin-top: 3.5%;margin-left: 15%;margin-bottom: 12%;">
-					<button class="py-1" name="submit-next" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Next </button>
+					<button class="py-1" name="submit-next" style="background-color: black;color: white; width:22%;margin-right: 27%;float: right;" type="submit" > Neste </button>
 				</div>
                 </form>
 		</div>

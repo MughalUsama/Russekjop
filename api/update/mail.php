@@ -7,7 +7,7 @@ $_SESSION["resetcode"] = $resetcode;
 $to_email = $_REQUEST["email"];
 $_SESSION["resetmail"] = $to_email;
 $subject = "Reset SportsReg password";
-$body = "Hi, your reset code for SportsReg account is $resetcode";
+$body = "Hi, your Reset-kode for SportsReg account is $resetcode";
 $headers = "From: SportsReg";
 $headers = 'From: Russekjop' . "\r\n" . 
 

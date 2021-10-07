@@ -76,7 +76,7 @@ session_start();
 					<div class="row mb-6 mb-lg-10 mb-xl-14">
 						<div class="col-12 text-center mb-4">
 							<h2 class="heading mb-3" >
-								<strong class="font-weight-medium">Welcome to </strong>
+								<strong class="font-weight-medium">Velkommen til </strong>
 								<strong class="text-danger">Russekjøp</strong>
 							</h2>
 							<span class="title">Register group</span>
@@ -86,38 +86,38 @@ session_start();
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form id="reg-form" class="login-form text-center" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="clubname" id="userName" class="form-control border border-danger" placeholder="Group Name" required>
+									<input type="text" name="clubname" id="userName" class="form-control border border-danger" placeholder="Gruppe-navn" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="contactperson" id="userContactPerson" class="form-control border border-danger" placeholder="Contact Person" required>
+									<input type="text" name="contactperson" id="userContactPerson" class="form-control border border-danger" placeholder="Kontaktperson" required>
 								</div>
 								<div class="position-relative">
 									<div class="form-group mb-4 mb-lg-6">
-										<input type="text" name="telephone" id="userTelephone" class="form-control border border-danger" placeholder="Telephone" required>
+										<input type="text" name="telephone" id="userTelephone" class="form-control border border-danger" placeholder="Telefon" required>
 									</div>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="email" name="email" id="userEmail" class="form-control border border-danger" placeholder="Email(Username)" required>
+									<input type="email" name="email" id="userEmail" class="form-control border border-danger" placeholder="Epost (Brukernavn)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="address" id="userAddress" class="form-control border border-danger" placeholder="Address" required>
+									<input type="text" name="address" id="userAddress" class="form-control border border-danger" placeholder="Adresse" required>
 								</div>
 								<div class="d-flex flex-row form-group mb-4 mb-lg-6">
-									<input type="text" name="postcode" id="userPostCode" class=" form-control border border-danger" placeholder="Post Code" style="width: 65%;"  required>
-									<input type="text" name="city" id="userCity" class=" form-control border border-danger" placeholder="City" style="margin-left:2.95%"  required>
+									<input type="text" name="postcode" id="userPostCode" class=" form-control border border-danger" placeholder="Postkode" style="width: 65%;"  required>
+									<input type="text" name="city" id="userCity" class=" form-control border border-danger" placeholder="Sted" style="margin-left:2.95%"  required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="password" id="password" class="form-control border border-danger" placeholder="Password" minlength="8" required>
+									<input type="password" name="password" id="password" class="form-control border border-danger" placeholder="Passord" minlength="8" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password"  id="confirmpassword" class="form-control border border-danger" placeholder="Confirm Password" minlength="8" required>
+									<input type="password"  id="confirmpassword" class="form-control border border-danger" placeholder="Bekfreft passord" minlength="8" required>
 								</div>
 								<div class="form-check d-flex flex-row">
 							    <input type="checkbox" name="userAgeConfirmation" id="userAgeConfirmation" class="form-check-input border border-danger" required>
-							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%;">I confirm that I am over 18 years old *</label>
+							    <label class="form-check-label" for="exampleCheck1" style="font-size:50%;">Jeg bekrefter at jeg er over 18 år *</label>
 							  </div>
 								<div class="pt-4 mb-5">
-									<button type="submit" name="register" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">sign up</button>
+									<button type="submit" name="register" id="userSignUpBtn" class="btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">Registrer</button>
 								</div>
 							</form>
 						</div>

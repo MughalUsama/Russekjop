@@ -62,20 +62,20 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <a href="./cluboffers.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">My Offers</span>                </div>
+                    <span class="menu-collapsed">Våre tilbud</span>                </div>
             </a>
             <!-- Separator with title -->
             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -85,13 +85,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -185,7 +185,7 @@ $newsdetailsresult =  mysqli_fetch_assoc($getndetails);
 <div class="container-fluid mx-0 px-0">
     <div class="d-flex mb-0 pb-0 mt-1 mx-0 px-0 jusitfy-content-center align-items-center flex-wrap col-12" id="news-body">
     <div class="ml-0 col-12 mx-0 px-0 py-1 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-secondary">
-    <h3 class="pt-1 pl-1 text-white">Edit Posts/News</h3>
+    <h3 class="pt-1 pl-1 text-white">Endre nyhet</h3>
     </div>
     <!-- NEWS BOXES BELOW -->
     <div class="news-start ml-0 col-12 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-dark">
@@ -207,30 +207,30 @@ $newsdetailsresult =  mysqli_fetch_assoc($getndetails);
         <h6 class="text-success"><?php echo($successmsg); ?></h6>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">News/Post Headline:</label>
-        <textarea class="form-control" placeholder="Write News/Post Headline" name="newsheadline" id="exampleFormControlTextarea1" rows="3" required><?php echo($newsdetailsresult["news_headline"]); ?></textarea>
+        <label for="exampleFormControlTextarea1">Overskrift:</label>
+        <textarea class="form-control" placeholder="Skrive Overskrift" name="newsheadline" id="exampleFormControlTextarea1" rows="3" required><?php echo($newsdetailsresult["news_headline"]); ?></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea2">News Description:</label>
-        <textarea class="form-control" placeholder="Write News/Post Description" name="newsdescription" id="exampleFormControlTextarea2" rows="5" required><?php echo($newsdetailsresult["news_description"]); ?></textarea>
+        <label for="exampleFormControlTextarea2">Nyhetstekst:</label>
+        <textarea class="form-control" placeholder="Skrive News/Post Description" name="newsdescription" id="exampleFormControlTextarea2" rows="5" required><?php echo($newsdetailsresult["news_description"]); ?></textarea>
     </div>
     <div class="form-group">
-    <label for="postimage">Select Image:</label>
+    <label for="postimage">Endre nyhet:</label>
         <input type="file" accept=".gif,.png.,.jpg,.jpeg,.jpeg" class="form-control-file" id="postimage" name="postimage">
     </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input" name="topnews" type="checkbox" id="topnews" value="1" >
-        <label class="form-check-label" for="topnews">Top News</label>
+        <label class="form-check-label" for="topnews">Toppnyhet</label>
     </div>
     <div class="form-check form-check-inline d-none">
         <input class="form-check-input" name="latestnews" type="checkbox" id="latestnews" value="1" >
     </div>
     <div class="form-check-inline float-right col-auto">
-    <button type="submit" name="update-btn" class="btn btn-primary mb-2">Update News</button>
+    <button type="submit" name="update-btn" class="btn btn-primary mb-2">Oppdater nyhet</button>
     </div>
     <div class="form-check col-auto mt-2">
      <p class="ml-1 mt-3">
-        Top News = News at the top of the page<br>
+        Toppnyhet = Hovednyhet<br>
     </p>
     </div>
 

@@ -13,7 +13,7 @@ $('#breg-form').submit(function(){
 
   if (image_name == '')
   {  
-       alert("Please Select Image");  
+       alert("Please Endre nyhet");  
        return false;  
   }  
   else  

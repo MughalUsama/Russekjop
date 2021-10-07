@@ -62,11 +62,11 @@ console.log(arrayItem["table_name"]);
                             }
                         });
             }
-            strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+            strVar += '                            <p class="pl-4 row col-12">Tilleggsinformasjon:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
             strVar+=downloadbtn;
             strVar += '                            </div><hr><div class="messages" clubid="'+club[index]["club_id"]+'" reqid="'+arrayItem["request_id"]+'"></div>';
             strVar += "                            <div class=\"row msg-div m-2 col-12 border-light\">";
-            strVar += "                                <textarea rows=\"5\" class=\"tarea row col-10\" clubid="+club[index]["club_id"]+" reqid="+arrayItem["request_id"]+" id=\"off"+cardno+"-msg\" placeholder=\"Write your offer\"><\/textarea>";
+            strVar += "                                <textarea rows=\"5\" class=\"tarea row col-10\" clubid="+club[index]["club_id"]+" reqid="+arrayItem["request_id"]+" id=\"off"+cardno+"-msg\" placeholder=\"Skrive your offer\"><\/textarea>";
             strVar += "                                <div class=\"d-flex row col-10 justify-conter-end\"><button class=\"ml-auto mt-1 px-4 send-btn\">Send<\/button><\/div>";
             strVar += "                            <\/div>";
             strVar += "                        <\/div>";
@@ -262,16 +262,16 @@ console.log(arrayItem["table_name"]);
                                     }
                                 });
                     }
-                    strVar += '                            <p class="pl-4 row col-12">Additional Information:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
+                    strVar += '                            <p class="pl-4 row col-12">Tilleggsinformasjon:<br><pre class="d-inline ml-4">'+ arrayItem["description"]+'</pre></p>';
                     if(arrayItem["created_on"]!=null){
-                        strVar += '                            <p class="pl-4 row col-12">Created on:      '+ arrayItem["created_on"]+'</p>';
+                        strVar += '                            <p class="pl-4 row col-12">Registrert:      '+ arrayItem["created_on"]+'</p>';
                     }
                     if(arrayItem["accepted_on"]!=null){
                         strVar += '                            <p class="pl-4 row col-12">Accepted on:      '+ arrayItem["accepted_on"]+'</p>';
                     }
     
                     strVar += downloadbtn;
-                    modalbtn ='<button class="col-5 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter">Chat History</button>';
+                    modalbtn ='<button class="col-5 ml-1 justify-content-start btn-primary float-right py-1 chat-btn" req-id="" data-toggle="modal" data-target="#newsModalCenter">Chat-historie</button>';
                     strVar += modalbtn;
                     strVar += '                            </div><hr><div class="messages" clubid="' + club[index]["club_id"] + '" reqid="' + arrayItem["request_id"] + '"></div>';
                     strVar += "                        <\/div>";

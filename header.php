@@ -17,7 +17,7 @@ if (array_key_exists('businessloggedin' ,$_SESSION) or array_key_exists('clublog
         echo("Russekjop");
     }
     else{
-        echo("Company Login");
+        echo("Bedrift Logg inn");
     }
 ?>
 
@@ -33,9 +33,9 @@ if (array_key_exists('businessloggedin' ,$_SESSION) or array_key_exists('clublog
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ml-auto text-center">
-                <a href="./register_Group.php" class="nav-item nav-link myfontTimes active font-weight-bold text-dark <?php echo($addclass);?>">Register Group</a>
-                <a href="./login.php" class="nav-item nav-link myfontTimes font-weight-bold text-dark <?php echo($addclass);?>">Login</a>
-                <a href="./company_login.php" class="nav-item nav-link myfontTimes font-weight-bold text-dark d-sm-none <?php echo($addclass);?>">Company (Login)</a>
+                <a href="./register_Group.php" class="nav-item nav-link myfontTimes active font-weight-bold text-dark <?php echo($addclass);?>">Registrer gruppe</a>
+                <a href="./login.php" class="nav-item nav-link myfontTimes font-weight-bold text-dark <?php echo($addclass);?>">Logg inn</a>
+                <a href="./company_login.php" class="nav-item nav-link myfontTimes font-weight-bold text-dark d-sm-none <?php echo($addclass);?>">Bedrift (Logg inn)</a>
             </div>
         </div>
     </nav>

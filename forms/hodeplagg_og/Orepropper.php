@@ -12,14 +12,14 @@
             <div class="col-12 col-md-10 col-lg-8 col-xl-6">
                 <form class="Orepropper-form text-center" method="POST" action="./forms/submit/detail2.php" enctype="multipart/form-data">
                     <div class="d-flex flex-row form-group mb-4 mb-lg-6">
-                        <input type="number" name="quantity" id="numberOfOrepropper" class=" form-control border border-danger" placeholder="Number of orepropper" style="width: 50%;"  required>
-                        <input type="text" name="color" id="colorOfOrepropper" class=" form-control border border-danger" placeholder="Color" style="margin-left:2.95%;width:50%;"  required>
+                        <input type="number" name="quantity" id="numberOfOrepropper" class=" form-control border border-danger" placeholder="Antall ørepropper (par)" style="width: 50%;"  required>
+                        <input type="text" name="color" id="colorOfOrepropper" class=" form-control border border-danger" placeholder="Farge" style="margin-left:2.95%;width:50%;"  required>
                     </div>
                     <div class="d-flex flex-row form-group mb-5 mb-lg-6">
-                        <input type="text" name="size" class="form-control border border-danger" id="sizeOfOrepropper" placeholder="Size" style="width:48.5%">
+                        <input type="text" name="size" class="form-control border border-danger" id="sizeOfOrepropper" placeholder="Størrelse" style="width:48.5%">
                     </div>
                     <div class="form-group mb-4 mb-lg-6">
-                        <textarea name="description" id="paragraph_text_Orepropper" cols="50" rows="10" class="form-control border border-danger" placeholder="Please provide us with additional information about your needs."></textarea>
+                        <textarea name="description" id="paragraph_text_Orepropper" cols="50" rows="10" class="form-control border border-danger" placeholder="Vær vennlig å fyll inn tilleggsinformation om deres behov."></textarea>
                     </div>
                     <div class="form-group mb-4 mb-lg-6 d-flex flex-row">
                         <input class="form-control border border-danger col-6 d-flex justify-content-start" type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.xlsx,.png,.jpg,.jpeg,.pdf,.pptx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">

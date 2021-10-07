@@ -72,7 +72,7 @@ session_start();
 					<div class="row mb-4">
 						<div class="col-12 text-center">
 							<h2 class="heading mb-4">
-								<strong class="font-weight-medium">Login - Business</strong>
+								<strong class="font-weight-medium">Logg inn - Bedrift</strong>
 							</h2>
 						</div>
 					</div>
@@ -80,13 +80,13 @@ session_start();
 						<div class="col-12 col-md-10 col-lg-8 col-xl-6">
 							<form class="login-form text-center" method="POST">
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="text" name="email" id="companyEmail" class="form-control border border-warning" placeholder="Email (Username)" required>
+									<input type="text" name="email" id="companyEmail" class="form-control border border-warning" placeholder="Epost (Brukernavn)" required>
 								</div>
 								<div class="form-group mb-4 mb-lg-6">
-									<input type="password" name="passwd" id="companyPassword" class="form-control border border-success" placeholder="Password" minlength="8" required>
+									<input type="password" name="passwd" id="companyPassword" class="form-control border border-success" placeholder="Passord" minlength="8" required>
 								</div>
 								<div class="pt-4 mb-3">
-									<button type="submit" name="login" id="companyLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Log in</button>
+									<button type="submit" name="login" id="companyLoginBtn" class="btn btn-lg py-1 btn-dark text-capitalize font-weight-bold">Logg inn</button>
 								</div>
 							</form>
 						</div>

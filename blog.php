@@ -114,7 +114,7 @@ if($newsdata)
             </div>
         </div>
         <div class="modal-footer bg-dark">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Tilbake</button>
         </div>
         </div>
     </div>

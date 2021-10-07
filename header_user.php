@@ -16,8 +16,8 @@ if (session_status() == PHP_SESSION_NONE) { //if there's no session_start yet...
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ml-auto text-center">
-                <a href="./" class="nav-item nav-link myfontTimes active font-weight-bold text-dark">Homepage</a>
-                <a href="./logout.php" id="logout_btn" class="logout_btn nav-item nav-link myfontTimes font-weight-bold text-dark">Logout</a>
+                <a href="./" class="nav-item nav-link myfontTimes active font-weight-bold text-dark">Hjem</a>
+                <a href="./logout.php" id="logout_btn" class="logout_btn nav-item nav-link myfontTimes font-weight-bold text-dark">Logg ut</a>
             </div>
         </div>
     </nav>

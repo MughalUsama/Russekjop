@@ -62,14 +62,14 @@ session_start();
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <!-- Separator with title -->
@@ -80,13 +80,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -148,7 +148,7 @@ $getallnews = db::getInstance()->get_result($allnews);
     <div class="d-flex jusitfy-content-center align-items-center flex-wrap col-12 px-0 mx-0" id="news-body">
 
     <div class="ml-0 col-12 py-1 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-secondary">
-    <h3 class="pt-1 text-white">Add new Post/News</h3>
+    <h3 class="pt-1 text-white">Legg til nyhet</h3>
     </div>
     <!-- NEWS BOXES BELOW -->
     <div class="news-start ml-0 col-12 d-flex jusitfy-content-center align-items-center row rounded border border-info bg-dark">
@@ -170,27 +170,27 @@ $getallnews = db::getInstance()->get_result($allnews);
         <h6 class="text-success"><?php echo($successmsg); ?></h6>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">News/Post Headline:</label>
-        <textarea class="form-control" placeholder="Write News/Post Headline" name="newsheadline" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="exampleFormControlTextarea1">Overskrift:</label>
+        <textarea class="form-control" placeholder="Skrive Overskrift" name="newsheadline" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea2">News Description:</label>
-        <textarea class="form-control" placeholder="Write News/Post Description" name="newsdescription" id="exampleFormControlTextarea2" rows="5" required></textarea>
+        <label for="exampleFormControlTextarea2">Nyhetstekst:</label>
+        <textarea class="form-control" placeholder="Skrive News/Post Description" name="newsdescription" id="exampleFormControlTextarea2" rows="5" required></textarea>
     </div>
     <div class="form-group">
-    <label for="postimage">Select Image:</label>
+    <label for="postimage">Endre nyhet:</label>
         <input type="file" accept=".gif,.png.,.jpg,.jpeg,.jpeg" class="form-control-file" id="postimage" name="postimage" required>
     </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input" name="topnews" type="checkbox" id="topnews" value="1" >
-        <label class="form-check-label" for="topnews">Top News</label>
+        <label class="form-check-label" for="topnews">Toppnyhet</label>
     </div>
     <div class="form-check-inline float-right col-auto">
-      <button type="submit" class="btn btn-primary mb-2" name="addnews">Add News</button>
+      <button type="submit" class="btn btn-primary mb-2" name="addnews">Legg til nyhet</button>
     </div>
     <div class="form-check col-auto mt-2">
      <p class="ml-1 mt-3">
-        Top News = News at the top of the page<br>
+        Toppnyhet = Hovednyhet<br>
     </p>
     </div>
 </form>
@@ -227,8 +227,8 @@ $getallnews = db::getInstance()->get_result($allnews);
             echo '<th scope="row">'.$serial_num.'</th>';
             echo '<td colspan="3">'.$nnews["news_headline"].'</td>';
             echo '<td>'.$nnews["posted_on"].'</td>';
-            echo '<td><button class="btn btn-danger delete-news" news-id="'.$nnews["news_id"].'">Delete</button></td>';
-            echo '<td><form action="editpost.php" method="POST" class="d-inline"><input class="d-none" name="editnewsid" value = "'.$nnews["news_id"].'" type="number" ><button type="submit" name="edit-btn" class="btn btn-warning edit-news" news-id="'.$nnews["news_id"].'">Edit</button></form></td>';
+            echo '<td><button class="btn btn-danger delete-news" news-id="'.$nnews["news_id"].'">Slett</button></td>';
+            echo '<td><form action="editpost.php" method="POST" class="d-inline"><input class="d-none" name="editnewsid" value = "'.$nnews["news_id"].'" type="number" ><button type="submit" name="edit-btn" class="btn btn-warning edit-news" news-id="'.$nnews["news_id"].'">Endre</button></form></td>';
             echo '</tr>';
         }
     }

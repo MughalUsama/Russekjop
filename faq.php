@@ -36,7 +36,7 @@ session_start();
 			<div class="row mb-6 mb-lg-10 mb-xl-14">
 				<div class="col-12 text-center mb-4">
 					<h2 class="heading mb-3" >
-						<strong class="font-weight-medium">Welcome to </strong>
+						<strong class="font-weight-medium">Velkommen til </strong>
 						<strong class="text-danger">Russekjøp</strong>
 					</h2>
 					<h1 class="title mt-4">FAQs</h1>

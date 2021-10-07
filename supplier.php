@@ -39,7 +39,7 @@ session_start();
             <div class="d-none d-md-flex col-md-6 mt-5 pt-5 pb-5" id="partner-img" ></div>
             <div class="col-12 col-md-6">
                 <div class="row pt-4 mt-4 pb-1 col-12 ml-1 d-flex justify-content-center">
-                <h2>Become a <span class="text-danger">Supplier</span></h2>
+                <h2>Bli en <span class="text-danger">leverandør</span></h2>
                 </div>
                 <!-- first paragraph-->
                 <p class="ml-1 mt-2 mb-2 pb-2 col-12 text-justify">

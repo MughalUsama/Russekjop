@@ -54,7 +54,7 @@ $(document).ready(function() {
                 }
 
                 if(arrayItem["description"]!=null){
-                cards+='                            <p class="pl-4 row col-12">Additional Information:            '+ arrayItem["description"]+'</p>';
+                cards+='                            <p class="pl-4 row col-12">Tilleggsinformasjon:            '+ arrayItem["description"]+'</p>';
                 }
                 cards+='                            </div>'+
                 '                        </div>'+

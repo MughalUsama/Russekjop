@@ -185,14 +185,14 @@ if (isset($_REQUEST["regsub-btn"]))
             <a href="./index.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <!-- Separator with title -->
@@ -203,13 +203,13 @@ if (isset($_REQUEST["regsub-btn"]))
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -236,7 +236,7 @@ if (isset($_REQUEST["regsub-btn"]))
 
             <div class="col-12 text-center mt-4 mb-4">
                 <h2>
-                    <span class="text-white">Edit Business</span>
+                    <span class="text-white">Endre Bedrift</span>
                 </h2>
             </div>
         </div>
@@ -244,42 +244,42 @@ if (isset($_REQUEST["regsub-btn"]))
               <div class="col-12 col-md-8">
                 <form class="login-form text-center" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="reg-form" enctype="multipart/form-data">
                     <div class="form-group row d-flex col-12 justify-content-center">
-                        <input type="text" class=" reginput-border form-control col-11 col-md-9" value="<?php echo($bname) ;?>" name="bname" id="bname" placeholder="Business Name" required>
+                        <input type="text" class=" reginput-border form-control col-11 col-md-9" value="<?php echo($bname) ;?>" name="bname" id="bname" placeholder="Bedriftsnavn" required>
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="text" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bvat) ;?>" name="vat" id="vat" placeholder="VAT number" required>
+                    <input type="text" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bvat) ;?>" name="vat" id="vat" placeholder="Org.nr" required>
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
                     <input type="text" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($baddress) ;?>" name="address" id="address" placeholder="Adresse" required>
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="tel" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bphone) ;?>" name="btelephone" id="btelephone" placeholder="Telephone" required>
+                    <input type="tel" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bphone) ;?>" name="btelephone" id="btelephone" placeholder="Telefon" required>
                     </div>
 
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bemail) ;?>" name="bemail" id="bemail" placeholder="Email (business contact email)" required>
+                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bemail) ;?>" name="bemail" id="bemail" placeholder="Email (Kontaktepost)" required>
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="url" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bwebsite) ;?>" name="website" id="website" placeholder="Website (http://www.website.com)" required>
-                    </div>
-
-                    <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="text" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bperson) ;?>" name="bperson" id="bperson" placeholder="Contact person" required>
+                    <input type="url" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bwebsite) ;?>" name="website" id="website" placeholder="Webside (http://www.website.com)" required>
                     </div>
 
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bcemail) ;?>" name="contactemail" id="contactemail" placeholder="Email (contact person)" required>
+                    <input type="text" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bperson) ;?>" name="bperson" id="bperson" placeholder="Kontaktperson" required>
+                    </div>
+
+                    <div class="form-group row d-flex col-12 justify-content-center">
+                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($bcemail) ;?>" name="contactemail" id="contactemail" placeholder="Email (Kontaktperson)" required>
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($busermail) ;?>" name="useremail" id="useremail" placeholder="Email (Username)" required>
+                    <input type="email" class=" reginput-border form-control   col-11 col-md-9" value="<?php echo($busermail) ;?>" name="useremail" id="useremail" placeholder="Epost (Brukernavn)" required>
                     </div>
                     
                     <div class="form-group row d-flex col-12 justify-content-center">
-                    <input type="password" class=" reginput-border form-control    col-11 col-md-9" value="<?php echo($bpass) ;?>" name="password" id="password" placeholder="Password" required>
+                    <input type="password" class=" reginput-border form-control    col-11 col-md-9" value="<?php echo($bpass) ;?>" name="password" id="password" placeholder="Passord" required>
                     </div>
                     <div class="form-group row d-flex col-12  justify-content-center">
                         
-                        <select data-placeholder="Choose Categories" name="categories[]" id="category" multiple class="chosen">
+                        <select data-placeholder="Velg kategori" name="categories[]" id="category" multiple class="chosen">
                         <option value="-1"></option>
                         <?php 
                             while($row = mysqli_fetch_assoc($pdata))
@@ -291,13 +291,13 @@ if (isset($_REQUEST["regsub-btn"]))
 
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-center">
-                        <select data-placeholder="Choose Products/Services" name="products[]" id= "prod"  multiple class="chosen">
+                        <select data-placeholder="Velg produkt/Services" name="products[]" id= "prod"  multiple class="chosen">
                         <option value="-1"></option>
                         </select>
 
                     </div>
                     <div class="form-group row  col-12 justify-content-center" style="display: none;" id="subproducts-div">
-                        <select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Choose Sub Products">
+                        <select id="subproducts" name="subproducts[]"  multiple class="chosen" data-placeholder="Velg produkt">
                             <option value="1">Toiletpaper</option>
                             <option value="2">Paper towels</option>
                             <option value="3">Socks</option>
@@ -310,7 +310,7 @@ if (isset($_REQUEST["regsub-btn"]))
 					</div>
                     <div class="form-group row d-flex col-12 justify-content-center">
                         
-                        <select data-placeholder="Choose Counties" name="counties[]" id="county" multiple class="chosen">
+                        <select data-placeholder="Velg salgssteder" name="counties[]" id="county" multiple class="chosen">
                         <option value="-1"></option>
                             <option value="Hele Norge (all over the country)">Hele Norge (all over the country)</option>
                             <option value="Oslo">Oslo</option>
@@ -331,7 +331,7 @@ if (isset($_REQUEST["regsub-btn"]))
                         <input class="col-9 py-1 text-primary bg-white" type="file" name="fileToUpload" id="fileToUpload">
                     </div>
                     <div class="form-group row d-flex col-12 justify-content-end">
-                    <button type="submit" id = "regsub-btn" name="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">Update</button>
+                    <button type="submit" id = "regsub-btn" name="regsub-btn" class="border border-white btn btn-lg py-1 btn-danger text-capitalize font-weight-bold">Oppdater</button>
                     </div>
 
                 </form>

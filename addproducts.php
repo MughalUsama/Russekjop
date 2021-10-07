@@ -127,14 +127,14 @@ session_start();
             <a href="./admin.php"class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Homepage</span>
+                    <span class="menu-collapsed">Hjem</span>
                 </div>
             </a>
             <!-- Submenu content -->
             <a href="./profile.php" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-user fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Profile</span>
+                    <span class="menu-collapsed">Profil</span>
                 </div>
             </a>
             <!-- Separator with title -->
@@ -145,13 +145,13 @@ session_start();
             <a href="./about_us.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-info-circle fa-fw mr-3"></span>
-                    <span class="menu-collapsed">About Us</span>
+                    <span class="menu-collapsed">Om oss</span>
                 </div>
             </a>
             <a href="./logout.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-sign-out fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Logout</span>
+                    <span class="menu-collapsed">Logg ut</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -172,13 +172,13 @@ session_start();
     <!-- Add category-->
     <div class="row d-flex col-12 mx-0 px-0 my-bg py-3" style="font-family: 'Times New Roman', Times, serif;">
         <div class="col-12 ml-3 d-flex py-3">
-            <h4 class="text-white">Add Category:</h4>
+            <h4 class="text-white">Legg til kategori:</h4>
         </div>
         <div class="row col-12 justify-content-center">                
             <form class="col-12 flex-wrap d-flex justify-content-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="cat-form">
                 <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                     <input type="text" class="form-control col-xs-12 col-md-4 d-sm-flex d-md-inline border border-danger" id="cat-name" placeholder="Category name" name="cat-name" required>
-                    <button class="form-control addcat-btn col-xs-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger"  name="addcat-btn" id="addcat-btn"> Add</button>
+                    <button class="form-control addcat-btn col-xs-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger"  name="addcat-btn" id="addcat-btn"> Legg til</button>
                 </div>
             </form>
         </div>
@@ -188,13 +188,13 @@ session_start();
     <!-- Add prod-->
     <div class="row d-flex col-12 mx-0 px-0 my-bg py-3 border-top border-secondary" style="font-family: 'Times New Roman', Times, serif;">
         <div class="col-12 ml-3 d-flex py-3">
-            <h4 class="text-white">Add Products:</h4>
+            <h4 class="text-white">Legg til produkt:</h4>
         </div>
         <div class="row col-12 justify-content-center">                
         <form class="col-12 flex-wrap d-flex justify-content-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="pro-form">
                     <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                         <select class="form-control col-sm-12 col-md-6 border border-danger" id="category1" name="category1">
-                            <option val = '-1' selected>Choose Category </option>
+                            <option val = '-1' selected>Velg Kategori </option>
                             <?php 
                             while($row = mysqli_fetch_assoc($cdata))
                             {
@@ -205,7 +205,7 @@ session_start();
                     </div>
                     <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                         <input type="text" class="form-control col-sm-12 col-md-4 d-sm-flex d-md-inline border border-danger" id="pro-name" placeholder="Product/Service name" name="pro-name" required>
-                        <button class="form-control addpro-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger" name="addpro-btn" id="addpro-btn"> Add</button>
+                        <button class="form-control addpro-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger" name="addpro-btn" id="addpro-btn"> Legg til</button>
                     </div>
                 </form>
         </div>
@@ -215,13 +215,13 @@ session_start();
     <!-- Remove Catergory-->
     <div class="row d-flex col-12 mx-0 px-0 my-bg py-3 border-top border-secondary" style="font-family: 'Times New Roman', Times, serif;">
         <div class="col-12 ml-3 d-flex py-3">
-            <h4 class="text-white">Remove Category:</h4>
+            <h4 class="text-white">Slett kategori:</h4>
         </div>
         <div class="row col-12 justify-content-center">                
         <form class="col-12 flex-wrap d-flex justify-content-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="remcat-form">
                 <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                     <select class="form-control col-sm-12 col-md-4 d-sm-flex d-md-inline border border-danger" id="remcat-name"  name="remcat-name">
-                        <option val = '-1' selected>Choose Category </option>
+                        <option val = '-1' selected>Velg Kategori </option>
                         <?php 
                         while($row = mysqli_fetch_assoc($cdata2))
                         {
@@ -229,22 +229,22 @@ session_start();
                         }
                         ?>
                     </select>
-                    <button class="form-control addcat-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1  btn-danger" name="remcat-btn" id="remcat-btn"> Remove</button>
+                    <button class="form-control addcat-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1  btn-danger" name="remcat-btn" id="remcat-btn"> Fjern</button>
                 </div>
             </form>        </div>
     </div>    <!-- End Remove Catergory-->
 
 
-    <!-- Remove Product-->
+    <!-- Slett produkt-->
     <div class="row d-flex col-12 mx-0 px-0 my-bg py-3 border-top border-secondary" style="font-family: 'Times New Roman', Times, serif;">
         <div class="col-12 ml-3 d-flex py-3">
-            <h4 class="text-white">Remove Products:</h4>
+            <h4 class="text-white">Slett produkts:</h4>
         </div>
         <div class="row col-12 justify-content-center">                
         <form class="col-12 flex-wrap d-flex justify-content-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="rempro-form">
             <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                 <select class="form-control col-sm-12 col-md-6" id="remcategory"  name="category2">
-                    <option val = '-1' selected>Choose Category </option>
+                    <option val = '-1' selected>Velg Kategori </option>
                     <?php 
                     while($row = mysqli_fetch_assoc($cdata1))
                     {
@@ -255,13 +255,13 @@ session_start();
             </div>
             <div class="form-group flex-wrap col-12 d-flex justify-content-center">
                 <select class="form-control col-sm-12 col-md-4 d-sm-flex d-md-inline border border-danger" id="prod" name="rempro-name">
-                    <option  val = '-1' selected>Choose Product/Service </option>
+                    <option  val = '-1' selected>Velg produkt/tjeneste </option>
                 </select>
-                <button class="form-control rempro-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger" name="rempro-btn" id="rempro-btn"> Remove</button>
+                <button class="form-control rempro-btn col-sm-4 col-md-2 d-sm-flex d-md-inline ml-1 btn-danger" name="rempro-btn" id="rempro-btn"> Fjern</button>
             </div>
         </form>
         </div>
-    </div>    <!-- End Remove Product-->
+    </div>    <!-- End Slett produkt-->
 
 
 
