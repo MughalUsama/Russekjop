@@ -131,7 +131,7 @@ session_start();
         </div>  
         <div class="row pl-3 ml-2 col-12 justify-content-start">
             <div class="row d-flex col-12 mb-5 pb-2 justify-content-start" id="fillcards">    
-            <h5 class="mx-auto">No Forespørsler</h5>
+            <h5 class="mx-auto">Ingen Forespørsler</h5>
             </div>
         </div>
 

@@ -37,7 +37,7 @@ session_start();
 						</div>
 					</div>
 					<div class="row justify-content-center col-12 px-0 mx-0 pt-4 pb-4" style="background-image: url('./img/pictureb.png');">
-					<h1 class="title mb-3">Bedriftsregister</h1>
+					<h1 class="title mb-3">Hvordan fungerer det?</h1>
 
 						<div class="col-12 pt-3">
 							<!-- How Russekjøp works div -->
@@ -47,7 +47,7 @@ session_start();
 									<div class="divs">
 										<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
 										<section><p style="font-size: 2rem;font-weight: bold">Fyll ut skjemaet</p></section>
-										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører. We obtain offers from several providers based on your needs.</p>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører.</p>
 									</div>
 								</div>
 
@@ -55,7 +55,7 @@ session_start();
 									<div class="divs">
 										<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
 										<section><p style="font-size:  2rem;font-weight: bold">Motta tilbud</p></section>
-										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Motta tilbud from several different suppliers and see which offer suits you best.</p>
+										<p class="text-center" style="font-size: 1.1rem;padding-left: 10%;">Motta tilbud fra flere forskjellige leverandører og se hvilket tilbud som passer deg best.</p>
 									</div>
 								</div>
 							<!-- Choose products div -->

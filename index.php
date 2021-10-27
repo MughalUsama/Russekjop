@@ -111,7 +111,7 @@ session_start();
   			<div class="divs">
   				<img class="imagesStyle" src="./img/Pictured.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Fyll ut skjemaet</p></section>
-  				<p class="text-center" style="padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører. We obtain offers from several providers based on your needs.</p>
+  				<p class="text-center" style="padding-left: 10%;">Spar tid ved å fylle ut skjemaet. Vi innhenter tilbud fra flere leverandører.</p>
   			</div>
   		</div>
 
@@ -119,7 +119,7 @@ session_start();
   			<div class="divs">
   				<img class="imagesStyle" src="./img/Picturee.png" width="30%" height="75%" style="margin:auto;display: block;">
   				<section><p style="font-size: 2.4vw;font-weight: bold">Motta tilbud</p></section>
-  				<p class="text-center" style="padding-left: 10%;">Motta tilbud from several different suppliers and see which offer suits you best.</p>
+  				<p class="text-center" style="padding-left: 10%;">Motta tilbud fra flere forskjellige leverandører og se hvilket tilbud som passer deg best.</p>
   			</div>
   		</div>
 
@@ -135,7 +135,7 @@ session_start();
   		</div>
   </div>
   <div class="pb-5" style="background-color:red;">
-  	<h4 class= "pt-5 pb-3" id="menu-heading" style="text-align: center; margin-top: 3%;margin-bottom: 3%;font-weight: bold">Save money on various purchases and collaborations</h4>
+  	<h4 class= "pt-5 pb-3" id="menu-heading" style="text-align: center; margin-top: 3%;margin-bottom: 3%;font-weight: bold">Spar penger på ulike kjøp og samarbeid</h4>
 	  <div class="row">
 	  		<div class="col-lg-3 col-md-3 col-sm-12">
 	  			<div class="divs">

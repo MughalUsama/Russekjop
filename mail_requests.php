@@ -1,19 +1,20 @@
 <?php
-require_once("./db.php");
+require_once("/home/pxx2xninpimm/cron/db.php");
 
 $get_requests_query = "Select * from club_requests where mail_sent = \"0\";";
 $unsent_requests = db::getInstance()->get_result($get_requests_query);
 $to = null;
 $message = "";
-$temp_message = 'Hi,\n   You have got a request from %s for %s at Russekjop. So, visit https://xn--russekjp-c5a.no/ now to respond to this request.
-    \nRegards,
-    \nRussekjop';
-$subject = 'Russekjop Product Request';
+$temp_message = "Hei,\n   Du har fått en forespørsel fra %s for %s på Russekjøp. Logg deg inn på www.russekjøp.no for å besvare forespørselen. 
+    \nMed vennlig hilsen
+    Russekjøp";
+    
+$subject = 'Russekjøp-forespørsel';
 
 
-$headers = 'From: ikkesvar@xn--russekjp-c5a.no' . "\r\n" .
+$headers = 'From: ikkesvar@russekjøp.no' . "\r\n" .
 
-'Reply-To: ikkesvar@xn--russekjp-c5a.no' . "\r\n" .
+'Reply-To: ikkesvar@russekjøp.no' . "\r\n" .
 
 'X-Mailer: PHP/' . phpversion();
     
@@ -115,7 +116,8 @@ while ($row = $unsent_requests->fetch_assoc()) {
 // sending mail
 
 }
-$update_sent = "Update requests SET mail_sent = \"1\";";
+$update_sent = "Update club_requests SET mail_sent = \"1\";";
 db::getInstance()->dbquery($update_sent);
+
 
 ?>

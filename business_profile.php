@@ -50,7 +50,7 @@ if (isset($_REQUEST["update"]))
     <div class="container">
         <div class="row mb-6 mb-lg-10 mb-xl-14">
             <div class="col-12 text-center mt-4 mb-4">
-                <span class="title text-white">Your Profile</span>
+                <span class="title text-white">Din Profil</span>
             </div>
         </div>
         <div class="row justify-content-center">

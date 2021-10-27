@@ -113,7 +113,7 @@ session_start();
         <nav class="mt-2" aria-label="...">
             <ul class="pagination pagination-md  justify-content-end">
                 <li class="page-item" aria-current="page">
-                <span class="page-link bg-danger border-danger text-white" id="off-tab">Offers</span>
+                <span class="page-link bg-danger border-danger text-white" id="off-tab">Tilbud</span>
                 </li>
                 <li class="page-item"><a class="page-link text-danger border-danger" id="all-req" >Alle forespørsler</a></li>
                 <li class="page-item"><a class="page-link text-danger border-danger" id="acc-off" >Aksepterte tilbud</a></li>

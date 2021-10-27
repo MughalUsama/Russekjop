@@ -42,17 +42,18 @@ session_start();
                 <h3 class="justify-content-center">Vi reduserer tid og kostnad<span class="text-danger"> – </span> og bidrar til økt inntjening</h3>
                 </div>
                 <!-- first paragraph-->
+                <pre style="font-size: 6px;">
+                </pre>
                 <p class="ml-1 mt-1 mb-2 pb-2 col-12 text-justify">
                 Russetiden er en kjent og kjær tid hvor endt skolegang skal feires. Mye skal planlegges og organiseres. Oppgaver skal fordeles. Penger skal tjenes. Innkjøp skal gjøres. Ved siden av dette skal du gjerne også forsøke å avslutte skolegangen på en god måte. Det sier seg selv at dette er en stressende og altoppslukende hverdag, og vi vet hvor tidskrevende det er å manøvrere seg blant den store mengden av tilbydere for å finne frem til tilbudet som passer din gruppe best. 
                 </p>
                 <p class="ml-1 mt-1 mb-2 pb-2 col-12 text-justify">
                 Det ønsket vi å gjøre noe med – derav Russekjøp. 
                 </p>
-                <p class="ml-1 mt-1 mb-3 pb-2 col-12 text-justify">
-                Dersom dette høres interessant ut – kontakt oss i skjemaet nedenfor. Dere vil så bli kontaktet av oss i løpet av kort tid.
+
             </div>
             <!-- second paragraph-->
-            <p class="ml-1 mt-0 mb-3 pb-2 col-12 text-justify">
+            <p class="ml-0 mt-4 mb-3 pb-2 col-12 text-justify">
                 Russekjøp er en markedsplass hvor din russegruppe helt kostnadsfritt kan registrere deres forespørsel på et tenkt produkt- eller tjenestekjøp. Forespørselen blir deretter automatisk sendt til våre leverandørbedrifter, som så besvarer med et tilbud på den registrerte forespørselen. Russegruppen vil deretter få tilsendt tilbud fra én eller flere tilbydere.
             </p>
             <p class="ml-1 mt-0 mb-2 pb-2 col-12 text-justify">

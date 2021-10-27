@@ -4,7 +4,9 @@
   <div class="container-fluid text-center col-12 text-md-left">
 
   <div class="row col-12">
+  <a href="http://russekjøp.no">
   <img class="pl-4 col-12 col-sm-4" id="flogo" src="./img/Picture3.png" alt="Russekjøp">
+  </a>
   <div class="col-12 col-sm-7 pb-4 pr-5 d-flex align-items-center justify-content-center justify-content-sm-end">
   <img class="float-right social ml-4"  src="./img/Picture1.png" alt="Russekjøp"/>
   <img class="float-right social ml-4 mr-3"  src="./img/Picture2.png" alt="Russekjøp"/>
@@ -69,7 +71,7 @@
 
         <ul class="mb-4 list-unstyled">
         <li>
-            <a href="./how_it_works.php">Bedriftsregister</a>
+            <a href="./how_it_works.php">Hvordan fungerer det?</a>
           </li>
           <li>
             <a href="./faq.php">FAQs</a>

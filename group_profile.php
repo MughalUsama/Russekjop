@@ -59,7 +59,7 @@
 								<strong class="font-weight-medium">Velkommen til </strong>
 								<strong>Russekjøp</strong>
 							</h2>
-							<span class="title">Your Profile</span>
+							<span class="title">Din Profil</span>
 						</div>
 					</div>
 					<div class="row justify-content-center">
